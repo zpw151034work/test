@@ -1,0 +1,14 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px)'>
+	<!-- 血瘀质预警 -->
+	<view class="content_box" >
+		<view class="base_info  stasisBloodWarning" wx:for="{{listData}}" wx:for-item="itemdata" >
+			<view class="item">
+				<!-- <image class="varning_img" src="{{imgUrl}}/main/warning.png"></image> -->
+			  <view class="icon"></view>
+				<view class="title" style="line-height:80rpx;">{{itemdata.alertContent}}</view>
+			</view>
+		</view>
+	</view>
+</view>

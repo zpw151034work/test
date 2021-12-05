@@ -1,0 +1,33 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+  <scroll-view style="width:750rpx;margin:0 auto;">
+    <view >
+     <view  class="item" bindtap="healthRecord1">
+      <image src="{{imgUrl}}/reportMain/2.png"></image>
+     </view>
+     <view class="item" bindtap="healthRecord2">
+      <image src="{{imgUrl}}/reportMain/1.png"></image>
+     </view>
+     <view class="item" bindtap="healthRecord3">
+      <image src="{{imgUrl}}/reportMain/3.png"></image>
+     </view>
+     <view class="item" bindtap="healthRecord4">
+      <image src="{{imgUrl}}/reportMain/4.png"></image>
+     </view>
+     <view class="contentBox" wx:if="{{false}}">
+      <view class="title">工具管理</view>
+      <view class="tools">
+       <view class="item"><image src="{{imgUrl}}/reportMain/6.png"></image></view>
+       <view class="item"><image src="{{imgUrl}}/reportMain/7.png"></image></view>
+       <view class="item"><image src="{{imgUrl}}/reportMain/8.png"></image></view>
+       <view class="item"><image src="{{imgUrl}}/reportMain/9.png"></image></view>
+      </view>
+     </view>
+     <view class="contentBox">
+     </view>
+    </view>
+  </scroll-view>	
+</view>  
+
+

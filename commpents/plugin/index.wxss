@@ -1,0 +1,47 @@
+.base_assessment{
+	background:#F9FAFC;
+}
+.base_assessment .item{
+		display:flex;
+		align-content: flex-start;
+		margin-bottom: 16rpx;
+		}
+.base_assessment .item view{
+	flex-grow: 1;
+ }
+.base_assessmenttitle{
+	font-size:28rpx;
+	width: 120rpx;
+	color:#333;
+}
+.base_assessmentchild{
+	margin-top:5rpx;
+	width: 30rpx;
+	height: 30rpx;
+}
+.base_assessmenttail{
+	font-size:28rpx;
+	width: 90rpx;
+	text-align: center;
+}
+.base_assessment .item view view{
+	width:40rpx;
+	height:20rpx;
+	position:relative;
+ /* margin:0 auto; */
+	left:70%;
+	top:calc(70%); 
+	transform: translate(-100%,-100%);
+}
+.base_assessment .item view view::before{
+ content:"";
+	border:20rpx solid #F9FAFC;
+	border-top-color:transparent; 
+	border-right-color:transparent;
+	/* border-bottom-color:transparent; */
+	border-left-color:transparent;
+	width:0px;
+	height:0px;
+	position:absolute;
+	/* transform:rotate(-90deg); */
+}

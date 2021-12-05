@@ -1,0 +1,75 @@
+/* pages/home/index.wxss */
+.home{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  height:100vh;
+  width:100vw;
+}
+.registered{
+  width:606rpx;
+  text-align: center;
+  height:88rpx;
+  background:#59B34E;
+  line-height: 88rpx;
+  color:#fff;
+  border-radius: 44rpx;
+  margin-bottom:40rpx;
+}
+.tourist{
+  width:606rpx;
+  text-align: center;
+  height:88rpx;
+  background:#ECEDEE;
+  line-height: 88rpx;
+  color:#000;
+  border-radius: 44rpx;
+}
+.title-top{
+  position:absolute;
+  left:50%;
+  top:230rpx;
+  width: 194rpx;
+  height: 180rpx;
+  transform: translate(-50%,0);
+}
+.title-top image{
+  width: 100%;
+  height: 100%;
+}
+.title-bottom{
+  margin-top:42rpx;
+  font-size:32rpx;
+  color:#666666;
+  position:absolute;
+  left:50%;
+  top:420rpx;
+  transform: translate(-50%,0);
+  }
+.empower{
+    position:absolute;
+    left:50%;
+    top:700rpx;
+    transform: translate(-50%,0);
+    height: 88rpx !important;
+    border-radius: 48rpx !important;
+    width:606rpx  !important;
+    font-size:36rpx;
+    font-weight: 500;
+    background:#429E38;
+    color:#FFFFFF;
+}
+.cancelBtn{
+  position:absolute;
+  left:50%;
+  top:820rpx;
+  transform: translate(-50%,0);
+  height: 88rpx !important;
+  border-radius: 48rpx !important;
+  width:606rpx  !important;
+  font-size:36rpx;
+  font-weight: 500;
+  color:#999999;
+  text-align: center;
+}

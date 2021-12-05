@@ -1,0 +1,54 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - 30px);'>
+	<scroll-view style="width:750rpx;margin:0 auto;padding-bottom:120rpx;">
+		<!-- echarts -->
+		<view class="reportChart" >
+			<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{healthScore}}"></ec-canvas>
+		</view>
+		<view wx:if="{{sleepStartTime!=''}}">
+			<!-- 睡眠时长 -->
+			<view class="energyIntake">
+				<view>睡眠时长</view>
+				<view>{{sleepTimeDuration}}小时</view>
+			</view>
+			<view class="content_box">
+				<view class="motionType">
+					<view>入睡时间</view>
+					<view>{{sleepStartTime}}</view>
+				</view>
+				<view class="motionType">
+					<view>醒来时间</view>
+					<view>{{sleepEndTime}}</view>
+				</view>
+			</view>
+			<view class="content_box">
+				<view class="motionType">
+					<view>平均睡眠时长</view>
+					<view>{{sleepAverage}}{{sleepAverage==0?"":"小时"}}</view>
+				</view>
+				<view class="motionType">
+					<view>推荐睡眠时长</view>
+					<view>{{sleepStandard}}{{sleepStandard==0?"":"小时"}}</view>
+				</view>
+			</view>
+			<view class="content_box">
+				<view class="motionType">
+					<view>睡眠状态</view>
+					<view>{{sleepStatuses}}</view>
+				</view>
+			</view>
+			<!-- 运动记录良好，继续保持！ -->
+			<!-- <view class="content_box assessment" >
+								<view class="content_title"><image  class="good" src="{{imgUrl}}/sleepReport/故障.png"></image>睡眠时间不足，睡眠质量不佳。</view>
+								<view class="contentTitle">
+									不可累了才入睡，每天应在稳定的时间段入睡，睡眠尽量保持每天7小时，尽量每日有1小时午睡时间，床垫不可过软，环境温度不适宜过高。
+								</view>
+			</view> -->
+		</view>
+		<view class="blankPage" wx:if="{{sleepStartTime==''}}">
+			<view class="tip">完成记录才能获得分析报告哦</view>
+			<view class="button" bindtap="jumpPage">去记录</view>
+		</view>
+	</scroll-view>
+</view>

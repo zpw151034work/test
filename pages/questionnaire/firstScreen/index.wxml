@@ -1,0 +1,31 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);'>
+  <view class="viewBg">
+    <view class="contentBg">
+
+      <wxs module="themeChoice">
+        var getRes = function (status) {
+          var res = '';
+          if (status) {
+            res = 'titleBg';
+          } else {
+            res = 'title';
+          };
+          return res
+        }
+        module.exports.getRes = getRes 
+      </wxs>
+      <text class="{{themeChoice.getRes(section == 0)}}">基本信息</text>
+      <text class="{{themeChoice.getRes(section == 1)}}">疾病信息</text>
+      <text class="{{themeChoice.getRes(section == 2)}}">生活信息</text>
+      <text class="{{themeChoice.getRes(section == 3)}}">营养筛查</text>
+      <text class="{{themeChoice.getRes(section == 4)}}">心理筛查</text>
+      <text class="{{themeChoice.getRes(section == 5)}}">运动筛查</text>
+      <text class="{{themeChoice.getRes(section == 6)}}">睡眠筛查</text>
+    </view>
+    <view class="bottomPhoneLay">
+      如有任何疑问，请致电(010) 5272 9739
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<!--index.wxml-->
+  <van-tabs swipeable active="{{navtabData.active }}" bind:change="onChange"  custom-class="customBackground"         nav-class="navBackground2" tab-class="tabBackground" color='white' title-active-color="white"  title-inactive-color="white">
+					<van-tab title="营养"></van-tab>
+					<van-tab title="运动"></van-tab> 
+					<van-tab title="睡眠"></van-tab>
+					<van-tab title="心理"></van-tab>
+					<van-tab title="中医"></van-tab>
+					<van-tab title="用药"></van-tab>
+   </van-tabs> 
+

@@ -1,0 +1,324 @@
+@import '../../../assets/base64.wxss';
+@import '../../../assets/base.wxss';
+.global_background{
+	width:750rpx;
+	height:244rpx;
+	position:relative;
+	top:0rpx;
+	z-index:1;
+	background-color:#64B55B;
+ border-radius: 0rpx 0rpx 100rpx 100rpx;
+}
+/* 页面样式 */
+.position_box {
+	position: relative;
+	top: -164rpx;
+	z-index: 100;
+}
+
+/* 警告 */
+.warning {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	color: #FA6916;
+	font-size: 28rpx;
+	font-weight: bold;
+	line-height: 30rpx;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 30rpx;
+	
+}
+
+/* 警告 */
+.warningFalse {
+	width: 100%;
+	height: auto;
+	background: #fff;
+	color: #64B55B;
+	font-weight: bold;
+	font-size: 28rpx;
+	line-height: 30rpx;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 30rpx;
+}
+
+/* tab */
+.content_box {
+	width: 702rpx;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 20rpx;
+	padding-top: 20rpx;
+	padding-bottom: 20rpx;
+	height: 100%;
+	overflow: hidden;
+	margin-bottom: 40rpx;
+}
+
+.content_box .psychologyTab {
+	width: 650rpx;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.content_box .psychologyTab .topMenu {
+	display: block;
+	height: 100%;
+	padding-bottom: 20rpx;
+	overflow: hidden;
+}
+
+.content_box .item {
+	float: none;
+	width: 650rpx;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 10rpx;
+	border-radius: 25rpx;
+	background-color: #F4FAF3;
+}
+
+.content_box .item .itemFrame {
+	float: none;
+	width: 650rpx;
+	margin-top: 10rpx;
+}
+
+.content_box .item .iconFrame {
+	float: none;
+	width: 650rpx;
+	margin-top: 20rpx;
+	overflow: hidden;
+}
+
+.content_box .item .icon {
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background: #B5DBA8;
+	display: inline-block;
+
+}
+
+.content_box .item .icon1 {
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	margin-top: 10rpx;
+	background: #B5DBA8;
+	display: block;
+	float: left;
+
+}
+
+.content_box .item .title {
+	margin-left: 10rpx;
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 500;
+
+}
+
+.content_box .item .title1 {
+	margin-left: 10rpx;
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 500;
+	display: block;
+	float: left;
+}
+
+.content_box .item .startIcon {
+	width: 550rpx;
+	float: left;
+  margin-top:8rpx;
+}
+
+.content_box .item .startIcon .star {
+	display: block;
+	float: right;
+
+}
+
+.content_box .item .content {
+	width: 592rpx;
+	font-size: 28rpx;
+	color: #666;
+
+}
+
+.content_box .item .content1 {
+	padding-top: 20rpx;
+	width: 592rpx;
+	font-size: 28rpx;
+	color: #666;
+
+	overflow: hidden;
+	float: none;
+}
+
+.content_box .item .content view {
+	float: left;
+	width: 162rpx;
+	height: 90rpx;
+	float: left;
+
+}
+
+.psychologyBackground3 {
+	/* background: #F4FAF3; */
+	color: #333 !important;
+	font-size: 32rpx !important;
+}
+
+.psychologyBackground4 {
+	background: #9B9B9B !important;
+	color: #000 !important;
+	font-size: 32rpx;
+}
+
+.psychologyBackground2 .van-ellipsis {
+	text-align: center;
+}
+
+/* //dietPoints */
+.countermeasure {
+	width: 654rpx;
+	/* background: #F4FAF3; */
+	margin: 0 auto;
+	border-radius: 10rpx;
+}
+
+.countermeasure .item {
+	width: 590rpx;
+	padding: 32rpx;
+	margin-bottom: 40rpx;
+}
+
+.countermeasure .item .icon {
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background: #B5DBA8;
+	display: inline-block;
+}
+
+.countermeasure .item .title {
+	margin-left: 10rpx;
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 500;
+
+}
+
+.countermeasure .item .content {
+	font-size: 28rpx;
+	color: #666;
+}
+
+.countermeasure .item .content view {
+	float: left;
+	width: 162rpx;
+	height: 90rpx;
+	float: left;
+}
+
+/* 心理咨询热线电话*/
+.psychologicalCounseling {
+	width: 642rpx;
+	background: #fff;
+	margin: 0 auto;
+	margin-left: 30rpx;
+	border-radius: 20rpx;
+	padding: 30rpx;
+	margin-bottom: 40rpx;
+	height: 86rpx;
+}
+
+.psychologicalCounseling .psychoFrame {
+	width: 550rpx;
+	float: left;
+}
+.psychologicalCounseling .phone_img {
+	width: 70rpx;
+	height: 70rpx;
+	float: left;
+	margin-left:10rpx;
+}
+.psychologicalCounseling view:nth-child(2n+1) {
+	color: #64B55B;
+	font-size: 27rpx;
+	font-size: 600;
+}
+.psychologicalCounseling view:nth-child(2n) {
+	color: #9B9B9B;
+	font-size: 24rpx;
+}
+/*顶部切换按钮*/
+.topChangeBtn {
+	display: flex;
+	flex-direction: nowrap;
+	justify-content: space-around;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.topChangeBtn .topChangeBtnItem {
+	font-size: 28rpx;
+	width: auto;
+	padding-top: 5rpx;
+	padding-bottom: 5rpx;
+	border-radius: 40rpx;
+	padding-right: 4%;
+	padding-left: 4%;
+	border: 1rpx solid #d8d8d8;
+}
+
+.topChangeBtn .topChangeBtnItemBack {
+	font-size: 28rpx;
+	width: auto;
+	padding-top: 5rpx;
+	padding-bottom: 5rpx;
+	border-radius: 40rpx;
+	padding-right: 4%;
+	padding-left: 4%;
+	border: 1rpx solid #59B34E;
+	color: #59B34E;
+}
+
+.topChangeBtn .topChangeBtnItemNotClick {
+	font-size: 28rpx;
+	width: auto;
+	padding-top: 5rpx;
+	padding-bottom: 5rpx;
+	border-radius: 40rpx;
+	padding-right: 4%;
+	padding-left: 4%;
+	color: #666;
+	border: 1rpx solid #d8d8d8;
+}
+
+/*个性描述整体背景*/
+.descriptionSelfBg {
+	border-radius: 20rpx;
+	background: #F4FAF3;
+	padding: 20rpx;
+	width: 90%;
+	margin: 0 auto;
+}
+
+/*个性描述内容*/
+.descriptionSelf {
+	color: #4A4A4A;
+	font-size: 28rpx;
+	margin-top: 30rpx;
+	margin-left: 20rpx;
+	margin-right: 20rpx;
+	margin-bottom: 30rpx;
+}

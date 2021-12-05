@@ -1,0 +1,219 @@
+/* pages/heahassessment/index.wxss */
+.container {
+	position: absolute;
+	width: 750rpx;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+	background: #fff;
+}
+
+.date {
+	height: 80rpx;
+}
+
+.content_box {
+	width: 702rpx;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 20rpx;
+	margin-bottom: 40rpx;
+	border: 1px solid #eee;
+}
+
+.content_title {
+	font-size: 32rpx;
+	font-weight: 700;
+	margin-bottom: 16rpx;
+	padding: 0 0 0 32rpx;
+	line-height: 80rpx;
+}
+
+.base_info {
+	display: flex;
+	width: 702rpx;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+.sleepData .item {
+	height: 234rpx;
+	width: 702rpx;
+	position: relative;
+}
+
+
+.sleepData .item text {
+	display: inline-block;
+	height: 234rpx;
+	line-height: 234rpx;
+}
+
+.sleepData .item text:nth-child(2n) {
+	position: absolute;
+	left: 204rpx;
+	font-size: 28rpx;
+	color: #999;
+}
+
+.sleepData .item text:nth-child(2n+1) {
+	position: absolute;
+	left: 32rpx;
+	font-size: 28rpx;
+	color: #333;
+}
+
+/* 今日心情 */
+.todayMood {
+	display: flex;
+	width: 638rpx;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	align-items: center;
+	padding: 0 32rpx;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.todayMood .item {
+	flex: 1;
+	text-align: center;
+}
+
+.todayMood .item image {
+	width: 70rpx;
+	height: 70rpx;
+}
+
+.todayMood .item:nth-child(8n) {
+	margin-right: 0rpx !important;
+}
+
+.todayMood .item text {
+	width: 70rpx;
+	font-size: 24rpx;
+	text-align: center;
+	padding: 10rpx 0;
+}
+
+/* 情绪影响因素 */
+.emotionalFactors {
+	display: flex;
+	width: 638rpx;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	align-items: center;
+	padding: 32rpx 32rpx;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.emotionalFactors .item {
+	width: 25%;
+	text-align: center;
+
+}
+
+.emotionalFactors .item image {
+	width: 96rpx;
+	margin: 0 auto;
+	height: 96rpx;
+}
+
+.emotionalFactors .item:nth-child(4n) {
+	margin-right: 0rpx !important;
+}
+
+.emotionalFactors .item text {
+	display: block;
+	width: 100%;
+	font-size: 24rpx;
+	text-align: center;
+}
+
+/* 调节情绪方法 */
+.emotionRegulation {
+	display: flex;
+	width: 638rpx;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	align-items: center;
+	padding: 0rpx 32rpx;
+}
+
+.emotionRegulation .item {
+	padding: 0rpx 24rpx;
+	background: #F6F6F6;
+	border-radius: 35rpx;
+	font-size: 28rpx;
+	color: #333;
+	margin: 8rpx 27rpx 12rpx 0;
+}
+.emotionRegulation .item:nth-child(5n){
+	margin-right:0rpx !important;
+}
+/* 最后按钮 */
+.button {
+	width: 702rpx;
+	height: 80rpx;
+	margin: 0 auto;
+	color: #fff;
+	border-radius: 40rpx;
+	text-align: center;
+	font-size: 32rpx;
+	line-height: 80rpx;
+	background: #419D37;
+}
+
+.tip {
+	width: 750rpx;
+	height: 80rpx;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 0rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background: #fff;
+	padding-bottom: 10rpx;
+}
+
+.tipX {
+	width: 750rpx;
+	height: 80rpx;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 58rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background: #fff;
+	padding-bottom: 10rpx;
+}
+
+/* 时间插件 */
+.custom-icon {
+	margin-top: 4rpx !important;
+}
+
+/* //时间按钮样式 */
+.timeButton {
+	width: 702rpx;
+	margin: 0 auto;
+	height: 50rpx;
+}
+
+.timeButtonRight {
+	line-height: 60rpx;
+	margin-right: 10rpx;
+}
+
+.timeButtonCenter {
+	width: 20rpx;
+	height: 50rpx;
+}
+
+.timeButtonRight {
+	line-height: 60rpx;
+	margin-right: 10rpx;
+}

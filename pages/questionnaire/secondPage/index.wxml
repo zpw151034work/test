@@ -1,0 +1,32 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);'>
+  <view class="viewBg">
+    <view class="topTitleBg">
+      <text class="topTitle">您可能需要进一步筛查</text>
+    </view>
+    <view class="viewTheme" wx:if="{{showPsychology}}">
+      <text class="tipTextTheme">您情绪可能存在一定困扰,</text>
+      <text class="tipTextTheme">为制定个性化、有效的调整方案，需要进一步筛查。</text>
+      <text class="tipTextTheme">所需时间：15～20分钟</text>
+      <button class="buttonTheme" bindtap="psychologyClick">进一步筛查心理</button>
+    </view>
+    <view class="viewTheme" wx:if="{{showSleep}}">
+      <text class="tipTextTheme">您的睡眠可能存在一定的问题，</text>
+      <text class="tipTextTheme"> 为制定个性化的睡眠方案，需要进一步筛查，</text>
+      <text class="tipTextTheme"> 所需时间：5分钟</text>
+      <button class="buttonTheme" bindtap="sleepClick">进一步筛查睡眠</button>
+    </view>
+    <view class="bottomTipLay">
+      <view class="fBLy">
+        <image class="imageTheme" src="../../../assets/questionnaireSecondTip.png"></image>
+        <text class="bottomTipTextTheme" style="margin-left:10rpx">如不继续筛查，也可获得方案，</text>
+      </view>
+      <text class="bottomTipTextTheme" style="margin-left:20rpx"> 但可能有潜在的问题未被方案覆盖。</text>
+    </view>
+    <view class="bottomLay">
+      <button class="bottomButtonTheme" bindtap="overBtnClick">不继续筛查</button>
+      <text class="bottomTipTextTheme" style="margin-bottom:20rpx">如有任何疑问，请致电(010) 5272 9739</text>
+    </view>
+  </view>
+</view>

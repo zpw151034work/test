@@ -1,0 +1,6 @@
+<nav-bar navbar-data='{{navbarData}}'></nav-bar >
+<view class="container" style='position:relative;top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px)'>
+		<view class="view_date">
+			你授权后，小程序开发者将获得你的昵称、头像、地区及性别，为你提供相关服务。小程序开发者收集、存储、处理或使用用户隐私及数据，应当遵守小程序服务条款“四、用户个人信息保护”及运营规范“15.用户隐私及数据规范“等规定。若你认为开发者未遵守上述规定或存在其他侵害用户隐私或数据的情况，可进行投诉。
+		</view>
+</view>  

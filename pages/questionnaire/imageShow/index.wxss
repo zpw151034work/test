@@ -1,0 +1,29 @@
+/* pages/questionnaire/edittextPage/edittextThem.wxss */
+.container{
+	width:750rpx;
+  margin:0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+  background:#fff;
+} 
+.viewBg {
+ width: 660rpx;
+ margin:0 auto;
+height: 100%;
+}
+.viewBg .title{
+  font-size: 28rpx;
+  font-weight:600;
+  padding:30rpx 0;
+}
+.viewBg .item{
+  padding-bottom:30rpx;
+  border-bottom:1rpx solid #F3F3F3;
+}
+.van-uploader__preview-image{
+  border-radius: 10rpx;
+}
+.van-uploader__upload{
+  border-radius: 10rpx;
+}
+

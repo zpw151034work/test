@@ -1,0 +1,290 @@
+/* pages/healthassessment/index.wxss */
+.health_score_background {
+	width:702rpx;
+	height: 520rpx;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+.health_score_background .healthcircle1 {
+	margin-top: 390rpx;
+	margin-left: 240rpx;
+	width: 25rpx;
+	height: 25rpx;
+	border-radius: 50% 50% 50% 50%;
+	background: #F2B27A
+}
+
+.health_score_background .healthcircle2 {
+	margin-top: 290rpx;
+	margin-left: 400rpx;
+	width: 25rpx;
+	height: 25rpx;
+	border-radius: 50% 50% 50% 50%;
+	background: #D4DF65
+}
+
+.health_score_background .healthcircle3 {
+	margin-top: 190rpx;
+	margin-left: 540rpx;
+	width: 25rpx;
+	height: 25rpx;
+	border-radius: 50% 50% 50% 50%;
+	background: #B5DBA8
+}
+
+.container {
+	width: 750rpx;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+	background: #fff;
+}
+
+/* 标题 */
+.content_box {
+	width: 702rpx;
+	padding-top: 40rpx;
+	margin: 0 auto;
+}
+
+.echartsBox {
+	width: 750rpx;
+	padding-top: 40rpx;
+	margin: 0 auto;
+}
+
+.content_title {
+	font-size: 36rpx;
+	font-weight: 700;
+	top:50%;
+	color: #333;
+}
+
+
+
+.base_info {
+	display: flex;
+	width: 702rpx;
+	margin-top: 40rpx;
+
+}
+
+.base_info .item {
+	flex-grow: 1;
+	background: #F9FAFC;
+	font-size: 28rpx;
+	display: flex;
+	margin-right: 14rpx;
+	border-radius: 20rpx;
+	margin-top: 14rpx;
+}
+
+.base_info .item .name {
+	color: #666666;
+	font-size: 28rpx;
+	margin-left: 20rpx;
+}
+
+.base_info .item .inner {
+	color: #666666;
+	font-size: 28rpx;
+}
+.container .base_info .item .name,.container .base_info .item .inner{
+	font-size: 28rpx;
+	font-weight: bolder;
+	top: 50%;
+	color: #666666;
+}
+.base_info .item .content {
+	color: #333333;
+	font-size: 28rpx;
+}
+
+.content_box .base_info .item .nurseScore {
+	padding: 10rpx;
+	margin-left: 20rpx;
+	color: #404140;
+	
+}
+.content_box .base_info .item .nurseScoreUnSelected
+{
+  padding: 10rpx;
+	margin-left: 20rpx;
+	color: #0e750e;
+}
+.content_box .base_info .item .nurseScorebackgroudThem {
+	margin-left: 20rpx;
+	font-size: 28rpx;
+	color: #fff;
+	padding-top: 10rpx;
+	padding-bottom: 10rpx;
+	padding-left: 20rpx;
+	padding-right: 20rpx;
+	border-radius: 40px 40px 40px 40px;
+	background: #64B55B;
+}
+
+.base_info .item view:nth-child(odd) {
+	font-size: 28 rpx;
+	color: #666666;
+}
+
+.base_info .item view:nth-child(even) {
+	font-size: 28 rpx;
+	color: #333333;
+}
+
+/* 评价管理 */
+.base_manage {
+	width: 702rpx;
+	margin: 0 auto;
+	height: 520rpx;
+	border-radius: 20rpx;
+	background: #F9FAFC;
+	margin-top: 30rpx;
+}
+
+.manage_title {
+	display: flex;
+	width: 614rpx;
+	margin: 0 auto;
+	padding: 20rpx 20rpx;
+}
+
+.manage_title .item {
+	flex-grow: 1;
+	display: flex;
+	margin-left: 20rpx;
+}
+
+.manage_title .item .circle {
+	margin-top: 9rpx;
+	width: 18rpx;
+	height: 18rpx;
+	border-radius: 50% 50% 50% 50%;
+	background: #F2B27A
+}
+
+.manage_title .item .circle2 {
+	margin-top: 9rpx;
+	width: 18rpx;
+	height: 18rpx;
+	border-radius: 50% 50% 50% 50%;
+	background: #D4DF65
+}
+
+.manage_title .item .circle3 {
+	margin-top: 9rpx;
+	width: 18rpx;
+	height: 18rpx;
+	border-radius: 50% 50% 50% 50%;
+	background: #B5DBA8
+}
+
+.manage_title .item view {
+	font-size: 20rpx;
+	color: #999999;
+	height: 14 rpx;
+}
+
+/* 风险评估 */
+.base_assessment {
+	width: 662rpx;
+	margin: 0 auto;
+	height: 240rpx;
+	border-radius: 20rpx;
+	background: #F9FAFC;
+	margin-top: 30rpx;
+	padding: 28rpx 20rpx;
+}
+
+.base_assessment .item {
+	display: flex;
+	margin-bottom: 16rpx;
+
+}
+
+.base_assessment .item view {
+	flex-grow: 1;
+	/* position: relative; */
+}
+
+.base_assessment .item view:first-child {
+	font-size: 28rpx;
+	color: #333;
+}
+
+.base_assessment .item view {
+	margin-top: 5rpx;
+	height: 30rpx;
+}
+
+.base_assessment .item view:last-child {
+	text-align: center;
+	height: 30rpx;
+}
+
+.base_assessment .item view view {
+	width: 20rpx;
+	height: 20rpx;
+	/* position: absolute; */
+	/* margin:0 auto; */
+	left: 50%;
+	top: 50%;
+	transform: translate(-153%, -67%);
+}
+
+.base_assessment .item view view:before {
+	content: "";
+	border: 20rpx solid #F9FAFC;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	/* border-bottom-color:transparent; */
+	border-left-color: transparent;
+	width: 0px;
+	height: 0px;
+	/* position:absolute; */
+	/* transform:rotate(-90deg); */
+}
+
+/* 健康得分 */
+.chMedicine_info {
+	width: 750rpx;
+	margin: 0 auto;
+	height: 470rpx;
+	border-radius: 20rpx;
+}
+
+.bottom_title {
+	width: 702rpx;
+	margin: 0 auto;
+	font-size: 24rpx;
+	color: #999999;
+	text-align: center;
+	margin-top: 30rpx;
+}
+
+.bottom_button {
+	width: 702rpx;
+	margin: 0 auto;
+	margin-top: 76rpx;
+}
+
+/* 健康的分  */
+.healthScore {
+	width: 750rpx;
+	height: 80rpx;
+}
+
+.healthScore view {
+	width: 702rpx;
+	margin: 0 auto;
+	background: #F9FAFC;
+	color: #64B55B;
+	font-weight: 600;
+	font-size: 30rpx;
+	text-align: center;
+	height: 80rpx;
+	line-height: 80rpx;
+	border-radius: 20rpx;
+}

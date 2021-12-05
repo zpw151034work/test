@@ -1,0 +1,192 @@
+/* pages/healthassessment/index.wxss */
+.container{
+ position: absolute;
+ width:750rpx;
+ margin:0 auto;
+ box-sizing: border-box;
+ overflow: auto;
+ background:#fff;
+} 
+.date{
+ height:80rpx;
+}
+.content_box{
+ width: 702rpx;
+ margin: 0 auto;
+ background:#fff;
+ border-radius:20rpx;
+ margin-bottom:40rpx;
+	border:1px solid #eee;
+	position: relative;
+}
+.content_title{
+ font-size:32rpx;
+ font-weight: 700;
+ margin-bottom:16rpx;
+ padding:9px 0 0 32rpx;
+ line-height: 80rpx;
+}
+.base_info{
+ display: flex;
+ width: 702rpx;
+ margin:0 auto;
+ flex-flow: row wrap;
+ align-items: center;
+}
+.sleepData .item{
+  height:234rpx;
+  width: 702rpx;
+		position: relative;
+		
+}
+.timeSlot{ 
+height:234rpx;
+ width:350rpx;
+ position: absolute;
+ top:-33rpx;
+	left:300rpx;
+
+ overflow: hidden;
+}
+.unit{
+ height:50rpx;
+ width:350rpx;
+ position: absolute;
+ top:39rpx;
+ left:300rpx;
+ line-height: 50rpx;
+}
+.unit text:nth-child(2n+1){
+ width: 175rpx;
+ display: inline-block;
+ line-height: 50rpx !important;
+ height:50rpx !important;
+ text-align: center;
+ position: absolute;
+ left:0 !important;
+}
+.unit text:nth-child(2n){
+ width: 175rpx;
+ display: inline-block;
+ line-height: 50rpx !important;
+ height:50rpx !important;
+ text-align: center;
+ position: absolute;
+ left:175rpx !important;
+}
+
+.van-picker__toolbar{
+ display: none !important;
+}
+.sleepData .item text{
+ display: inline-block;
+ height: 234rpx;
+ line-height: 234rpx;
+}
+.sleepData .item text:nth-child(2n){
+ position: absolute;
+ left:204rpx;
+ font-size:28rpx;
+ color:#999;
+}
+.sleepData .item text:nth-child(2n+1){
+ position: absolute;
+ left:32rpx;
+ font-size:28rpx;
+ color:#333;
+}
+.sleepState{
+ display: flex;
+ width: 638rpx;
+ margin:0 auto;
+ flex-flow: row wrap;
+ align-items: center;
+ padding:0 32rpx;
+ }
+ .sleepState .item{
+  margin-right:1rpx;
+ }
+ .sleepState .item image{
+  width:70rpx;
+  height:70rpx;
+  }
+  .sleepState .item:nth-child(8n){
+   margin-right:0rpx !important;
+  }
+ .sleepState .item text{
+   display:block;
+   width: 70rpx;
+   font-size:24rpx;
+   color:#999;
+   text-align: center;
+   padding:10rpx 0;
+ }
+ .swich {
+  display:inline-block;
+  width: 100rpx;
+  height:80rpx;
+  line-height: 80rpx;
+ }
+ .healthProducts{
+  display: flex;
+  width: 638rpx;
+  margin:0 auto;
+  flex-flow: row wrap;
+  align-items: center;
+  padding:32rpx;
+ }
+ .healthProducts .item{
+   padding:8rpx 24rpx;
+   background:#F6F6F6;
+   border-radius: 35rpx;
+   font-size:28rpx;
+   color:#333;
+   margin:10rpx 12rpx 0 0;
+ }
+ /* 最后按钮 */
+ .button{
+  width:702rpx;
+  height:80rpx;
+  margin:0 auto;
+  color:#fff;
+  border-radius: 40rpx;
+  text-align: center;
+  font-size:32rpx;
+  line-height: 80rpx;
+  background:#419D37;
+  }
+ .tip {
+  width:750rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  position: fixed;
+  bottom:0rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background:#fff;
+  display: flex;
+	align-items: center;
+	padding-bottom: env(safe-area-inset-bottom);
+ }
+ .tipX {
+  width: 750rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  position: fixed;
+  bottom:58rpx;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background:#fff;
+  padding-bottom:10rpx;
+ }
+ /* 时间插件 */
+.custom-icon{
+	margin-top: 4rpx !important;
+}
+/* //时间按钮样式 */
+.timeButton{
+	width:702rpx;margin:0 auto;height:50rpx;
+}
+.timeButtonRight{line-height: 60rpx; margin-right:10rpx;}
+.timeButtonCenter{width:20rpx;height:50rpx;}
+.timeButtonRight{line-height: 60rpx; margin-right:10rpx;}

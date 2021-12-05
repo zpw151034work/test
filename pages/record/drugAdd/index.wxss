@@ -1,0 +1,229 @@
+/* pages/healthassessment/index.wxss */
+.container{
+	position: absolute;
+	width:750rpx;
+ margin:0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+	background:#fff;
+} 
+.content_box {
+	width: 702rpx;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 20rpx;
+	margin-bottom: 40rpx;
+}
+.base_info {
+	width: 702rpx;
+	margin: 0 auto;
+}
+.van-image {
+	width: 84rpx;
+	height: 84rpx;
+	border-radius: 10rpx;
+}
+.cell-slot {
+	display: flex;
+	border-radius: 10rpx;
+	width: 400rpx;
+}
+.cell-title {
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 600 !important;
+}
+.cell-reason {
+	font-size: 24rpx;
+	color: #909399;
+}
+/* 弹出层样式 */
+.dialog .van-button--default {
+	width: 544rpx !important;
+	height: 80rpx !important;
+	margin-left: 50rpx !important;
+	border-radius: 40rpx;
+	background: #419D37 !important;
+	color: #fff !important;
+	margin-bottom: 30rpx !important;
+}
+
+.dialogContent {
+	width: 100%;
+	height: 100%;
+	border: 1rpx solid #fff;
+}
+
+/* 产品规格 */
+.productSpecifications {
+	width: 640rpx;
+	height: 150rpx;
+	line-height: 150rpx;
+}
+
+.productSpecifications .name {
+	width: 200rpx;
+	height: 150rpx;
+	text-align: center;
+}
+
+.dialogContent .title {
+	width: 630rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	text-align: center;
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 600;
+}
+
+.close {
+	position: absolute;
+	top: 30rpx;
+	right: 10rpx;
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.dialogInfo {
+	widows: 640rpx;
+	height: 240rpx;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0 32rpx;
+}
+
+.dialogInfo .item {
+	height: 80rpx;
+	display: flex;
+	justify-content: space-between;
+	width: 640rpx;
+	line-height: 80rpx;
+
+}
+
+.dialogInfo .item text {
+	display: block;
+}
+
+.dialogInfo .item text {
+	font-size: 28rpx;
+	color: #333;
+}
+
+.van-dropdown-item {
+	width: 300rpx !important;
+}
+
+.van-overlay {
+	background-color: var(--overlay-background-color, rgba(0, 0, 0, 0)) !important;
+	opacity: 0 !important;
+}
+
+.van-dropdown-item {
+	top: 258rpx !important;
+	right: 0 !important;
+	left: 350rpx !important;
+}
+/* 最后按钮 */
+.tip {
+	width:750rpx;
+	/* height: 80rpx; */
+	margin: 0 auto;
+	position: fixed;
+	bottom:0rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+	}
+.tipX {
+	width: 750rpx;
+	/* height: 80rpx; */
+	margin: 0 auto;
+	position: fixed;
+	bottom:58rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+	}
+.button {
+	float: left;
+	width: 602rpx;
+	height: 80rpx;
+	color: #fff;
+	border-radius: 40rpx;
+	text-align: center;
+	font-size: 32rpx;
+	line-height: 80rpx;
+	background: #419D37;
+}
+.tipButton{
+		position: relative;
+		
+}
+.info{
+	position: absolute;
+	width: 30rpx;
+	height:30rpx;
+	background:red;
+	color:#fff;
+font-size:20rpx;
+	border-radius: 50%;
+	text-align: center;
+	line-height:30rpx;
+	left:50rpx;
+}
+.tipButton image{
+	float: left;
+	display: inline-block;
+	width: 60rpx;
+	height: 60rpx;
+	margin-top: 8rpx;
+	margin-right: 30rpx;
+}
+.ButtonBox{
+	width: 750rpx;
+	height: 80rpx;
+	padding:0 24rpx;
+	background:#fff;
+	padding-bottom:10rpx;
+}
+.infoDialog{
+	background:rgba(000, 000, 000, 0.7);
+	height:100vh;
+	position:relative;
+	width: 750rpx;
+	z-index:10000 !important;
+}
+.infoBox{
+	padding-top:20rpx;
+	width: 750rpx;
+	margin: 0 auto;
+	border-top-left-radius:20rpx;
+	border-top-right-radius:20rpx;
+	background:#fff;
+}
+.zIndex{
+	z-index:-1 !important;
+}
+.noData{
+	width:100%;
+	height:800rpx;
+	position: relative;
+}
+.noData .img{
+	width:360rpx;
+	height:336rpx;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.noData .img image{
+	width:360rpx;
+	height:336rpx;
+}
+.search .van-field__control{
+	color:#000 !important;
+  caret-color:#000 !important;
+}

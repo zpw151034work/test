@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav-bar": "/commpents/navbar/index",
+    "ec-canvas": "../../commpents/ec-canvas/ec-canvas",
+    "plug-in":"../../commpents/plugin/index"
+ },
+  "disableScroll":true
+  }
+  

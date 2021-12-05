@@ -1,0 +1,44 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);'>
+  <view class="viewBg">
+    <view class="progress-box">
+      <progress percent="20" show-info font-size="30rpx" stroke-width="8"></progress>
+    </view>
+    <text class="title">{{title}}</text>
+    <view class="contentTheme">
+      <view class="search">
+        <input bindinput="bindKeyInput" bindtap="buttonClick" />
+        <image src="../../../assets/el-icon-search.png" class="image"></image>
+      </view>
+      <view class="contentBox">
+        <scroll-view class="scrollTheme" scroll-y>
+          <view wx:for="{{dataActive}}" class="item" wx:for-item='item' data-item="{{item}}" data-index="{{index}}"
+            bindtap="itemClear">
+            <text>{{item.diagnoseName}}</text>
+            <image src="../../../assets/search-delete.png "></image>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="searchData" wx:if="{{isShow}}">
+        <scroll-view class="scrollTheme" scroll-y>
+          <view style="height:1000rpx;">
+            <text wx:for="{{searchData}}" class="item" wx:for-item='item' data-item="{{item}}" data-index="{{index}}"
+              bindtap="itemclickAdd">{{item.diagnoseName}}</text>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="bottomBg">
+      <view class="backTheme">
+        <text style="text-align:center" bindtap="backFun">返回</text>
+      </view>
+      <view class="sureTheme">
+        <text style="text-align:center" bindtap="sureFun">{{sureBtnContent}}</text>
+      </view>
+    </view>
+    <view class="bottomPhoneLay">
+      如有任何疑问，请致电(010) 5272 9739
+    </view>
+  </view>
+</view>

@@ -1,0 +1,168 @@
+/* pages/healthassessment/index.wxss */
+/* 公用样式*/
+.container{
+	position: absolute;
+	width:750rpx;
+ margin:0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+	background:#fff;
+}
+.content_box{
+	margin: 0 auto;
+	width: 642rpx;
+	margin:0 auto;
+	padding:10rpx 30rpx;
+	margin-bottom:40rpx;	
+	box-shadow:0 0 8rpx 4rpx #eee;
+	border-radius: 20rpx;
+	}
+	.content_title{
+		font-size:36rpx;
+		font-weight: 700;
+	}
+.base_info{
+	width:642rpx;
+	margin:0 auto;
+ }
+.base_info .item{
+	  flex-grow:1;
+   background:#F9FAFC;
+			font-size:28rpx;
+			display: flex;
+			margin-right:14rpx;
+			padding: 0 20rpx;
+			height: 80rpx;
+			line-height:80rpx;
+			border-radius: 20rpx;
+			margin-top:14rpx;
+	}
+	.base_info .item view:nth-child(odd){
+			font-size:28 rpx;
+			color:#666666;
+	} 	
+	.base_info .item view:nth-child(even){
+		font-size:28 rpx;
+		color:#333333;
+} 
+/* Report chart */
+.reportChart{
+	width: 750rpx;
+	height:500rpx;
+}
+/* 能量摄入  */
+.energyIntake{
+	height: 96rpx;
+	width: 642rpx;
+	margin:0 auto;
+	padding:0 30rpx;
+	display: flex;
+	justify-content: space-between;
+	border:1rpx solid #fff;
+	border-radius: 20rpx;
+	line-height:96rpx;
+	box-shadow:0 0 8rpx 4rpx #eee;
+	margin-bottom:40rpx;
+	margin-top:40rpx;
+}
+.energyIntake view:nth-child(2n){
+	color:#64B55B;
+	font-size:36rpx;
+}
+.energyIntake view:nth-child(2n+1){
+	color:#000;
+	font-size:36rpx;
+	font-weight:600;
+}
+/* 三大营养素分析 */
+.nutritionAnalysis{
+	width: 642rpx;
+	height:260rpx;
+	margin:0 auto;
+}
+.analysisTable{
+	width: 642rpx;
+	height: 328rpx;
+	background:#F4FAF3;
+	border-radius: 20rpx;
+	margin-bottom:15rpx;
+}
+.analysisTable .name {
+	display: flex;
+	flex-direction: row ;
+	justify-content:center;
+}
+.analysisTable .name view{
+	width: 30%;
+	height: 80rpx;
+	line-height:80rpx;
+	font-size:28rpx;
+	color:#4A4A4A;
+	font-weight:400;
+}
+ /* 运动类型 */
+.motionType{
+	height: 96rpx;
+	width: 642rpx;
+	margin:0 auto;
+ display: flex;
+	justify-content: space-between;
+	border:1rpx solid #fff;
+	border-radius: 20rpx;
+	line-height:96rpx;
+	color:#4A4A4A;
+	}
+	.motionType view:nth-child(2n+1){
+		color:#000;
+		font-size:36rpx;
+		font-weight:600;
+	}
+	.motionType view:nth-child(2n) {
+		font-size: 32rpx;
+		width: 427rpx;
+		text-align: right;
+	}
+.contentTitle{
+	width:602rpx;
+	margin:0 auto;
+	background:#F4FAF3;
+	padding:20rpx;
+	margin-bottom:15rpx;
+	border-radius:20rpx;
+	color:#666666;
+	font-size:28rpx;
+	text-indent:2em;
+	margin-bottom:15rpx;
+}
+.good{
+	width:34rpx;
+	height:34rpx;
+	margin-right:20rpx;
+}
+.blankPage{
+	width: 750rpx;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+  background: #fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+	flex-direction:column;
+	 margin-top:40rpx;
+}
+.blankPage .tip{
+	margin-top:60rpx;
+	color:#9B9B9B;
+	font-size:28rpx;	
+}
+.blankPage .button{
+	color:#FFF;
+	background:#59B34E;
+	height:88rpx;
+	width: 316rpx;
+	text-align: center;
+	line-height: 88rpx;
+	border-radius: 44rpx;
+	margin-top:160rpx;
+} 

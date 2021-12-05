@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "mp-dialog": "../../../commpents/dialog/dialog"
+   },
+    "disableScroll":true
+
+}
+

@@ -1,0 +1,18 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);' class="container">
+  <view class="viewBg">
+    <view class="item">
+     <view class="title">上传血常规报告</view>
+     <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" deletable="" preview-size="205rpx" disabled="" show-upload=""/>
+    </view>
+    <view class="item">
+     <view class="title">上传血常规报告</view>
+     <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" deletable="" preview-size="205rpx" disabled="" show-upload=""/>
+    </view>
+    <view class="item">
+     <view class="title">上传血常规报告</view>
+     <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" deletable="" preview-size="205rpx" disabled="" show-upload=""/>
+    </view>
+  </view>
+</view>

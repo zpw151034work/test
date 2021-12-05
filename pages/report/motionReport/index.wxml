@@ -1,0 +1,35 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - 34px);'>
+	  <scroll-view style="width:750rpx;margin:0 auto;padding-bottom:120rpx;">
+			<!-- echarts -->
+			<view class="reportChart" >
+				<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{healthScore}}" ></ec-canvas>
+			</view>
+			<view wx:if="{{motionTypeData!=''}}">
+			  <!-- 能量摄入 -->
+					<view class="energyIntake">
+							<view>运动消耗</view>
+							<view>{{totalEnergy}}千卡</view>
+					</view>
+					<view class="content_box" >
+								<view class="content_title">运动类型</view>
+								<view class="motionType"  wx:for="{{motionTypeData}}"  wx:for-item="item">
+										<view>{{item.sport}}</view>
+										<view>{{item.val}}分钟</view>
+								</view>
+					</view>
+			</view>
+			<view class="blankPage" wx:if="{{motionTypeData==''}}">
+          <view class="tip">完成记录才能获得分析报告哦</view>
+          <view class="button" bindtap="jumpPage">去记录</view>
+			</view>
+			<!-- 运动记录良好，继续保持！ -->
+			<!-- <view class="content_box assessment" >
+						<view class="content_title"><image  class="good" src="{{imgUrl}}/motionReport/点赞.png"></image>运动记录良好，继续保持！</view>
+						<view class="contentTitle">
+								健身和营养专家指出，现代都市中人们的体力劳动越来越少，脑力劳动和工作压力越来越大，人的身体机能按照现在的生活模式运行是逐步减退的。因此要通过运动来提高整个身体的防御能力，包括肌肉的、骨骼的，还有整个内脏系统和身体循环系统的改善。
+						</view>
+			</view> -->
+	  </scroll-view>	
+	</view>      

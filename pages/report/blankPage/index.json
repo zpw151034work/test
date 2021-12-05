@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "nav-bar": "/commpents/navbar-backHome/index",
+    "ec-canvas": "../../../commpents/ec-canvas/ec-canvas"
+  },
+  "disableScroll":true
+}
+  

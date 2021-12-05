@@ -1,0 +1,84 @@
+<view class="container">
+	<scroll-view  class="scroll">
+		<view class="info">
+			<view class="global_background">
+				<view class="hearder_img">
+					<image wx:if="{{avatarUrl}}" src="{{avatarUrl}}"></image>
+					<open-data wx:if="{{!avatarUrl}}" type="userAvatarUrl"></open-data>
+				</view>
+				<view class="name">{{userName}}</view>
+				<view class="editingMaterials" wx:if="{{false}}">编辑资料</view>
+			</view>
+			<view class="tab_title">
+
+				<van-cell icon="idcard" is-link link-type="navigateTo">
+					<view slot="title" class="slot" bindtap="iHealthClick">
+						<view class="van-cell-text">AI健康评测</view>
+					</view>
+				</van-cell>
+				<van-cell icon="idcard" is-link link-type="navigateTo">
+					<view slot="title" class="slot" bindtap="iHealthScanClick">
+						<view class="van-cell-text">扫码获取AI健康评测</view>
+					</view>
+				</van-cell>
+
+				<van-cell icon="idcard" is-link link-type="navigateTo" url="../baseInfo/index" wx:if="{{false}}">
+					<view slot="title" class="slot">
+						<view class="van-cell-text">基本信息</view>
+					</view>
+				</van-cell>
+				<van-cell icon="contact" is-link link-type="navigateTo" wx:if="{{false}}">
+					<view slot="title">
+						<view class="van-cell-text">我的医生</view>
+					</view>
+				</van-cell>
+				<van-cell icon="envelop-o" is-link link-type="navigateTo" wx:if="{{false}}">
+					<view slot="title">
+						<view class="van-cell-text">我的消息</view>
+					</view>
+				</van-cell>
+				<van-cell icon="like-o" is-link link-type="navigateTo" wx:if="{{false}}">
+					<view slot="title">
+						<view class="van-cell-text">我的收藏</view>
+					</view>
+				</van-cell>
+				<van-cell icon="coupon-o" is-link link-type="navigateTo" wx:if="{{false}}">
+					<view slot="title">
+						<view class="van-cell-text">优惠券</view>
+					</view>
+				</van-cell>
+			</view>
+			<view class="position_box">
+				<view class="content_box">
+					<van-cell icon="question-o" is-link link-type="navigateTo">
+						<view slot="title" class="slot" bindtap="helpFeedBackClick">
+							<view class="van-cell-text">帮助与反馈</view>
+						</view>
+					</van-cell>
+					<van-cell icon="setting-o" is-link link-type="navigateTo">
+						<view slot="title" bindtap="setClick">
+							<view class="van-cell-text">版本</view>
+							<van-tag type="danger"></van-tag>
+						</view>
+					</van-cell>
+					<van-cell icon="replay" is-link link-type="navigateTo" wx:if="{{tourist=='tourist'}}" bindtap="signOut">
+						<view slot="title">
+							<view class="van-cell-text">退出</view>
+							<van-tag type="danger"></van-tag>
+						</view>
+					</van-cell>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view class="zan-dialog" wx:if="{{showDialog}}">
+		<!-- 如果想点击弹窗外不隐藏，取消bindtap点击事件即可 -->
+		<view class="zan-dialog__container">
+			<view style='padding:100rpx;' class="dialogContent">
+				<text>意见反馈</text>
+				<editor class="weuiInput" placeholder="请输入意见" />
+				<button class="sureBtnClic" bindtap="sureBtnClick">确定</button>
+			</view>
+		</view>
+	</view>
+</view>

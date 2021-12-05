@@ -1,0 +1,22 @@
+<!--index.wxml-->
+
+<view class="container">
+   <view class="title-top">
+      <image src='{{imgUrl}}/empower/logo.png'></image>
+   </view>
+   <view class="title-bottom">开启健康管理</view>
+    <button class="empower" wx:if="{{phoneShow}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >获取手机号</button> 
+   <!-- <button class="empower" wx:if="{{phoneShow}}" bindtap="phoneNumberTest">获取手机号</button> -->
+
+   <button class="empower" wx:if="{{weChat}}" bindtap="getUserProfile">微信授权登录</button>
+   <!-- <view bindtap="cancelBtn" class="cancelBtn">取消</view> -->
+   <view class="explain">
+      <van-checkbox value="{{ checked }}" bind:change="changeCheckbox" checked-color="#429E38" icon-size="25px">
+         我已阅读并同意《健康管理服务协议》</van-checkbox>
+   </view>
+   <view class="dialog">
+      <wxc-dialog class="wxc-dialog" title="{{loginInfo.title}}" content="{{loginInfo.content}}"
+         logName="{{loginInfo.logName}}" logImage="{{loginInfo.logImage}}" bindcancel="onCancel"
+         bindconfirm="onConfirm"></wxc-dialog>
+   </view>
+</view>

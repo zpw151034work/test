@@ -1,0 +1,32 @@
+/* pages/healthassessment/index.wxss */
+.container{
+	width:100%;
+	background:#eee;
+	height: 800rpx;
+	box-sizing: border-box;
+}
+.van-cell{
+	height: 162rpx;
+	
+}
+.van-image{
+width:84rpx;
+height:84rpx;
+border-radius: 10rpx;
+border:3rpx solid #fff;
+
+}
+.cell-slot{
+	display:flex;	
+	border-radius:10rpx;
+}
+
+.cell-title{
+		font-size:28rpx;
+		color:#333;
+		font-weight: 600;
+}
+.cell-reason{
+	font-size:24rpx;
+	color:#909399;
+}

@@ -1,0 +1,61 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);'>
+  <view class="viewBg">
+    <view class="progress-box">
+      <progress percent="20" show-info font-size="30rpx" stroke-width="8"></progress>
+    </view>
+    <text class="title">{{title}}</text>
+    <view class="contentTheme">
+      <view class="search">
+        <input bindinput="bindKeyInput" bindtap="buttonClick" />
+        <image src="../../../assets/el-icon-search.png" class="image"></image>
+      </view>
+      <view class="contentBox">
+        <scroll-view class="scrollTheme" scroll-y>
+          <view wx:for="{{dataActive}}" class="item" wx:for-item='item' data-item="{{item}}" data-index="{{index}}"
+            bindtap="itemClear">
+            <text>{{item.name}}</text>
+            <image src="../../../assets/search-delete.png "></image>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="titleTip">
+        <view class="small smallL"></view>
+        <view class="medium mediumL"></view>
+        <view class="big bigL"></view>
+        <view class="fl tltleText">常见疾病</view>
+        <view class="big bigR"></view>
+        <view class="medium mediumR"></view>
+        <view class="small smallR"></view>
+      </view>
+      <view class="commonDiseases">
+        <scroll-view class="scrollTheme" scroll-y>
+          <view class="commonDiseasesLay" wx:for="{{commonData}}" wx:for-item='item' >
+            <text class="commonDiseasesItem" bindtap="itemClick" data-item="{{item}}"
+            data-index="{{index}}">{{item.name}}</text>
+          </view>
+        </scroll-view>
+      </view>
+      <view class="searchData" wx:if="{{isShow}}">
+        <scroll-view class="scrollTheme" scroll-y>
+          <view>
+            <text class="item" wx:for="{{searchData}}" wx:for-item='item' data-item="{{item}}" data-index="{{index}}"
+              bindtap="itemclickAdd">{{item.name}}</text>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="bottomBg">
+      <view class="backTheme">
+        <text style="text-align:center" bindtap="backFun">返回</text>
+      </view>
+      <view class="sureTheme">
+        <text style="text-align:center" bindtap="sureFun">确定</text>
+      </view>
+    </view>
+    <view class="bottomPhoneLay">
+      如有任何疑问，请致电(010) 5272 9739
+    </view>
+  </view>
+</view>

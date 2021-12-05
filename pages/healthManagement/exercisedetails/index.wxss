@@ -1,0 +1,24 @@
+/* pages/healthassessment/index.wxss */
+.container{
+	width:750rpx;
+	background:#fff;
+  box-sizing: border-box;
+  overflow:auto;
+}
+.question{
+  color:#000000;
+  font-size: 42rpx;
+  width: 750rpx;
+  height:120rpx;
+  line-height: 120rpx;
+}
+.answer{
+  text-indent: 2em;
+  color:#4A4A4A;
+  font-size: 28rpx;
+}
+.contentBox{
+  width:662rpx;
+  margin:0 auto;
+}
+

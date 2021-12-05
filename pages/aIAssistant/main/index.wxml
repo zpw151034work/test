@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<!--pages/healthassessment/index.wxml-->
+  <nav-bar navbar-data='{{navbarData}}'></nav-bar>
+	<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+     <scroll-view style="width:750rpx;margin:0 auto;">
+		   <view style="height:32rpx;width:750rpx;"></view>
+	     <view class="Icon">
+			     <image src="{{imgUrl}}/aIAssistant/机器人.png"></image>
+			 </view>
+       <view class="topText" style="margin-bottom:40rpx;">您好，小睿AI助手为您服务！</view>
+       <view class="main-chat">
+			  <view>
+				  <!-- 机器人 -->
+          <view  class="padding clearfix" style="margin-bottom:40rpx;">
+                <image class="left-Avatar padding_half" src="{{imgUrl}}/aIAssistant/机器人.png" ></image>
+                <view class="left-Triangle"></view>
+                <view class="left-speech-message padding_half" bindtap="playRobotSpeech">
+                  <view style="display:inline-block; padding:10rpx;"  class="robotContent">
+                     <view>Hi，很高心我们遇见了！您可以尝试让我帮你做这些：</view>
+										<view bindtap="intelligentRecording">· 智能记录 </view>
+										<view bindtap="questionsAnswer">· 随问随答</view>
+                  </view>
+                </view>
+          </view >
+         <!-- 自己 -->
+           <view  class="padding clearfix" style="margin-bottom:40rpx;" wx:if="{{meShow == true}}">
+                <image class="right-Avatar padding_half"  src="{{myImg}}" ></image>
+                <view class="right-Triangle"></view>
+                <view class="right-speech-message padding_half"  bindtap="playSpeech">
+                  <view style="display:inline-block;padding:10rpx;" >
+                    <view style="color:#FFFFFF;background:#64B55B;">智能记录</view>
+                  </view>
+                </view>
+           </view>
+					<!-- 机器人 -->
+           <view  class="padding clearfix"  style="margin-bottom:40rpx;" wx:if="{{robotShow == true}}"> 
+                <image class="left-Avatar padding_half"  src="{{imgUrl}}/aIAssistant/机器人.png"  ></image>
+                  <view class="left-Triangle"></view>
+                  <view class="left-speech-message padding_half" bindtap="playRobotSpeech">
+                    <view style="display:inline-block; padding:10rpx;"  class="robotContent">
+                      <view>请在下方选择你想记录的问题：</view>
+                      <view bindtap="Diet">· 记录饮食 </view>  
+                      <view bindtap="exercise">· 记录运动</view>
+                      <view bindtap="sleep">· 记录睡眠</view>
+                      <view bindtap="feeling">· 记录感受</view>
+                    </view>
+                  </view>
+           </view>
+        </view>
+       <view class="weui-icon_success"></view>
+			 </view> 
+		 </scroll-view>
+	</view>
+
+
+

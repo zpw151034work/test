@@ -1,0 +1,193 @@
+@import '../../../assets/base64.wxss';
+@import '../../../assets/base.wxss';
+/* 页面样式 */
+.content_box{
+	margin-bottom:40rpx;
+}
+.tab_text {
+	font-size: 32rpx;
+	color: #333;
+	font-weight: 600;
+	position: absolute;
+	top: 20rpx;
+	left: 32rpx;
+}
+.tab_button {
+	display: flex;
+	position: absolute;
+	top: 112rpx;
+	font-size: 24rpx;
+	color: #666;
+	width: 640rpx;
+	height: 132rpx;
+	margin-left: 32rpx;
+}
+.tab_button .item {
+	margin-left: 6rpx;
+}
+.tab_button .item image {
+	width: 90rpx;
+	height: 90rpx;
+}
+.tab_button .item view {
+	font-size: 28rpx;
+	line-height: 40rpx;
+	text-align: center;
+	color: #333;
+}
+.sleep_content {
+	display: flex;
+	width: 662rpx !important;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	align-items: center;
+	border-radius: 10rpx;
+}
+
+
+.sleep_status {
+	width: 100%;
+	height: auto;
+	font-size: 48rpx;
+	text-align: center;
+	color: #59B34E;
+}
+.sleep_content {
+	width: 654rpx;
+	background: #F4FAF3;
+	margin: 0 auto;
+}
+
+.sleep_content .item {
+	width: 590rpx;
+	padding: 32rpx;
+}
+
+.sleep_content .item .icon {
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background: #B5DBA8;
+	display: inline-block;
+	margin-right: 10rpx;
+}
+
+.sleep_content .item .title {
+	margin-left: 10rpx;
+	font-size: 28rpx;
+	font-weight: bold;
+	color: #4A4A4A;
+}
+
+.sleep_content .item .content {
+	font-size: 28rpx;
+	color: #4A4A4A;
+}
+
+.sleep_content .item .content view {
+	width: 162rpx;
+	height: 90rpx;
+	font-size: 28rpx;
+	color: #666;
+	float: left;
+}
+
+.sleep_content .item .content view image {
+	width: 162rpx;
+	height: 90rpx;
+}
+
+/* 健康需求 */
+.nutritionalNeeds {
+	height: 232rpx;
+	width: 702rpx;
+}
+
+.tab_button {
+	position: absolute;
+	top: 112rpx;
+	width: 640rpx;
+	height: 132rpx;
+	margin-left: 32rpx;
+}
+
+/* 睡具建议 */
+.bedding {
+	width: 410rpx !important;
+	margin: auto;
+}
+
+.bedding text {
+	display: block;
+	width: 200rpx;
+	float: left;
+}
+
+
+/* 两列列表样式 start */
+.gridview {
+	position: relative;
+	margin-left: 60rpx;
+	margin-bottom: 20rpx;
+}
+
+.gridview-item {
+	float: left;
+	width: 50%;
+	color: #9B9B9B;
+	font-size: 28rpx;
+	box-sizing: border-box;
+	margin-bottom: 20rpx;
+}
+/* 两列列表样式 end */
+
+.horizontalline {
+	width: 610px;
+	height: 2px;
+	margin-left: 30rpx;
+	margin-right: 30rpx;
+	background: #F0F1F0;
+}
+
+.sectionTitleTop{
+	font-size: 32rpx;
+	color: #000000;
+	font-weight: bold;
+	margin-bottom:10rpx;
+	padding-top:20rpx;
+	padding-left:30rpx;
+}
+.sectionTitle{
+	font-size: 32rpx;
+	color: #000000;
+	font-weight: bold;
+	margin-left: 45rpx;
+	margin-bottom: 30rpx;
+}
+
+.top_content_box{
+	width: 702rpx;
+	position: absolute;
+	top: 254rpx;
+	margin-bottom:40rpx;
+	background: #fff;
+	border-radius: 20rpx;
+	margin-left: 26rpx;
+}
+ /* 固定下方框子 */
+.background_position{
+	 width:702rpx;
+	 margin:0 auto;
+	 position: relative;
+	 top:730rpx;
+	 background:#fff;
+	border-radius: 20rpx;
+	 padding:10rpx 0 ;
+	 }
+.sleepProgram .top_content_box  {
+	padding-bottom:30rpx;
+	margin-bottom: 0rpx !important;
+}
+.border_radius{
+	border-radius: 20rpx;
+}

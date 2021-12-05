@@ -1,0 +1,9 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+	 <image src="{{imgUrl}}/newImages/blankPage.png"></image>
+	  <view  class="title_tip" >
+		  完成记录才能获得分析报告哦
+		</view>
+		<view class="button" bindtap="jumpPage">去记录</view>
+</view>

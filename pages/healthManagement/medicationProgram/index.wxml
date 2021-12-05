@@ -1,0 +1,52 @@
+<view class="container" style="height:calc(100vh - {{statusBarHeight+44}}px);" >
+	<scroll-view class="scrollView" style="padding-bottom:100rpx;background:#F9FAFC;min-height:1200rpx;">
+		<view class="global_background">
+		</view>
+		<view class="positionBox" wx:if="{{pageShowDate!=''}}">
+			<view class="medication">
+				<view class="tabItem " wx:for="{{pageShowDate}}" wx:for-item='itemd' wx:for-index="index">
+					<view class="clearfix tabBox">
+						<view class="tab_text fl">
+							{{itemd.name}}
+						</view>
+						<view class="tab_name fr clearfix">
+							<view class="name fl" style="font-size:28rpx;padding-right:20rpx;padding-top:8rpx;color:#9B9B9B;">
+								{{itemd.isUseTitle}}
+							</view>
+							<view class="swich fr">
+								<van-switch checked="{{itemd.isUse == 2}}" data-item="{{itemd}}" data-index="{{index}}"
+									bind:change="onChangeSwitch" size="30rpx" style="display:inline-block" inactive-color="#fff"
+									active-color="#64B55B" />
+							</view>
+						</view>
+					</view>
+					<view wx:for="{{itemd.sketch}}" wx:for-item="itemSket" class="echartsBox">
+						<view style="margin-top:10rpx;font-size:28rpx;color:#4A4A4A">{{itemSket}}</view>
+					</view>
+					<view class="tip clearfix">
+						<view class="item" wx:for="{{itemd.other}}" wx:for-item='ite' wx:for-index="index">
+							<text></text>
+							<text bindtap="sixBtnClick" data-item="{{ite}}"
+								style="font-size:28rpx;color:#64B55B;font-weight:blod">{{ite.name}}</text>
+						</view>
+					</view>
+				</view>
+	
+			</view>
+		</view>
+		<view class="positionBox2" wx:if="{{pageShowDate==''}}">
+			尚未添加常服用的药品
+		</view>
+	</scroll-view>
+	<view class="bottomButton">
+				<view bindtap="gotoAddDrug"  class="button">添加常用药品</view>
+				  <view wx:if="{{showOrHide == 2}}" bindtap="showHideClick" class="bottomView clearfix">
+					<image src="{{imgUrl}}/drugAdd/showEye.png" class="bottomEye"></image>
+						<text class="bottomBtn"> 显示已停止服用的药品</text>
+					</view>
+					<view wx:if="{{showOrHide == 1}}" bindtap="showHideClick" class="bottomView">
+					<image src="{{imgUrl}}/drugAdd/closeEye.png" class="bottomEye"></image>
+						<text class="bottomBtn"> 隐藏已停止服用的药品</text>
+					</view>	
+	</view>
+</view>

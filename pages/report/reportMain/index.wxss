@@ -1,0 +1,48 @@
+/* pages/healthassessment/index.wxss */
+.container{
+	position: absolute;
+	width:750rpx;
+ margin:0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+	background:#fff;
+	}
+.container .item{
+	width: 702rpx;
+	margin: 0 auto;
+	height:180rpx;
+	margin-top: 40rpx;
+}
+.container .item image{
+	width:702rpx;
+	height:180rpx;
+}
+.contentBox{
+ width:702rpx;
+	height:150rpx;
+	margin:0 auto;
+	margin-top:40rpx;
+}
+.contentBox .title{
+	font-size:32rpx;
+	color:#333;
+}
+.tools{
+	display: flex;
+ flex-wrap: wrap; 
+	justify-items:flex-start;
+	}
+.tools .item{
+	flex-grow:0;
+	width:160rpx;
+	height:110rpx;
+	font-size:20rpx;
+	color:#fff;
+	text-align: center;
+	line-height:50rpx;
+	}
+	.tools .item image{
+		width:160rpx;
+		height:110rpx;
+	}
+	

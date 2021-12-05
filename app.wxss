@@ -1,0 +1,54 @@
+pages {
+  position: relative;
+  z-index: 9999998;
+  background: #fff;
+}
+view,
+text,
+.text {
+  margin: 0;
+  font-family: "pingfang SC", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+
+}
+/*滚动条隐藏*/
+::-webkit-scrollbar {
+ width: 0;
+ height: 0;
+color: transparent;
+display: none;
+}
+/*清除浮动*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float:right;
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: 'vant-icon-temp';
+  font-style: normal;
+  font-display: auto;
+  src: url('https://img01.yzcdn.cn/vant/vant-icon-84f687.woff2') format('woff2'),
+    url('https://img01.yzcdn.cn/vant/vant-icon-84f687.woff') format('woff'),
+    url('https://img01.yzcdn.cn/vant/vant-icon-84f687.ttf') format('truetype');
+}
+.van-icon {
+  font-family: 'vant-icon-temp' !important;
+} 

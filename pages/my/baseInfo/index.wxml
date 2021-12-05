@@ -1,0 +1,14 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh -{{statusBarHeight}}px)'>
+	<van-cell-group>
+  <van-cell title="姓名" value="{{userName}}" />
+		<van-cell title="性别" value="{{sex}}" />
+		<van-cell title="出生日期" value="{{birthday}}" />
+		<van-cell title="身高" value="{{height}}cm" />
+		<van-cell title="当前体重" value="{{weight}}kg" />
+		<van-cell title="确诊疾病" value="{{disease}}" />
+		<van-cell title="既往史" value="{{diseaseHistory}}" />  
+		<!-- <van-cell title="特殊阶段*" value="无" /> -->
+</van-cell-group>
+</view>    

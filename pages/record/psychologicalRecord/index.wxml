@@ -1,0 +1,54 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+	<scroll-view style="width:750rpx;margin:0 auto;padding-bottom:60rpx;">
+		<view class="date">
+			<view class="clearfix timeButton" bindtap="onDisplay">
+				 <view class="fr timeButtonRight" >
+					<van-icon name="clock-o" />
+				 </view>
+				  <view class="fr timeButtonCenter" ></view>
+				 <view class="fr timeButtonLeft" >{{date}}</view>
+		 </view>
+		 <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" min-date="{{ minDate }}" max-date="{{maxDate}}" color="#429E38" default-date="{{date}}"/>
+	 </view>
+		<view>
+			<!-- 今日心情 -->
+				<view class="content_box" >
+						<view class="content_title">今日心情</view>
+						<view class="sleepState todayMood">
+								<view class="item"  wx:for="{{todayMoodData}}" wx:for-item='item' wx:for-index="index" data-item="{{item}}"   data-index="{{index}}"
+                 bindtap="todayMoodClick">
+										<image src="{{item.isActive?item.image:item.imageActiive}}"></image>
+										<text style="color:{{item.isActive ? '#4A4A4A':'#999'}}">{{item.name}}</text>
+								</view>
+						</view>
+			</view>
+			<!-- 情绪影响因素 -->
+			<view class="content_box" >
+						<view class="content_title">情绪影响因素</view>
+						<view class="emotionalFactors">
+								<view class="item"  wx:for="{{emotionalFactorsData}}" wx:for-item='item' wx:for-index="index" 
+         data-item="{{item}}"   data-index="{{index}}"
+         bindtap="emotionalFactorsClick">
+									<image src="{{item.isActive?item.image:item.imageActiive}}"></image>
+									<text style="color:{{item.isActive ? '#4A4A4A':'#999'}}">{{item.name}}</text>
+								</view>
+						</view>
+			</view>
+			<!-- 调节情绪方法 -->  
+			<view class="content_box clearfix" >
+						<view class="content_title fl" >调节情绪方法</view>
+						<view class=" base_info emotionRegulation">
+								<view class="item" wx:for="{{emotionRegulationData}}" wx:for-item='item' wx:for-index="index" data-item="{{item}}"   
+								data-index="{{index}}" bindtap="emotionRegulationClick" style="color:{{item.isActive ? '#4A9E41':'#999'}}">
+								{{item.name}}
+								</view>		
+						</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view class="{{isIphoneX ?'tipX':'tip'}}">
+				<view class="button" bindtap="save">完成</view> 
+	</view>
+</view>  

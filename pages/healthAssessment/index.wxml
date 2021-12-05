@@ -1,0 +1,131 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight+34}}px);'>
+  <scroll-view style="width:750rpx;margin:0 auto;padding-bottom:40rpx;">
+    <view class="content_box echartsBox">
+      <view class="chMedicine_info">
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{healthScore}}"></ec-canvas>
+      </view>
+    </view>
+    <!-- 健康得分 -->
+    <view class="healthScore">
+      <view>健康得分：{{patientHealthScore}}</view>
+    </view>
+    <!-- 基本信息 -->
+    <view class="content_box">
+      <view class="content_title">基本信息</view>
+      <view class="base_info">
+        <view class="item">
+          <view class="name">姓名：</view>
+          <view class="content">{{patientName}}</view>
+        </view>
+        <view class="item">
+          <view class="inner">性别：</view>
+          <view class="content">{{patientSex}}</view>
+        </view>
+        <view class="item">
+          <view class="inner">年龄：</view>
+          <view class="content">{{patientAge}}</view>
+        </view>
+      </view>
+      <view class="base_info">
+        <view class="item">
+          <view class="name">确诊疾病：</view>
+          <view class="content">{{patientDisease}}</view>
+        </view>
+      </view>
+      <view class="base_info">
+        <view class="item">
+          <view class="name">当前阶段：</view>
+          <view class="content">{{patientDiseaseStage}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- 管理评价 -->
+    <view class="content_box">
+      <view class="content_title">管理评价</view>
+      <view class="base_manage">
+        <!-- <view style="width:654rpx;margin:0 auto; padding-top:32rpx;">
+          <van-button size="small" round type="primary" block>综合得分：{{patientHealthScore}} 分</van-button>
+        </view>
+        <view class="manage_title">
+          <view class="item">
+            <view class="circle"></view>
+            <view style="margin-left:10rpx; font-size:20rpx">本次健康管理评估</view>
+          </view>
+          <view class="item">
+            <view class="circle2">
+            </view>
+            <view style="margin-left:10rpx; font-size:20rpx">本次管理结束预期</view>
+          </view>
+          <view class="item">
+            <view class="circle3">
+            </view>
+            <view style="margin-left:10rpx; font-size:20rpx">健康状态</view>
+          </view>
+        </view> -->
+        <!-- <view class="health_score_background" style="border:1rpx solid red;">
+        <view class="healthcircle1" wx:if="{{manageAssessment == 0}}"></view>
+        <view class="healthcircle2" wx:if="{{manageAssessment == 1}}"></view>
+        <view class="healthcircle3" wx:if="{{manageAssessment == 2}}"></view>
+        </view> -->
+        <view class="health_score_background">
+          <ec-canvas id="mychart-dom-bar1" canvas-id="mychart-bar1" ec="{{healthEvaluation}}" ></ec-canvas>
+        </view>
+      </view>
+    </view>
+    <!--风险评估-->
+    <view class="content_box assessment">
+      <view class="content_title">风险评估</view>
+       <plug-in plugin-data='{{pluginDataRisk}}'></plug-in>
+    </view>
+    <!-- 健康管理目标 -->
+    <view class="content_box">
+      <view class="content_title">健康管理目标</view>
+      <view class="base_info">
+        <view class="item">
+          <view >目标类型：</view>
+          <view>{{healthAssmentTagart}}</view>
+        </view>
+      </view>
+    </view>
+    <!--心理评估-->
+    <view class="content_box">
+      <view class="content_title">心理评估</view>
+       <plug-in plugin-data='{{pluginDataPsychology}}'></plug-in>
+    </view>
+    <!--睡眠评估-->
+    <view class="content_box assessment">
+      <view class="content_title">睡眠评估</view>
+       <plug-in plugin-data='{{pluginDataSleep}}'></plug-in>
+    </view>
+    <!--运动评估-->
+    <view class="content_box assessment">
+      <view class="content_title">运动评估</view>
+       <plug-in plugin-data='{{pluginDataSport}}'></plug-in>
+    </view>
+    <!--营养评估-->
+    <view class="content_box assessment">
+      <view class="content_title">营养评估</view>
+       <plug-in plugin-data='{{pluginDataNutrition}}'></plug-in>
+    </view>
+    <!-- 护理评估 -->
+    <view class="content_box">
+      <view class="content_title">护理评估</view>
+      <view class="base_info">
+        <view class="item">
+          <view class="nurseScore">护理评级：</view>
+          <view class="nurseScorebackgroudThem" wx:if="{{nurseAssessment == 0}}">医学护理</view>
+          <view class="nurseScoreUnSelected" wx:else>医学护理</view>
+          <view class="nurseScorebackgroudThem" wx:if="{{nurseAssessment == 1}}">家庭护理</view>
+          <view class="nurseScoreUnSelected" wx:else>家庭护理</view>
+          <view class="nurseScorebackgroudThem" wx:if="{{nurseAssessment == 2}}">自我护理</view>
+          <view class="nurseScoreUnSelected" wx:else>自我护理</view>
+        </view>
+      </view>
+    </view>
+    <view class=" bottom_button">
+      <van-button round type="primary" block bindtap="btnClick">查看我的健康管理方案</van-button>
+    </view>
+  </scroll-view>
+</view>

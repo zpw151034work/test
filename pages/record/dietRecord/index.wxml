@@ -1,0 +1,320 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px)'>
+	<scroll-view style="width:750rpx;padding_bottom:calc(100rpx+{{envsafe-area-inset-bottom}})">
+			<view class="date">
+				<!-- <van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" /> -->
+				<!-- <van-cell value="{{ date }}" min-date bind:click="onDisplay" >
+					<van-icon slot="right-icon" name="clock-o" class="custom-icon" />
+				</van-cell style="border:0rpx !important;">  -->
+				<view class="clearfix timeButton"  bindtap="onDisplay">
+						<view class="fr timeButtonRight" >
+							<van-icon name="clock-o" />
+						</view>
+							<view class="fr timeButtonCenter" ></view>
+						<view class="fr timeButtonLeft" >{{date}}</view>
+				</view>
+				<van-calendar show="{{ show }}" bind:close="onCloseCalendar" min-date="{{ minDate }}" max-date="{{maxDate}}" bind:confirm="onConfirm" color="#429E38" default-date="{{date}}"/>
+			
+			</view>
+			<!-- 建议图片 -->
+			<view class="dataShow clearfix">
+				<view class="fl item">
+					<text style="	font-size:20rpx;">建议摄入</text>
+					<text class="fontWeight">{{recommended}}</text>
+				</view>
+				<view class="fl middle">
+				    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{healthScore}}" ></ec-canvas> 
+				</view>
+				<view class="fl item">
+					<text style="	font-size:20rpx;">运动消耗</text>
+					<text class="fontWeight">{{motionRecordHeat}}</text>
+				</view>
+			</view>
+			<view wx:if="{{pageShow}}">
+				<view class="content_box " wx:if="{{breakfastData!=''}}" >
+						<van-cell border="{{ false }}"  >
+							<view slot="title">
+								<van-tag class="van-cell-text fontWeight">早餐</van-tag>
+								<van-tag class="van-cell-text  emptycell" ></van-tag>
+								<van-tag type="danger" class="vantHeat" >{{breakfastHeat}}千卡</van-tag>
+							</view>
+						</van-cell>
+						<view class="base_info">
+							<view class="item"  wx:for="{{breakfastData}}" wx:for-item='item' wx:for-index="index" >
+								<van-swipe-cell right-width="{{80}}" >
+									<van-cell-group border="{{ false }}"  >
+										<van-cell value="" class="van-cell" value="{{item.heat}}千卡" is-link border="{{ false }}" data-item="{{item}}" data-index="{{index}}" bind:click="clickTap">
+											<view slot="title"  class="cell-slot">
+												<van-image width="42" height="42" src="{{host}}{{item.foodImg}}"
+													class="van-image" />
+												<view class="van-cell-text" style="margin-left:30rpx;">
+													<view class="cell-title">{{item.food}}</view>
+													<view class="cell-reason" wx:if="{{!item.motionMinutes}}">{{item.val}}/{{item.unitType}}</view>
+                          <view class="cell-reason" wx:if="{{item.motionMinutes}}">{{item.motionMinutes}}/{{item.unitType}}</view>
+												</view>
+											</view>
+										</van-cell>
+									</van-cell-group>
+									<view slot="right" class="delete" data-item="{{item}}" bindtap="foodRecordDelete">删除</view>
+								</van-swipe-cell>
+							</view>
+						</view>
+				</view>
+				<view class="content_box" wx:if="{{lunchData!=''}}">
+						<van-cell border="{{ false }}" >
+								<view slot="title">
+									<van-tag class="van-cell-text fontWeight">午餐</van-tag>
+									<van-tag class="van-cell-text  emptycell" ></van-tag>
+									<van-tag type="danger" class="vantHeat" >{{lunchHeat}}千卡</van-tag>
+							  </view>  
+							</van-cell>
+							<view class="base_info">
+								<view class="item"  wx:for="{{lunchData}}" wx:for-item='item' wx:for-index="index" >
+								<van-swipe-cell right-width="{{80}}">
+									<van-cell-group border="{{ false }}">
+										<van-cell value="" class="van-cell" value="{{item.heat}}千卡" is-link border="{{ false }}" data-item="{{item}}" data-index="{{index}}" bind:click="clickTap">
+											<view slot="title"  class="cell-slot">
+												<van-image width="42" height="42" src="{{host}}{{item.foodImg}}"
+													class="van-image" />
+												<view class="van-cell-text" style="margin-left:30rpx;">
+													<view class="cell-title">{{item.food}}</view>
+													<view class="cell-reason" wx:if="{{!item.motionMinutes}}">{{item.val}}/{{item.unitType}}</view>
+                          <view class="cell-reason" wx:if="{{item.motionMinutes}}">{{item.motionMinutes}}/{{item.unitType}}</view>
+												</view>
+											</view>
+										</van-cell>
+									</van-cell-group>
+									<view slot="right" class="delete" data-item="{{item}}" bindtap="foodRecordDelete">删除</view>
+								</van-swipe-cell>
+							</view>
+							</view>
+				</view>
+				<view class="content_box" wx:if="{{dinnerData!=''}}">
+							<van-cell border="{{ false }}" >
+								<view slot="title">
+									<van-tag class="van-cell-text fontWeight">晚餐</van-tag>
+									<van-tag class="van-cell-text  emptycell" ></van-tag>
+									<van-tag type="danger" class="vantHeat" >{{dinnerHeat}}千卡</van-tag>
+							  </view>  
+							</van-cell>
+							<view class="base_info">
+								<view class="item"  wx:for="{{dinnerData}}" wx:for-item='item' wx:for-index="index" >
+								<van-swipe-cell right-width="{{80}}">
+									<van-cell-group border="{{ false }}">
+										<van-cell value="" class="van-cell" value="{{item.heat}}千卡" is-link border="{{ false }}" data-item="{{item}}" data-index="{{index}}" bind:click="clickTap">
+											<view slot="title"  class="cell-slot">
+												<van-image width="42" height="42" src="{{host}}{{item.foodImg}}"
+													class="van-image" />
+												<view class="van-cell-text" style="margin-left:30rpx;">
+													<view class="cell-title">{{item.food}}</view>
+													<view class="cell-reason" wx:if="{{!item.motionMinutes}}">{{item.val}}/{{item.unitType}}</view>
+                          <view class="cell-reason" wx:if="{{item.motionMinutes}}">{{item.motionMinutes}}/{{item.unitType}}</view>
+												</view>
+											</view>
+										</van-cell>
+									</van-cell-group>
+									<view slot="right" class="delete" data-item="{{item}}" bindtap="foodRecordDelete">删除</view>
+								</van-swipe-cell>
+							</view>
+							</view>
+				</view>
+				<view class="content_box" wx:if="{{breakfastDataAdd!=''}}">
+						<van-cell border="{{ false }}" >
+								<view slot="title">
+									<van-tag class="van-cell-text fontWeight">早加餐</van-tag>
+									<van-tag class="van-cell-text  emptycell" ></van-tag>
+									<van-tag type="danger" class="vantHeat" >{{breakfastHeatAdd}}千卡</van-tag>
+							  </view>  
+							</van-cell>
+						<view class="base_info">
+							<view class="item"  wx:for="{{breakfastDataAdd}}" wx:for-item='item' wx:for-index="index" >
+								<van-swipe-cell right-width="{{80}}">
+									<van-cell-group border="{{ false }}">
+										<van-cell value="" class="van-cell" value="{{item.heat}}千卡" is-link border="{{ false }}" data-item="{{item}}" data-index="{{index}}" bind:click="clickTap">
+											<view slot="title"  class="cell-slot">
+												<van-image width="42" height="42" src="{{host}}{{item.foodImg}}"
+													class="van-image" />
+												<view class="van-cell-text" style="margin-left:30rpx;">
+													<view class="cell-title">{{item.food}}</view>
+													<view class="cell-reason" wx:if="{{!item.motionMinutes}}">{{item.val}}/{{item.unitType}}</view>
+                          <view class="cell-reason" wx:if="{{item.motionMinutes}}">{{item.motionMinutes}}/{{item.unitType}}</view>
+												</view>
+											</view>
+										</van-cell>
+									</van-cell-group>
+									<view slot="right" class="delete" data-item="{{item}}" bindtap="foodRecordDelete">删除</view>
+								</van-swipe-cell>
+							</view>
+						</view>
+				</view>
+				<view class="content_box" wx:if="{{lunchDataAdd!=''}}">
+							<van-cell border="{{ false }}" >
+								<view slot="title">
+									<van-tag class="van-cell-text fontWeight">午加餐</van-tag>
+									<van-tag class="van-cell-text  emptycell" ></van-tag>
+									<van-tag type="danger" class="vantHeat" >{{lunchHeatAdd}}千卡</van-tag>
+							  </view>
+							</van-cell>
+							<view class="base_info">
+								<view class="item"  wx:for="{{lunchDataAdd}}" wx:for-item='item' wx:for-index="index" >
+								<van-swipe-cell right-width="{{80}}">
+									<van-cell-group border="{{ false }}">
+										<van-cell value="" class="van-cell" value="{{item.heat}}千卡" is-link border="{{ false }}" data-item="{{item}}" data-index="{{index}}" bind:click="clickTap">
+											<view slot="title"  class="cell-slot">
+												<van-image width="42" height="42" src="{{host}}{{item.foodImg}}"
+													class="van-image" />
+												<view class="van-cell-text" style="margin-left:30rpx;">
+													<view class="cell-title">{{item.food}}</view>
+													<view class="cell-reason" wx:if="{{!item.motionMinutes}}">{{item.val}}/{{item.unitType}}</view>
+                          <view class="cell-reason" wx:if="{{item.motionMinutes}}">{{item.motionMinutes}}/{{item.unitType}}</view>
+												</view>
+											</view>
+										</van-cell>
+									</van-cell-group>
+									<view slot="right" class="delete" data-item="{{item}}" bindtap="foodRecordDelete">删除</view>
+								</van-swipe-cell>
+							</view>
+							</view>
+				</view>
+				<view class="content_box" wx:if="{{dinnerDataAdd!=''}}">
+							<van-cell border="{{ false }}" >
+								<view slot="title">
+									<van-tag class="van-cell-text fontWeight">晚加餐</van-tag>
+									<van-tag class="van-cell-text  emptycell" ></van-tag>
+									<van-tag type="danger" class="vantHeat" >{{dinnerHeatAdd}}千卡</van-tag>
+							  </view>
+							</van-cell>
+							<view class="base_info">
+								<view class="item"  wx:for="{{dinnerDataAdd}}" wx:for-item='item' wx:for-index="index" >
+								<van-swipe-cell right-width="{{80}}">
+									<van-cell-group border="{{ false }}">
+										<van-cell value="" class="van-cell" value="{{item.heat}}千卡" is-link border="{{ false }}" data-item="{{item}}" data-index="{{index}}" bind:click="clickTap">
+											<view slot="title"  class="cell-slot">
+												<van-image width="42" height="42" src="{{host}}{{item.foodImg}}"
+													class="van-image" />
+												<view class="van-cell-text" style="margin-left:30rpx;">
+													<view class="cell-title">{{item.food}}</view>
+													<view class="cell-reason" wx:if="{{!item.motionMinutes}}">{{item.val}}/{{item.unitType}}</view>
+                          <view class="cell-reason" wx:if="{{item.motionMinutes}}">{{item.motionMinutes}}/{{item.unitType}}</view>
+												</view>
+											</view>
+										</van-cell>
+									</van-cell-group>
+									<view slot="right" class="delete" data-item="{{item}}" bindtap="foodRecordDelete">删除</view>
+								</van-swipe-cell>
+							</view>
+							</view>
+				</view>
+
+				<view class="content_box" wx:if="{{motionRecordData!=''}}">
+					   <van-cell border="{{ false }}" >
+								<view slot="title">
+									<van-tag class="van-cell-text fontWeight">运动</van-tag>
+									<van-tag class="van-cell-text  emptycell" ></van-tag>
+									<van-tag type="danger" class="vantHeat" >{{motionRecordHeat}}千卡</van-tag>
+							  </view>
+							</van-cell>
+							<view class="base_info">
+								<view class="item" wx:for="{{motionRecordData}}" wx:for-item='item' wx:for-index="index">
+									<van-swipe-cell right-width="{{80}}">
+										<van-cell-group border="{{ false }}">
+											<van-cell value="" class="van-cell" value="{{item.heat}}千卡" is-link border="{{ false }}" >
+												<view slot="title"  class="cell-slot">
+													<van-image width="42" height="42" src="{{host}}{{item.img}}"
+														class="van-image" />
+													<view class="van-cell-text" style="margin-left:30rpx;">
+														<view class="cell-title">{{item.sport}}</view>
+														<view class="cell-reason" wx:if="{{!item.motionMinutes}}">{{item.val}}/分钟</view>
+													</view>
+												</view>
+											</van-cell>
+										</van-cell-group>
+										<view slot="right" class="delete" data-item="{{item}}" bindtap="motionRecordDelete">删除</view>
+									</van-swipe-cell>
+								</view>
+							</view>
+				</view>
+			</view>
+			<view wx:if="{{!pageShow}}" class="empty">
+						<view class="picture">
+								<image src="{{imgUrl}}/dietRecord/没有数据.png"></image>
+						</view>
+						<view class="emptyTextTop">还没有记录</view>
+						<view class="emptyText">请点击屏幕下方按钮来添加</view>
+						<view class="emptyButtton" >
+									<view>营养分析</view>
+									<view>饮食建议</view>
+						</view>
+						<view class="tip">完整记录三餐分析更准确</view>
+			</view>
+			<view style="height:168rpx;"></view>
+	</scroll-view>
+	<!--手动弹出窗 -->
+	<view class="dialog">
+		<van-dialog use-slot show="{{ showTanChu }}" data-item="{{dialogData}}" 
+			bind:confirm="dialogSave" width="350px">
+				<view class="dialogContent">
+					<view class="card">
+						<image src="{{host}}{{dialogData.foodImg}}"></image>
+						<view class="cardText">
+							<text>{{dialogData.foodName}}</text>
+							<text>{{dialogData.heat}}千卡/100克</text>
+						</view>
+					</view>
+					<view class="close" bindtap="onCloseDialog">
+						<van-icon name="cross" size="30px"/>
+					</view>
+					<view class="dialogInfo">
+						<view class="item" >
+							<text style="padding-top:30rpx;">{{changeHeat}}千卡</text>
+						</view>
+						<view class="item middle" >
+							<van-field value="{{ motionMinutes }}" border="{{ false }}" bind:change="onMinutesChange" placeholder='' input-align="center" placeholder=""
+							placeholder-style="color:#64B55B;font-size: 30rpx; text-align:center;display: block;" custom-style="text-align:center;" input-class="text-align:center;" />
+							<text>{{unit}}</text>
+						</view>
+						<view class="item" bindtap="clickImgShow">
+				      <image src="{{imgUrl}}/dietAdd222/balanceIcon.png"  style="width:30rpx;height:30rpx;margin-left:30rpx;"></image>
+							<!-- <text>估算重量</text> -->
+							<text></text>
+						</view>
+					</view>
+				</view>
+				<view class="swiper">
+				  <van-tabs active="{{ active }}"   bind:change="onChange" tab-active-class='activeClass'>
+						<van-tab   wx:for="{{dialogData.unitData}}" wx:for-item='item' title="{{item.amount}}"></van-tab>
+					</van-tabs> 
+				</view>
+		</van-dialog>
+ </view>
+</view>
+ <!-- //底部tabbar -->
+	<view class="bottomNav">
+		<view class="sleepState">
+			<view class="item" bindtap="dietRecordAdd1">
+				<image src="{{imgUrl}}/dietRecord/早餐.png"></image>
+				<text>+早餐</text>
+			</view>
+			<view class="item" bindtap="dietRecordAdd2">
+				<image src="{{imgUrl}}/dietRecord/午餐.png"></image>
+				<text>+午餐</text>
+			</view>
+			<view class="item" bindtap="dietRecordAdd3">
+				<image src="{{imgUrl}}/dietRecord/晚餐.png"></image>
+				<text>+晚餐</text>
+			</view>
+			<view class="item" bindtap="dietRecordAdd4">
+				<image src="{{imgUrl}}/dietRecord/加餐.png"></image>
+				<text>+加餐</text>
+			</view>
+			<view class="item" bindtap="motionRecordName">
+				<image src="{{imgUrl}}/dietRecord/运动.png"></image>
+				<text>+运动</text>
+			</view>
+		</view>
+	</view>
+<!-- //底部上拉弹框 -->
+<view>
+	<van-action-sheet show="{{ showTan }}" actions="{{ actions }}" bind:close="onCloseTan" bind:select="onSelect" />
+</view>

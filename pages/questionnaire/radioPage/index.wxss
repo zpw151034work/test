@@ -1,0 +1,98 @@
+/* pages/questionnaire/edittextPage/edittextThem.wxss */
+
+.viewBg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-box {
+  width: 90%;
+  margin-top: 50rpx;
+}
+
+.contentLayTheme {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 90%;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #59B34E;
+  text-align: center;
+  margin-top: 100rpx;
+}
+
+.contentTheme {
+  width: 90%;
+  height: 60%;
+  margin-top: 30rpx;
+}
+
+.scrollTheme {
+  height: 100%;
+}
+
+.forTheme {
+  width: 100%;
+  height: 100%;
+}
+
+.forItemTheme {
+  height: auto;
+  border: 1rpx solid #9B9B9B;
+  border-radius: 5rpx;
+  margin-bottom: 2%;
+  text-align: center;
+  padding: 3%;
+  font-size: 28rpx;
+}
+
+.bottomBg {
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.backTheme {
+  width: 35%;
+  height: 100rpx;
+  background: #ECEDEE;
+  border-radius: 50rpx;
+  color: #4A4A4A;
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sureTheme {
+  width: 35%;
+  height: 100rpx;
+  background: #59B34E;
+  border-radius: 50rpx;
+  color: #ffffff;
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bottomPhoneLay {
+  height: 50rpx;
+  margin-top: 40rpx;
+  font-size: 20rpx;
+  color: #9B9B9B;
+}

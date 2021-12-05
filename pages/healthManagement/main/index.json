@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "nav-bar": "/commpents/navbar-bg/index"
+  },
+  "backgroundColor":"#64B55B",
+  "disableScroll":true
+}
+  

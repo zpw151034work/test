@@ -1,0 +1,29 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);'>
+  <view class="viewBg">
+    <view class="progress-box">
+      <progress percent="{{percentData}}" show-info font-size="30rpx" stroke-width="8"></progress>
+    </view>
+    <text class="title">{{title}}</text>
+    <view class="contentTheme">
+      <picker class="pickerTheme" mode="selector" range="{{questionContent}}" value="{{index}}" bindchange="listenerPickerSelected">
+        <view class="pickerChoice">
+          <text class="pickerChoiceContent">{{chooseResult}}</text>
+          <text class="triangleUp"></text>
+        </view>
+      </picker>
+    </view>
+    <view class="bottomBg">
+      <view class="backTheme" wx:if="{{showBack}}">
+        <text style="text-align:center" bindtap="backFun">返回</text>
+      </view>
+      <view class="sureTheme">
+        <text style="text-align:center" bindtap="sureFun">确定</text>
+      </view>
+    </view>
+    <view class="bottomPhoneLay">
+      如有任何疑问，请致电(010) 5272 9739
+    </view>
+  </view>
+</view>

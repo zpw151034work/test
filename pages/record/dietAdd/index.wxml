@@ -1,0 +1,107 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}' class="{{infoShow?zIndex:''}}"></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+	<scroll-view style="width:750rpx;height:calc(100vh - {{statusBarHeightX}}px);" scroll-y='true'  bindscrolltolower="lower"  bindscrolltoupper="upper">
+		<!-- 搜索 -->
+		<view class="search">
+			<van-search value="{{ value }}"   shape="round" placeholder="请输入搜索关键词" bind:change="onChangeSearch" />
+		</view>
+		<view class="content_box" wx:if="{{foodData!=''}}">
+			<view class="base_info">
+				<view class="item" wx:for="{{foodData}}" wx:for-item='item' wx:for-index="index">
+					<van-cell value="" class="van-cell">
+						<view slot="title" class="cell-slot">
+							<van-image width="42" height="42" src="{{host}}{{item.foodImg}}" class="van-image" />
+							<view class="van-cell-text" style="margin-left:30rpx;">
+								<view class="cell-title">{{item.foodName}}</view>
+								<view class="cell-reason">{{item.heat}}千卡/100克</view>
+							</view>
+						</view>
+						<van-icon slot="right-icon" name="add-o" class="custom-icon" data-item="{{item}}" data-index="{{index}}"
+							bindtap="foodAddClick"  size="20px" style="margin-top:28rpx;"/>
+					</van-cell>
+				</view>
+			</view>
+			<view wx:if="{{showOrHide}}" class="loadMore" bindtap="loadMore">
+				加载更多
+			</view>
+		</view>
+		<view class="noData" wx:else>
+         <view class="img">
+				   <image src="{{imgUrl}}/noData/noData.png"></image>
+				 </view>
+		</view>
+		<view style="height:100rpx;width:100%;"></view>
+	</scroll-view>
+	<view>
+	<!--手动弹出窗 -->
+	<view class="dialog">
+			<van-dialog use-slot show="{{ show }}" data-item="{{dialogData}}" 
+				bind:close="onClose" bind:confirm="dialogSave"  style="width:750rpx;" width='350px'>
+				<view class="dialogContent">
+					<view class="card">
+						<image src="{{host}}{{dialogData.foodImg}}"></image>
+						<view class="cardText">
+							<text>{{dialogData.foodName}}</text>
+							<text>{{dialogData.heat}}千卡/100克</text>
+						</view>
+					</view>
+					<view class="close" bindtap="onClose">
+					  <van-icon name="cross" size="30px"/>
+					</view>
+					<view class="dialogInfo">
+						<view class="item" >
+							<text style="padding-top:30rpx;">{{changeHeat}}千卡</text>
+						</view>
+						<view class="item middle"  >
+							<van-field value="{{ motionMinutes }}" border="{{ false }}" bind:change="onMinutesChange" placeholder="" input-align="center"
+							placeholder-style="color:#64B55B;font-size: 30rpx; text-align:center;display: block;" custom-style="text-align:center;" input-class="text-align:center;" />
+							<text>{{unit}}</text>
+						</view>
+						<view class="item"  data-item="{{dialogData}}" bindtap="clickImgShow">
+						   <!-- <image xw:if="false" src="{{host}}{{dialogData.foodImg}}"></image> -->
+				      <image src="{{imgUrl}}/dietAdd222/balanceIcon.png"  style="width:30rpx;height:30rpx;margin-left:30rpx;"></image>
+							<!-- <text>估算重量</text> -->
+							<!-- <text></text>
+							<image style="width:100rpx;height:100rpx;border:1rpx solid red;z-index:1000;" src="{{host}}/{{img}}"></image> -->
+							
+						</view>
+					</view>
+				</view>
+				<view class="swiper">
+				  <van-tabs active="{{ active }}"   bind:change="onChange" tab-active-class='activeClass'>
+						<van-tab   wx:for="{{dialogData.unitData}}" wx:for-item='item' title="{{item.amount}}"></van-tab>
+					</van-tabs> 
+				</view>
+			</van-dialog>
+	</view>
+	<!-- 最下面页面button		 -->
+	<view class="clearfix tip">
+			<view wx:if="{{infoShow}}" class="infoDialog">
+				<view style="position: absolute;bottom:0;" class="infoBox">
+					<view class="item" wx:for="{{foodAddData}}" wx:for-item='item' wx:for-index="index">
+						<van-cell value="" class="van-cell" value="" border="false"  center='true' >
+							<view slot="title" class="cell-slot">
+								<van-image width="42" height="42" lazy-load src="{{host}}{{item.foodImg}}" class="van-image" />
+								<view class="van-cell-text" style="margin-left:30rpx;">
+									<view class="cell-title">{{item.foodName}}</view>
+									<view class="cell-reason">{{item.heat}}千卡/100克</view>
+								</view>
+							</view>
+							<van-icon slot="right-icon" name="delete" class="custom-icon" data-item="{{item}}" data-index="{{index}}"
+								bindtap="foodDeleteClick" size="20px" />
+						</van-cell>
+					</view>
+				</view>
+			</view>
+			<view class="ButtonBox">
+				<view class="tipButton" bindtap="infoShow">
+					<image src="{{imgUrl}}/dietAdd/餐.png"></image>
+					<view class="info">{{foodAddData.length}}</view>
+				</view>
+				<view class="button" bindtap="save">完成</view>
+			</view>
+	</view>
+	</view>
+<!-- <load-ing class="loading" loading-data="{{loadingData}}"></load-ing>  -->
+</view>

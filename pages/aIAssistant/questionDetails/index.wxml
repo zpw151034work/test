@@ -1,0 +1,9 @@
+<nav-bar navbar-data='{{navbarData}}'></nav-bar >
+<view class="container" style='position:relative;top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px)'>
+  <view   class="contentBox" style="height:calc(100vh - {{statusBarHeight}}px);">
+    <scroll-view >
+    <view class="question">{{question}}</view>
+    <view class="answer">{{answer}}</view>
+   </scroll-view>
+  </view>
+</view>  

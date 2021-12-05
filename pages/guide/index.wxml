@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+   <view class="scanningCode" bindtap="scanningCode" >
+    <image src="{{imgUrl}}/guide/scanningCode.png"></image>
+			</view>
+			<view class="evaluation" bindtap="evaluation">
+    <image src="{{imgUrl}}/guide/evaluation.png"></image>
+			</view>	
+			<view class="close" bindtap="close" >
+        <van-icon name="cross"  size="25px" />
+			</view>			
+</view>

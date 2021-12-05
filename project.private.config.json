@@ -1,0 +1,709 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": [
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/tcmProgram/index",
+          "pathName": "pages/healthManagement/tcmProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/medicationProgram/index",
+          "pathName": "pages/healthManagement/medicationProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/healthRecords/index",
+          "pathName": "pages/healthManagement/healthRecords/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/tcmProgram/index",
+          "pathName": "pages/healthManagement/tcmProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/medicationProgram/index",
+          "pathName": "pages/healthManagement/medicationProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/nutritionProgramme/index",
+          "pathName": "pages/healthManagement/nutritionProgramme/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietRecord/index",
+          "pathName": "pages/record/dietRecord/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/empower/index",
+          "pathName": "pages/empower/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/guide/index",
+          "pathName": "pages/guide/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthAssessment/index",
+          "pathName": "pages/healthAssessment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthAssessment/index",
+          "pathName": "\"pages/healthManagement/nutrition/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/nutrition/index",
+          "pathName": "pages/healthManagement/nutrition/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/nutrition/index",
+          "pathName": "pages/healthManagement/psychology/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/psychology/index",
+          "pathName": "pages/healthManagement/nutrition/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthAssessment/index",
+          "pathName": "pages/healthAssessment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/nutrition/index",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/healthRecords/index",
+          "pathName": "pages/healthManagement/healthRecords/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/home/index",
+          "pathName": "pages/my/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/baseInfo/index",
+          "pathName": "pages/my/baseInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/psychology/index",
+          "pathName": "pages/healthManagement/recommendedDiet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/recommendedDiet/index",
+          "pathName": "pages/healthManagement/recommendedDiet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/noRecommendedDiet/index",
+          "pathName": "pages/healthManagement/noRecommendedDiet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/noRecommendedDiet/index",
+          "pathName": "pages/healthManagement/noRecommendedDiet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/badRecipe/index",
+          "pathName": "pages/healthManagement/badRecipe/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/nutrition/index",
+          "pathName": "pages/healthManagement/exerciseProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/tcmProgram/index",
+          "pathName": "pages/healthManagement/tcmProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/medicationProgram/index",
+          "pathName": "pages/healthManagement/medicationProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/medicationProgram/index",
+          "pathName": "pages/healthManagement/medicationProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/sleepRecord/index",
+          "pathName": "pages/record/sleepRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietRecord/index",
+          "pathName": "pages/record/dietRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/motionRecord/index",
+          "pathName": "pages/record/motionRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/signRecord/index",
+          "pathName": "pages/record/signRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/drugRecord/index",
+          "pathName": "pages/record/drugRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/drugAdd/index",
+          "pathName": "pages/record/drugAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/healthWarning/index",
+          "pathName": "pages/record/healthWarning/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/aIAssistant/index",
+          "pathName": "pages/aIAssistant/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/healthRecords/index",
+          "pathName": "pages/healthManagement/healthRecords/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/healthRecords/index",
+          "pathName": "pages/healthManagement/healthRecords/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/serviceDetails/index",
+          "pathName": "pages/serviceDetails/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/medicationProgram/index",
+          "pathName": "pages/healthManagement/medicationProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/healthRecords/index",
+          "pathName": "pages/healthManagement/healthRecords/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/psychology/index",
+          "pathName": "pages/healthManagement/psychology/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/assessments/index",
+          "pathName": "pages/assessments/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/nutrition/index",
+          "pathName": "pages/healthManagement/nutrition/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/exerciseProgram/index",
+          "pathName": "pages/healthManagement/exerciseProgram/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/nutritionProgramme/index",
+          "pathName": "pages/healthManagement/nutritionProgramme/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/nutrition/index",
+          "pathName": "pages/healthManagement/nutrition/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/report/nutritionReport/index",
+          "pathName": "pages/report/nutritionReport/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/report/motionReport/index",
+          "pathName": "pages/report/motionReport/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietRecord/index",
+          "pathName": "pages/record/dietRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietRecord/index",
+          "pathName": "pages/record/dietRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietRecord/index",
+          "pathName": "pages/record/dietRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/sleepRecord/index",
+          "pathName": "pages/record/sleepRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/report/psychologyReport/index",
+          "pathName": "pages/report/psychologyReport/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/home/index",
+          "pathName": "pages/my/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthAssessment/index",
+          "pathName": "pages/healthAssessment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/assessments/index",
+          "pathName": "pages/assessments/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/report/psychologyReport/index",
+          "pathName": "pages/report/psychologyReport/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/program/index",
+          "pathName": "pages/healthManagement/program/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/aIAssistant/index",
+          "pathName": "pages/aIAssistant/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/voice/index",
+          "pathName": "pages/voice/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/sleepRecord/index",
+          "pathName": "pages/record/sleepRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/psychologicalRecord/index",
+          "pathName": "pages/record/psychologicalRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/drugRecord/index",
+          "pathName": "pages/record/drugRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/drugRecord/index",
+          "pathName": "pages/record/drugRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/drugRecord/index",
+          "pathName": "pages/record/drugRecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/drugAdd/index",
+          "pathName": "pages/record/drugAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/drugAdd/index",
+          "pathName": "pages/record/drugAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/aIAssistant/index",
+          "pathName": "pages/aIAssistant/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/aIAssistant/index",
+          "pathName": "pages/aIAssistant/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/voice/index",
+          "pathName": "pages/voice/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/main/index",
+          "pathName": "pages/healthManagement/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/main/index",
+          "pathName": "pages/healthManagement/main/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/report/nutritionReport/index",
+          "pathName": "pages/report/nutritionReport/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/program/index",
+          "pathName": "pages/healthManagement/program/index",
+          "query": "name=%E8%90%A5%E5%85%BB",
+          "scene": null
+        },
+        {
+          "name": "pages/healthAssessment/index",
+          "pathName": "pages/healthAssessment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Assessment/index",
+          "pathName": "pages/Assessment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/assessments/index",
+          "pathName": "pages/assessments/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/medicationProgram/index",
+          "pathName": "pages/healthManagement/medicationProgram/index",
+          "query": "name=%E8%90%A5%E5%85%BB",
+          "scene": null
+        },
+        {
+          "name": "pages/empower/index",
+          "pathName": "pages/empower/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/empower/index",
+          "pathName": "pages/empower/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/erroe/index",
+          "pathName": "pages/erroe/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/error/index",
+          "pathName": "pages/error/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/guide/index",
+          "pathName": "pages/guide/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/multipleChoice/index",
+          "pathName": "pages/questionnaire/multipleChoice/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/singleSearch/index",
+          "pathName": "pages/questionnaire/singleSearch/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/singleSearch/index",
+          "pathName": "pages/questionnaire/singleSearch/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/singleSearch/index",
+          "pathName": "pages/questionnaire/singleSearch/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/singleSearch/index",
+          "pathName": "pages/questionnaire/singleSearch/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/ageSelection/index",
+          "pathName": "pages/questionnaire/ageSelection/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/uploader/index",
+          "pathName": "pages/questionnaire/uploader/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/imageShow/index",
+          "pathName": "pages/questionnaire/imageShow/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/questionnaire/uploaderGuide/index",
+          "pathName": "pages/questionnaire/uploaderGuide/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/record/dietAdd/index",
+          "pathName": "pages/record/dietAdd/index",
+          "query": "title=%E6%B7%BB%E5%8A%A0%E6%97%A9%E9%A4%90&time=2021-09-07",
+          "scene": null
+        },
+        {
+          "name": "pages/healthManagement/program/index",
+          "pathName": "pages/healthManagement/program/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/report/blankPage/index",
+          "pathName": "pages/report/blankPage/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/index",
+          "pathName": "pages/home/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

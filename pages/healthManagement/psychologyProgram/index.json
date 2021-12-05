@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "nav-bar": "/commpents/navbar-bg/index",
+    "nav-tab":"/commpents/navTab/index"
+  },
+  "disableScroll":true
+
+}

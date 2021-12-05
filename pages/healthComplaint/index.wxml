@@ -1,0 +1,20 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);' class="container">
+  <scroll-view scroll-y>
+    <view class="viewBg">
+      <view>其他想告知健康管理师的情况，请详细描述:</view>
+      <view class="item">
+        <textarea class="textarea-bg font_s33 font_c31" id="information" maxlength='2000' placeholder="请输入您的主诉" name="information" value="{{information}}"bindinput="getDataBindTap">
+          <view class='word' id="counter">{{lastArea}}/2000</view>
+         </textarea>
+      </view>
+     
+    </view>
+  </scroll-view>
+  <view class="bottomBg">
+     <view class="sureTheme">
+        <text style="text-align:center" bindtap="sureFun">完成</text>
+     </view>
+  </view>
+</view>

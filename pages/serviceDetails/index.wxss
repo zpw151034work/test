@@ -1,0 +1,22 @@
+/* pages/healthassessment/index.wxss */
+.container{
+	width:750rpx;
+	background:#fff;
+	height: 800rpx;
+	box-sizing: border-box;
+}
+.view_date{
+	text-indent:2em;
+	width: 662rpx;
+	margin:10rpx auto;
+	font-size:28rpx;
+	color:#999999;
+	
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}

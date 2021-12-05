@@ -1,0 +1,23 @@
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="tab" style="top:{{statusBarHeight-1}}px">
+ <van-tabs sticky active="{{active}}" bind:change="onChange" custom-class="customBackground" nav-class="navStyle"
+		tab-class="tabBackground" color='white' title-active-color="white" title-inactive-color="white"
+		tab-active-class="activeStyle">
+		<van-tab title="营养">
+			<nutrition-program id="nutrition" ></nutrition-program>
+		</van-tab>
+		<van-tab title="运动">
+			<exercise-program id="exercise"></exercise-program>
+		</van-tab>
+		<van-tab title="睡眠">
+			<sleep-program></sleep-program>
+		</van-tab>
+		<van-tab title="心理">
+			<psychology-program></psychology-program>
+		</van-tab>
+		<van-tab title="用药">
+			<medication-program></medication-program>
+		</van-tab>
+	</van-tabs>
+
+</view>

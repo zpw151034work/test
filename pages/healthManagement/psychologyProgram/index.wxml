@@ -1,0 +1,112 @@
+<view class="container" style="height:calc(100vh - {{statusBarHeight+44}}px);" >
+  <scroll-view class="scrollView" style="background:#F9F9F9;">
+    <view class="global_background">
+    </view>
+    <view class="position_box" >
+      <view class="content_box">
+        <wxs module="btnshow">
+          var getRes = function (showStatus) {
+            var res = '';
+            if (showStatus == 0) {
+              res = 'topChangeBtnItem';
+            } else if (showStatus == 1) {
+              res = 'topChangeBtnItemBack';
+            } else {
+              res = 'topChangeBtnItemNotClick';
+            };
+            return res;
+          }
+          module.exports.getRes = getRes;
+        </wxs>
+        <view class="topChangeBtn" style="margin-bottom:15rpx">
+          <view class="{{btnshow.getRes(btnShowStatus[1])}}" bindtap="btnChange" data-typeid="1">焦虑</view>
+          <view class="{{btnshow.getRes(btnShowStatus[2])}}" bindtap="btnChange" data-typeid="2">抑郁</view>
+          <view class="{{btnshow.getRes(btnShowStatus[6])}}" bindtap="btnChange" data-typeid="6">强迫</view>
+          <view class="{{btnshow.getRes(btnShowStatus[5])}}" bindtap="btnChange" data-typeid="5">恐惧</view>
+          <view class="{{btnshow.getRes(btnShowStatus[3])}}" bindtap="btnChange" data-typeid="3">人际关系</view>
+        </view>
+        <view class="topChangeBtn" style="margin-bottom:30rpx">
+          <view class="{{btnshow.getRes(btnShowStatus[10])}}" bindtap="btnChange" data-typeid="10">愤怒</view>
+          <view class="{{btnshow.getRes(btnShowStatus[4])}}" bindtap="btnChange" data-typeid="4">躯体化</view>
+          <view class="{{btnshow.getRes(btnShowStatus[8])}}" bindtap="btnChange" data-typeid="8">敌对</view>
+          <view class="{{btnshow.getRes(btnShowStatus[7])}}" bindtap="btnChange" data-typeid="7">精神病性</view>
+          <view class="{{btnshow.getRes(btnShowStatus[9])}}" bindtap="btnChange" data-typeid="9">偏执</view>
+        </view>
+        <!-- 建议沟通您的主治医生进行心理会诊 -->
+        <view class="warning" wx:if="{{hideSug == 1}}">
+          <image style="width:25rpx;height:25rpx;margin-right:20rpx;" src="{{imgUrl}}/psychology/smallBell.png"></image>
+          <view>
+            建议沟通您的主治医生进行心理会诊
+          </view>
+        </view>
+        <view class="warningFalse" wx:else>
+          <image style="width:25rpx;height:25rpx;margin-right:20rpx;" src="{{imgUrl}}/psychology/thumUp.png"></image>
+          恭喜您，您的心理状态非常健康
+        </view>
+        <view class="item" wx:if="{{maybeCause && ragulationPrincple}}">
+          <view class="iconFrame">
+            <view class="startIcon">
+              <image class="star" wx:if="{{starCount>=4}}" style="width:30rpx;height:30rpx;"
+                src="{{imgUrl}}/star/star.png"></image>
+              <image class="star" wx:if="{{starCount>=3}}" style="width:30rpx;height:30rpx;"
+                src="{{imgUrl}}/star/star.png"></image>
+              <image class="star" wx:if="{{starCount>=2}}" style="width:30rpx;height:30rpx;"
+                src="{{imgUrl}}/star/star.png"></image>
+              <image class="star" wx:if="{{starCount>=1}}" style="width:30rpx;height:30rpx;"
+                src="{{imgUrl}}/star/star.png"></image>
+            </view>
+            <text class="title1">{{starName}}</text>
+          </view>
+
+          <view class="itemFrame" wx:if="{{maybeCause}}">
+            <text class="icon1" style="margin-left:30rpx" ></text> <text class="title1">可能诱因</text>
+          </view>
+          <view class="content1" style="margin-bottom:20rpx;margin-left:50rpx" wx:if="{{maybeCause}}">{{maybeCause}}</view>
+          <view class="itemFrame"  wx:if="{{ragulationPrincple}}">
+             <text class="icon" style="margin-left:30rpx"></text> <text class="title">调节原则</text>
+          </view>
+          <view class="content" style="margin-bottom:20rpx;margin-left:50rpx" wx:if="{{ragulationPrincple}}">{{ragulationPrincple}}</view>
+        </view>
+      </view>
+      <!-- 个性描述 -->
+      <view class="content_box"  wx:if="{{description!=null}}">
+        <view class="content_title">个性描述</view>
+        <view class="descriptionSelfBg">
+          <view class="descriptionSelf">{{description}}</view>
+        </view>
+      </view>
+      <!-- 专属应对策 -->
+      <view class="content_box" wx:if="{{positiveSu.length>0}}">
+        <view class="content_title">专属应对策略</view>
+        <view class="countermeasure">
+          <view wx:for="{{positiveSu}}" wx:for-item="itemd" class="item">
+            <text class="icon"></text> <text class="title">{{itemd.title}}</text>
+            <view class="content">{{itemd.content}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- 不建议的应对策 "-->
+      <view class="content_box" wx:if="{{negativeSu.length>0}}">
+        <view class="content_title">不建议的应对策略</view>
+        <view class="countermeasure ">
+          <view wx:for="{{negativeSu}}" wx:for-item="itemd" class="item">
+            <text class="icon"></text> <text class="title">{{itemd.title}}</text>
+            <view class="content">{{itemd.content}}</view>
+          </view>
+        </view>
+      </view>
+      <!-- 公益心理咨询热线 -->
+      <view class="psychologicalCounseling">
+        <view class="psychoFrame">
+          <view>
+            {{birth_province}}公益心理咨询热线：{{telephone}}
+          </view>
+          <view>
+            服务时间：{{serviceTime}}
+          </view>
+        </view>
+        <image class="phone_img" src="{{imgUrl}}/telephone/telephone.png"></image>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav-bar": "/commpents/navbar/index",
+    "nav-tab":"/commpents/navTab/index",
+    "van-uploader": "@vant/weapp/uploader/index"
+  }
+}

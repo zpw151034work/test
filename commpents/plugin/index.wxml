@@ -1,0 +1,11 @@
+<!--pages/assessments/index.wxml-->
+<view class="base_assessment">
+		<view  wx:for="{{pluginData}}" wx:for-item='item' class="item">
+				<view class="base_assessmenttitle">{{item.name}}</view>
+					 <view class="base_assessmentchild" wx:for="{{item.gradeColor}}" wx:for-item='ite' wx:key="key" style="background:{{ite.background}}">
+							 <view wx:if="{{ite.isShow==true}}">
+							  </view>
+						</view>
+				<view class="base_assessmenttail">{{item.Grade}}</view>
+		</view>
+</view>

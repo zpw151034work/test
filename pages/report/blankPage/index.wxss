@@ -1,0 +1,36 @@
+/* pages/healthassessment/index.wxss */
+/* 公用样式*/
+.container {
+	position: absolute;
+	width: 750rpx;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+  background: #fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+.container image{
+  width: 260rpx;
+  height:248rpx;
+  margin-left:80rpx;
+}
+.container .title_tip{
+  text-align: center;
+  color:#9B9B9B;
+  font-size:28rpx;
+  margin-top:52rpx;
+}
+.button{
+	color:#FFF;
+	background:#59B34E;
+	height:88rpx;
+	width: 316rpx;
+	text-align: center;
+	line-height: 88rpx;
+	border-radius: 44rpx;
+	margin-top:160rpx;
+} 
+

@@ -1,0 +1,9 @@
+<!--pages/home/index.wxml-->
+<view class="home">
+  <view class="title-top">
+      <image src='{{imgUrl}}/empower/logo.png'></image>
+   </view>
+   <view class="title-bottom">开启健康管理</view>
+  <view class="registered" bindtap="onRegistered">注册登录</view>  
+  <view class="tourist" bindtap="onTourist">游客进入</view>
+</view>

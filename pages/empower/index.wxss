@@ -1,0 +1,89 @@
+/**index.wxss**/
+.container{
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
+ }
+.title-top{
+  position:absolute;
+  left:50%;
+  top:230rpx;
+  width: 194rpx;
+  height: 180rpx;
+  transform: translate(-50%,0);
+}
+.title-top image{
+  width: 100%;
+  height: 100%;
+}
+.title-bottom{
+  margin-top:42rpx;
+  font-size:32rpx;
+  color:#666666;
+  position:absolute;
+  left:50%;
+  top:420rpx;
+  transform: translate(-50%,0);
+  }
+.empower{
+    position:absolute;
+    left:50%;
+    top:700rpx;
+    transform: translate(-50%,0);
+    height: 88rpx !important;
+    border-radius: 48rpx !important;
+    width:606rpx  !important;
+    font-size:36rpx;
+    font-weight: 500;
+    background:#429E38;
+    color:#FFFFFF;
+}
+.cancelBtn{
+  position:absolute;
+  left:50%;
+  top:820rpx;
+  transform: translate(-50%,0);
+  height: 88rpx !important;
+  border-radius: 48rpx !important;
+  width:606rpx  !important;
+  font-size:36rpx;
+  font-weight: 500;
+  color:#999999;
+  text-align: center;
+}
+.tip{
+      position:absolute;
+      left:50%;
+      top:800rpx;
+      transform: translate(-50%,0);
+      margin-top:20rpx;
+      display: inline;
+      font-size:36rpx;
+      color:#999;
+    }
+ .explain{
+      position:absolute;
+      left:50%;
+      bottom:108rpx;
+      transform: translate(-50%,0);
+      width:420rpx;
+      font-size:20rpx;
+      color:#666;
+      text-align:center;
+    }
+   .van-checkbox__label{
+    line-height: 15px !important;
+    font-size: 20rpx !important;
+    }
+ /*checkbox 选项框大小  */
+.van-checkbox__icon-wrap,.van-checkbox__label{line-height:15px}
+.van-checkbox__icon-wrap{-webkit-flex:none;flex:none}
+.van-checkbox__icon{display:block;width:15px !important;height:15px !important;font-size:14px;color:transparent;text-align:center;border:1px solid #e5e5e5;box-sizing:border-box;transition:.2s}
+.van-icon-success{
+	line-height:15px !important;
+}
+

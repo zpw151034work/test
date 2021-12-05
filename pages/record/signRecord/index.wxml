@@ -1,0 +1,104 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+	<scroll-view style="width:750rpx;margin:0 auto;padding-bottom:60rpx;">
+	<view class="content_box">
+		<view class="base_info">
+			<view class="item">
+				<van-cell  class="van-cell" center>
+					<view slot="title" class="cell-slot">
+						<van-image width="42" height="42" lazy-load src="https://jk.aspoontech.com/tizheng/体重.png"
+							class="van-image" />
+						<view class="van-cell-text" style="margin-left:30rpx;">
+							<view class="cell-title">体重</view>
+							<view class="cell-reason">4分钟前</view>
+						</view>
+					</view>
+					<van-tag slot="right-icon" type="danger"  style="color:#64B55B;font-size:36rpx;">- -</van-tag>
+				</van-cell>
+			</view>
+			<view class="item">
+				<van-cell value="" class="van-cell" center>
+					<view slot="title" class="cell-slot">
+						<van-image width="42" height="42" lazy-load src="https://jk.aspoontech.com/tizheng/心率.png"
+							class="van-image" />
+						<view class="van-cell-text" style="margin-left:30rpx;">
+							<view class="cell-title">心率</view>
+							<view class="cell-reason">4分钟前</view>
+						</view>
+					</view>
+					<van-tag slot="right-icon" type="danger"  style="color:#64B55B;font-size:36rpx;">- -</van-tag>
+				</van-cell>
+			</view>
+			<view class="item">
+				<van-cell value="" class="van-cell" center>
+					<view slot="title" class="cell-slot">
+						<van-image width="42" height="42" lazy-load src="https://jk.aspoontech.com/tizheng/血糖.png"
+							class="van-image" />
+						<view class="van-cell-text" style="margin-left:30rpx;">
+							<view class="cell-title">血糖</view>
+							<view class="cell-reason">4分钟前</view>
+						</view>
+					</view>
+					<van-tag slot="right-icon" type="danger"  style="color:#64B55B;font-size:36rpx;">- -</van-tag>
+				</van-cell>
+			</view>
+			<view class="item">
+				<van-cell value="" class="van-cell" center>
+					<view slot="title" class="cell-slot">
+						<van-image width="42" height="42" lazy-load src="https://jk.aspoontech.com/tizheng/血压.png"
+							class="van-image" />
+						<view class="van-cell-text" style="margin-left:30rpx;">
+							<view class="cell-title">血压</view>
+							<view class="cell-reason">餐后2小时</view>
+						</view>
+					</view>
+					<van-tag slot="right-icon" type="danger"  style="color:#64B55B;font-size:36rpx;">- -</van-tag>
+				</van-cell>
+			</view>
+			<view class="item">
+				<van-cell  class="van-cell" center>
+					<view slot="title" class="cell-slot">
+						<van-image width="42" height="42" lazy-load src="https://jk.aspoontech.com/tizheng/血氧.png"
+							class="van-image" />
+						<view class="van-cell-text" style="margin-left:30rpx;">
+							<view class="cell-title">血氧</view>
+							<view class="cell-reason">4分钟前</view>
+						</view>
+					</view>
+					<van-tag slot="right-icon" type="danger"  style="color:#64B55B;font-size:36rpx;">- -</van-tag>
+				</van-cell>
+			</view>
+			<view class="item">
+				<van-cell value="" class="van-cell" center>
+					<view slot="title" class="cell-slot">
+						<van-image width="42" height="42" lazy-load src="https://jk.aspoontech.com/tizheng/体温.png"
+							class="van-image" />
+						<view class="van-cell-text" style="margin-left:30rpx;">
+							<view class="cell-title">体温</view>
+							<view class="cell-reason">4分钟前</view>
+						</view>
+					</view>
+					<van-tag slot="right-icon" type="danger"  style="color:#64B55B;font-size:36rpx;">- -</van-tag>
+				</van-cell>
+			</view>
+			<view class="item">
+				<van-cell value="" class="van-cell" center>
+					<view slot="title" class="cell-slot">
+						<van-image width="42" height="42" lazy-load src="https://jk.aspoontech.com/tizheng/排便.png"
+							class="van-image" />
+						<view class="van-cell-text" style="margin-left:30rpx;">
+							<view class="cell-title">排便</view>
+							<view class="cell-reason">4分钟前</view>
+						</view>
+					</view>
+					<van-tag slot="right-icon" type="danger"  style="color:#64B55B;font-size:36rpx;">- -</van-tag>
+				</van-cell>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+	<view class="{{isIphoneX ?'tipX':'tip'}}">
+				<view class="button" bindtap="save">完成</view> 
+	</view>
+</view>

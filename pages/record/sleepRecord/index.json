@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav-bar": "/commpents/navbar/index",
+    "van-calendar": "@vant/weapp/calendar/index"
+   },
+   "disableScroll":true
+
+}
+  

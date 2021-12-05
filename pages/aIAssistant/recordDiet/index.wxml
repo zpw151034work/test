@@ -1,0 +1,136 @@
+<nav-bar navbar-data='{{navbarData}}' style='margin-top:{{statusBarHeight}}px'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+  <view class="titleImage"></view>
+  <view class="main-chat" style="height:calc(100vh - {{statusBarHeightX}}px)">
+    <scroll-view scroll-y scroll-into-view="{{toView}}">
+      <view wx:for="{{messages}}" wx:for-item="i">
+        <!-- 自己 -->
+        <view id="{{i.id}}" class="padding clearfix" wx:if="{{i.me}}">
+          <image class="right-Avatar padding_half" src="{{i.avatar}}"></image>
+          <view class="right-Triangle"></view>
+          <view class="right-speech-message padding_half" wx:if="{{i.speech}}" data-filePath="{{i.filePath}}"
+            bindtap="playSpeech">
+            <view style="display:inline-block;">
+              <image style="width:52rpx;height:42rpx;vertical-align:middle;margin:0 6rpx;"
+                src="{{playingSpeech==i.filePath?speechIcon:defaultSpeechIcon}}"></image> {{i.seconds}}″
+            </view>
+          </view>
+          <view class="right-message padding_half" wx:if="{{!i.speech}}" style="margin-top:10rpx;">
+            <template is="msgItem" data="{{...i}}" />
+          </view>
+        </view>
+        <!-- 机器人 -->
+        <view id="{{i.id}}" class="padding clearfix" wx:if="{{!i.me}}" style="margin-top:10rpx;">
+          <image class="left-Avatar padding_half" src="{{i.avatar}}"></image>
+          <view class="left-Triangle"></view>
+          <view class="left-speech-message padding_half" wx:if="{{i.speech}}" data-filePath="{{i.filePath}}"
+            bindtap="playRobotSpeech">
+            <view style="display:inline-block;">
+              <image style="width:52rpx;height:42rpx;vertical-align:middle;margin:0 6rpx;"
+                src="{{playingSpeech==i.filePath?speechIcon:defaultSpeechIcon}}"></image> {{i.seconds}}″
+            </view>
+          </view>
+          <view class="left-message padding_half" wx:if="{{!i.speech}}">
+            <template is="msgItem" data="{{...i}}" />
+          </view>
+        </view>
+
+      </view>
+      <!-- <view class="weui-icon_success"></view> -->
+      <view class="dietDisplay" wx:if="{{isFoodShow==true}}">
+        <view class="content_box">
+          <view class="base_info">
+            <view class="item" wx:for="{{foodData}}" wx:for-item='item' wx:for-index="index">
+              <van-swipe-cell right-width="{{80}}">
+                <van-cell-group border="{{ false }}">
+                  <van-cell value="" class="van-cell" value="{{item.heat}}千卡" is-link="true" border="{{ false }}"
+                    data-item="{{item}}" data-index="{{index}}" bindtap="clickTap">
+                    <view slot="title"  class="cell-slot">
+                      <van-image width="42" height="42" src="{{host}}{{item.foodImg}}" class="van-image" />
+                      <view class="van-cell-text" style="margin-left:30rpx;">
+                        <view class="cell-title">{{item.food}}</view>
+                        <view class="cell-reason" wx:if="{{!item.motionMinutes}}">{{item.val}}/{{item.unitType}}</view>
+                        <view class="cell-reason" wx:if="{{item.motionMinutes}}">
+                          {{item.motionMinutes}}/{{item.unitType}}</view>
+                      </view>
+                    </view>
+                  </van-cell>
+                </van-cell-group>
+                <view slot="right" class="delete" data-item="{{item}}" data-index="{{index}}"
+                  bindtap="foodRecordDelete">删除</view>
+              </van-swipe-cell>
+            </view>
+          </view>
+          <view class="buttons clearfix">
+            <view class="button cancel fl" bindtap="cancel">取消</view>
+            <view class="button complete fl" data-item="{{item}}" bindtap="complete">完成</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="wa-row" style="height:100rpx;background:#eeee;">
+  <image src="{{changeImageUrl}}" class="text-center icon ion-ios"
+    style="height:60rpx;line-height:60rpx;margin:8rpx 5rpx 0 0; " bindtap="changeType"></image>
+  <view wx:if="{{!isSpeech}}" class="padding_half" style="flex:1;text-index:1em; height:76rpx; line-height:76rpx;">
+    <input value="{{msg}}" bindinput="sendMessage"
+      style="text-index:1em; height:76rpx; line-height:76rpx;background:#fff;border-radius: 10rpx;" />
+  </view>
+  <view wx:if="{{isSpeech}}" class="padding_half" style="flex:1; height:64rpx; line-height:64rpx;">
+    <button class="speech-button" hover-class='button-hover' hover-start-time="0" bindtouchstart="startRecord"
+      bindtouchend="stopRecord">{{speechText}}</button>
+  </view>
+  <!-- <image src="{{emotionIcon}}" class="text-center icon ion-ios" style="height:64rpx;line-height:64rpx" bindtap="emotionBtn"></image> -->
+  <button type="primary" disabled="{{isSpeech||msg==''}}" size='mini' class="send-button" bindtap="send">发送</button>
+</view>
+<view id="emotionPanel" wx:if="{{emotionBox}}">
+  <image wx:for="{{ emotions }}" src="{{item.src}}" class="emotion" data-name="{{item.name}}" bindtap="chooseEmotion">
+  </image>
+</view>
+<!--手动弹出窗 -->
+<view class="dialog">
+  <van-dialog use-slot show="{{ showTanChu }}" data-item="{{dialogData}}" bind:confirm="dialogSave" width="350px">
+    <view class="dialogContent">
+      <view class="card">
+        <image src="{{host}}{{dialogData.foodImg}}"></image>
+        <view class="cardText">
+          <text>{{dialogData.foodName}}</text>
+          <text>{{dialogData.heat}}千卡/100克</text>
+        </view>
+      </view>
+      <view class="close" bindtap="onCloseDialog">
+        <van-icon name="cross" size="30px" />
+      </view>
+      <view class="dialogInfo">
+        <view class="item">
+          <text style="padding-top:30rpx;">{{changeHeat}}千卡</text>
+        </view>
+        <view class="item middle">
+          <van-field value="{{ motionMinutes }}" border="{{ false }}" bind:change="onMinutesChange"
+            auto-focus='{{true}}' input-align="center" placeholder=""
+            placeholder-style="color:#64B55B;font-size: 30rpx; text-align:center;" custom-style="text-align:center;" />
+          <text>{{unit}}</text>
+        </view>
+        <view class="item" bindtap="clickImgShow">
+
+          <image src="{{imgUrl}}/dietAdd222/balanceIcon.png" style="width:30rpx;height:30rpx;margin-left:30rpx;"></image>
+          <!-- <text>估算重量</text> -->
+
+        </view>
+      </view>
+    </view>
+    <view class="swiper">
+      <van-tabs active="{{ active }}" bind:change="onChange" tab-active-class='activeClass'>
+        <van-tab wx:for="{{dialogData.unitData}}" wx:for-item='item' title="{{item.amount}}"></van-tab>
+      </van-tabs>
+    </view>
+  </van-dialog>
+</view>
+<!-- 循环模板我的 -->
+<template name="msgItem">
+  <view wx:for="{{contents}}" style="display:inline-block;white-space:pre-line;padding:0 10rpx;">
+    <text wx:if="item.type=='text'" style="margin:0;width:auto;" selectable>{{item.text}}</text>
+    <!-- <image wx:if="item.type=='image'" style="width:42rpx;height:42rpx;vertical-align:middle;margin:0 6rpx;max-width:550rpx;" src="{{item.url}}"></image> -->
+  </view>
+</template>

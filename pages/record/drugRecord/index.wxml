@@ -1,0 +1,47 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+	<scroll-view style="width:750rpx;margin:0 auto;padding-bottom:60rpx;">
+		<view class="date">
+			<view class="clearfix timeButton" bindtap="onDisplay">
+				 <view class="fr timeButtonRight">
+					<van-icon name="clock-o" />
+				 </view>
+				  <view class="fr timeButtonCenter" ></view>
+				 <view class="fr timeButtonLeft" >{{date}}</view>
+		 </view>
+			<van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" min-date="{{ minDate }}" max-date="{{ maxDate }}" color="#429E38" default-date="{{date}}"/>
+		</view>
+		<view>
+			<!-- 常服用药品 -->
+			<view class="content_box">
+				<view class="content_title" wx:if="{{!showView}}">常服用药品</view>
+				<view class="content_error" wx:if="{{showView}}">尚未添加常服用的药品</view>
+				<view class="usedDrugs" wx:if="{{!showView}}">
+
+					<view class="item" wx:for="{{commonDrugsData}}" wx:for-item='item' wx:for-index="index" data-item="{{item}}"
+						data-index="{{index}}" bindtap="healthProductsClick" style="color:{{item.isActive ? '#4A9E41':'#999'}}">
+						<van-cell>
+							<view slot="title">
+								<view class="van-cell-text">{{item.medicine}}</view>
+							</view>
+							<view>
+								<text style="font-size:24rpx;display:inline-block;height:40rpx;"></text>
+								<van-checkbox data-item="{{item}}" data-index="{{index}}" value="{{item.isUse == 2 ?true:false}}"
+									bind:change="onChangeChecked" checked-color="green"
+									style="width:30rpx;height:30rpx;display:inline-block;margin:auto;padding:5rpx 5rpx 5rpx 5rpx;">
+								</van-checkbox>
+							</view>
+						</van-cell>
+					</view>
+				</view>
+				<view class="drugsButton" bindtap="addDrug">
+					<text class="drugsText">添加正在服用的药品</text>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	<view class="{{isIphoneX ?'tipX':'tip'}}">
+				<view class="button" bindtap="save">完成</view> 
+	</view>
+</view>

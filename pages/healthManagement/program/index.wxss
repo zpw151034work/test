@@ -1,0 +1,35 @@
+/* tab数据 */
+.tab {
+	position: fixed;
+	width: 750rpx;
+	height: 88rpx;
+	z-index: 100;
+}
+.page {
+	background: #64B55B;
+}
+.tabBackground {
+	background: #64B55B;
+	opacity: 1;
+	padding: 0;
+	font-size: 32rpx;
+	color: #fff !important;
+}
+
+.navStyle {
+	background: #64B55B;
+}
+
+.tabBackground .van-ellipsis {
+	text-align: center;
+}
+
+.activeStyle {
+	color: #fff ;
+	font-size: 36rpx !important;
+	font-weight: 500;
+}
+
+.van-tab {
+	flex-basis: 20% !important;
+}

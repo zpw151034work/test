@@ -1,0 +1,78 @@
+<!--pages/healthassessment/index.wxml-->
+
+<view class="container exercise clearfix" style="height:calc(100vh - {{statusBarHeight+44}}px);">
+	<scroll-view style="background:#F9FAFC;">
+		<view class="global_background">
+			<view class="tab_title" id="exerciseTabTitle">
+				<!-- 当前阶段运动原则 -->
+				<view class="tab_text">
+					当前阶段运动原则
+				</view>
+				<view class="tab_button">
+					{{sport_principle}}
+				</view>
+			</view>
+		</view>
+		<view style="width:702rpx;background:#fff;margin:0 auto;border-radius:20rpx;margin-bottom:20rpx;position:relative;top:{{positionHeight}}rpx;">
+			<!-- 运动推荐 -->
+			<view class="content_box" style="	margin-top: 40rpx;">
+				<view class="content_title" >运动推荐</view>
+				<view class=" sportsRecommendation" style="height:178rpx;">
+					<image class="icon" src="{{imgUrl}}/newImages/time.png"></image>
+					<text>时间建议</text>
+					<view class="duration"> {{sport_time}}</view>
+					<view class="timeSlot">
+						<view>{{sport_frequency}}</view>
+					</view>
+				</view>
+			</view>
+				<!-- 运动推荐 -->
+				<view class="content_box">
+				<view class=" sportsRecommendation">
+					<image class="icon" src="{{imgUrl}}/newImages/Notice.png"></image>
+					<text>运动须知</text>
+					<view class="sportsInstructions">
+					  {{sportsInstructions}}
+					</view>
+				</view>
+			</view>
+			<!-- 方式建议 -->
+			<view class="content_box">
+				<view class="suggestionsWaysBox">
+					<image class="icon" src="{{imgUrl}}/newImages/moveMode.png"></image>
+					<text>方式建议</text>
+					<view>
+						<view class="suggestionBg">
+							<view wx:if="{{typeId == 1}}" class="suggestionBtnBg">热身运动</view>
+							<view wx:else bindtap="onSugBtnClick" data-gid="{{1}}" class="suggestionBtn">热身运动</view>
+							 <view class="suggestionImage"><image src="{{imgUrl}}/newImages/next.png"></image></view>
+							<view wx:if="{{typeId == 2}}" class="suggestionBtnBg">体能训练</view>
+							<view wx:else bindtap="onSugBtnClick" data-gid="{{2}}" class="suggestionBtn">体能训练</view>
+							<view class="suggestionImage"><image src="{{imgUrl}}/newImages/next.png"></image></view>
+							<view wx:if="{{typeId == 6}}" class="suggestionBtnBg">结束放松</view>
+							<view wx:else bindtap="onSugBtnClick" data-gid="{{6}}" class="suggestionBtn">结束放松</view>
+						</view>
+						<!-- <view class="suggestionBg">
+							<view wx:if="{{typeId == 4}}" class="suggestionBtnBg">抗阻运动</view>
+							<view wx:else bindtap="onSugBtnClick" data-gid="{{4}}" class="suggestionBtn">抗阻运动</view>
+							<view wx:if="{{typeId == 5}}" class="suggestionBtnBg">神经肌肉运动</view>
+							<view wx:else bindtap="onSugBtnClick" data-gid="{{5}}" class="suggestionBtn">神经肌肉运动</view>
+							<view wx:if="{{typeId == 6}}" class="suggestionBtnBg">结束放松</view>
+							<view wx:else bindtap="onSugBtnClick" data-gid="{{6}}" class="suggestionBtn">结束放松</view>
+						</view> -->
+						<!-- <view class="suggestionBg">
+							<view wx:if="{{typeId == 7}}" class="suggestionBtnBg">运动须知</view>
+							<view wx:else bindtap="onSugBtnClick" data-gid="{{7}}" class="suggestionBtn">运动须知</view>
+						</view> -->
+					</view>
+					<view class="sugSty">
+						<view wx:for="{{sport_currentPic}}" wx:for-item="itemd">
+							<image bindtap="onSugItemClick" data-gid="{{itemd}}" class="sugStyItem" src="{{itemd.img}}"></image>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view style="height:120rpx;width:750rpx;"></view>
+		</view>
+	</scroll-view>
+</view>

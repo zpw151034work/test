@@ -1,0 +1,9 @@
+
+{
+  "usingComponents": {
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-loading": "@vant/weapp/loading/index"
+    
+  },
+  "component": true
+}

@@ -1,0 +1,17 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px)'>
+	<!-- 血瘀质预警 -->
+	<view class="content_box" >
+										<view class="base_info  stasisBloodWarning">
+											   <view class="item clearfix">
+														<text class="icon"></text> <view class="title">蛋白质摄入不足</view>
+														<view>
+															推荐食物：蛋白粉、鸡蛋、牛奶、鱼肉、虾肉、牛奶、廋肉
+														</view>
+												 </view>
+														
+										 </view>
+									</view>
+		
+</view>

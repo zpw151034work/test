@@ -1,0 +1,334 @@
+@import '../../../assets/base64.wxss';
+@import '../../../assets/base.wxss';
+
+.container {
+
+	/* background: #64B55B; */
+}
+
+.page {
+	background-color: #fff !important;
+}
+
+/* 页面样式 */
+.nutrition .tab_title {
+	width: 642rpx;
+	background: #ffff;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 254rpx;
+	border-radius: 20rpx;
+	z-index: 10000;
+	padding: 30rpx;
+
+}
+
+.tab_text {
+	font-size: 32rpx;
+	color: #333;
+	font-weight: 600;
+	top: 20rpx;
+	left: 32rpx;
+
+}
+
+.tab_button {
+	display: flex;
+	/* position: absolute; */
+	top: 82rpx;
+	font-size: 28rpx;
+	color: #4A4A4A;
+	width: 642rpx;
+	text-overflow: -o-ellipsis-lastline;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	/**--自动换行--**/
+}
+.tab_button .item {
+	margin-left: 6rpx;
+}
+.tab_button .item image {
+	width: 90rpx;
+	height: 90rpx;
+}
+
+.tab_button .item view {
+	font-size: 28rpx;
+	line-height: 40rpx;
+	text-align: center;
+	color: #333;
+}
+
+/* 营养需求 */
+.nutritionalNeeds {
+	height: 232rpx;
+	width: 702rpx;
+	margin: auto;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.nutritionalNeeds view:nth-child(2n+1) {
+	width: 510rpx;
+	height: 234rpx;
+}
+
+.nutritionalNeeds view:nth-child(2n) {
+	width: 190rpx;
+	height: 164rpx;
+	padding: 35rpx 0;
+}
+
+.glass {
+	display: block;
+	height: 92rpx;
+	width: 58rpx;
+	margin: 0 auto;
+}
+
+.dose {
+	display: block;
+	color: #4A4A4A;
+	font-size: 24rpx;
+	width: 100%;
+	text-align: center;
+	height: 68rpx;
+	line-height: 68rpx;
+}
+
+/* 饮食推荐 */
+.dietRecommendation {
+	width: 654rpx;
+	margin: 0 auto;
+	background: #F4FAF3;
+	border-radius: 20rpx;
+}
+
+.pointsDiet {
+	padding-bottom: 0 !important;
+}
+
+.dinner,
+.lunch,
+.breakfast {
+	width: 612rpx;
+	padding: 0 20rpx 0 20rpx;
+	float: left;
+	border-bottom: 1rpx solid #FFF0F1F0;
+}
+
+.dinner text:nth-child(odd),
+.lunch text:nth-child(odd),
+.breakfast text:nth-child(odd) {
+	font-size: 28rpx;
+	color: #333;
+	margin-right: 28rpx;
+}
+
+.dinner text:nth-child(even),
+.lunch text:nth-child(even),
+.breakfast text:nth-child(even) {
+	font-size: 24rpx;
+	color: #999;
+}
+
+.dinner-box .item,
+.lunch-box .item,
+.breakfast-box .item {
+	width: 190rpx;
+	height: 200rpx;
+	background: #E2EAE1;
+	border-radius: 10rpx;
+	margin-right: 20rpx;
+	float: left;
+	margin-top: 10rpx;
+	margin-bottom: 10rpx;
+	overflow: hidden;
+}
+
+.dinner-box .item:nth-child(3n+3),
+.lunch-box .item:nth-child(3n+3),
+.breakfast-box .item:nth-child(3n+3) {
+	margin-right: 0rpx !important;
+}
+
+.dinner-box .item image,
+.lunch-box .item image,
+.breakfast-box .item image {
+	display: block;
+	width: 76rpx;
+	height: 76rpx;
+	margin: 14rpx auto;
+	border-radius: 50%;
+}
+
+.dinner-box .item text,
+.lunch-box .item text,
+.breakfast-box .item text {
+	display: block;
+	height: 38rpx;
+	line-height: 38rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #333;
+	width: 190rpx;
+	overflow: hidden;
+}
+
+.dietRecommendationButton {
+	height: 180rpx;
+}
+
+.dietRecommendationButton image {
+	width: 320rpx;
+	height: 100rpx;
+	margin: 40rpx 12rpx 0 14rpx;
+}
+
+/* //dietPoints */
+.dietPoints {
+	width: 654rpx;
+	background: #F4FAF3;
+	margin: 0 auto;
+}
+
+.dietPoints .item {
+	width: 590rpx;
+	padding: 32rpx;
+}
+
+.dietPoints .item .icon {
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background: #B5DBA8;
+	display: inline-block;
+}
+
+.dietPoints .item .title {
+	margin-left: 10rpx;
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 500;
+}
+
+.dietPoints .item .content {
+	font-size: 28rpx;
+	color: #666;
+}
+
+/* 补充籍·5 */
+.Supplements {
+	width: 624rpx;
+	background: #F4FAF3;
+	margin: 0 auto;
+	padding: 0 15rpx;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.Supplements .item:nth-child(odd) {
+	float: left;
+	margin: 30rpx 22rpx 0 0;
+	width: 300rpx;
+
+}
+
+.Supplements .item:nth-child(even) {
+	float: left;
+	margin: 30rpx 0 0 0;
+	width: 300rpx;
+}
+
+.Supplements .item image {
+	width: 300rpx;
+	height: 192rpx;
+	border-radius: 10rpx;
+}
+
+.Supplements .item .name {
+	display: block;
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 600;
+	width: 300rpx;
+}
+
+.Supplements .item .content {
+	display: block;
+	font-size: 24rpx;
+	color: #999999;
+	width: 300rpx;
+	word-wrap: break-word;
+}
+
+.nutrition .content_box {
+	margin-bottom: 40rpx;
+	background: #ffff;
+}
+
+.content_box>.item {
+	width: 100%;
+
+}
+
+.content_box>.item .title {
+	width: 100%;
+	text-align: center;
+	font-size: 28rpx;
+	font-weight: 600;
+	height: 98rpx;
+	line-height: 98rpx;
+}
+
+.content_box>.item .ibutton {}
+
+.content_box>.item .ibutton>view {
+	display: inline-block;
+	width: 198rpx;
+	height: 64rpx;
+	line-height: 64rpx;
+	text-align: center;
+	color: #59B34E;
+	font-size: 24rpx;
+	background: #F4FAF3;
+	margin-right: 16rpx;
+	margin-left: 20rpx;
+	border-radius: 8rpx;
+	margin-bottom: 20rpx;
+	overflow: hidden;
+}
+
+.content_box>.item:nth-child(2n) .ibutton>view {
+	display: inline-block;
+	width: 198rpx;
+	height: 64rpx;
+	line-height: 64rpx;
+	text-align: center;
+	color: #9B9B9B;
+	font-size: 24rpx;
+	background: #F4FAF3;
+	margin-right: 16rpx;
+	margin-left: 19rpx;
+	border-radius: 8rpx;
+	margin-bottom: 20rpx;
+}
+
+.tab_button text {
+	color: #59B34E;
+	display: inline-block;
+}
+
+.mychart-dom-bar {
+	width: 510rpx;
+	height: 234rpx;
+}

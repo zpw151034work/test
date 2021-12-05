@@ -1,0 +1,13 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px)'>
+  <van-cell value="" class="van-cell" wx:for="{{recommendedDiet}}" wx:for-item="item">
+		<view slot="title"  class="cell-slot">
+			<image  class="van-image" src="{{imgUrl}}/nutritionProgram/蔬菜.png"></image>
+			<view class="van-cell-text" style="margin-left:30rpx;">
+				<view class="cell-title">{{item.name}}</view>
+				<view class="cell-reason">{{item.reason}}</view>
+			</view>
+		</view>
+	</van-cell>
+</view>

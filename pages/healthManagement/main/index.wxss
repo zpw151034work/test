@@ -1,0 +1,425 @@
+/* pages/healthassessment/index.wxss */
+.global_background{
+	width:750rpx;
+	height:600rpx;
+	position:relative;
+	top:-176rpx;
+	z-index:1;
+	background-color:#64B55B;
+ border-radius: 0rpx 0rpx 100rpx 100rpx;
+} 
+/* tabbar */
+.container {
+	width: 750rpx;
+	margin: 0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+	background:#64B55B;
+}
+.view_date {
+	height: 40rpx;
+	font-size: 28rpx;
+	color: #000;
+}
+.unitNum {
+	position: absolute;
+	top: 226rpx;
+	left: 60rpx;
+	font-size: 70rpx;
+	color: #fff;
+	width:186rpx;
+	text-align: center;
+  display:block;
+}
+.noAuthor {
+	position: absolute;
+	top: 300rpx;
+	left: 68rpx;
+	font-size: 26rpx;
+	color: #fff;
+}
+.unit {
+	position: absolute;
+	top:276rpx;
+	left:266rpx;
+	font-size: 28rpx;
+	color: #fff;
+}
+.title {
+	position: absolute;
+	font-size: 35rpx;
+	top: 330rpx;
+	left: 54rpx;
+	width: 186rpx;
+	height: 56rpx;
+	border-radius: 34rpx;
+	line-height: 56rpx;
+	text-align: center;
+	background: #fff;
+	color: #64B55B;
+	font-weight: bolder;
+}
+
+.hospital {
+	position: absolute;
+	top: 300rpx;
+	left: 380rpx;
+	width: 216rpx;
+	height: 56rpx;
+	font-size: 24rpx;
+	text-align: right;
+	color: #fff;
+}
+
+.department {
+	position: absolute;
+	top: 340rpx;
+	left: 380rpx;
+	width: 216rpx;
+	height: 56rpx;
+	font-size: 24rpx;
+	text-align: right;
+	color: #fff;
+}
+
+.scanCode {
+	position: absolute;
+	top: 298rpx;
+	left: 610rpx;
+	width: 80rpx;
+	height: 66rpx;
+	color: #fff;
+	font-size: 60rpx;
+}
+
+.showBar {
+	width: 690rpx;
+	height: 56rpx;
+	position: absolute;
+	left: 30rpx;
+	top: 418rpx;
+
+}
+
+.barImage {
+	width: 630rpx !important;
+	height: 26rpx;
+	position: absolute;
+	left: 60rpx;
+	z-index: 101;
+	top: 436rpx;
+}
+
+.tab_title {
+	width: 630rpx;
+	height: 276rpx;
+	background: #ffff;
+	position: absolute;
+	left: 60rpx;
+	top: 442rpx;
+	border-radius: 0 0 20rpx 20rpx;
+	z-index: 100;
+	box-shadow: 5rpx 5rpx 5rpx rgb(207, 204, 204);
+}
+.wx-progress-inner-bar {
+	border-radius: 14px;
+	}
+	.wx-progress__bar {
+  border: 5px solid black;
+	}
+.tab_text {
+	font-size: 32rpx;
+	color: #5CAE52;
+	position: absolute;
+	top: 30rpx;
+	left: 50%;
+	font-weight: bolder;
+	transform: translate(-50%, 0);
+	width:100%;
+	text-align: center;
+}
+
+.tab_button {
+	display: flex;
+	position: absolute;
+	top: 112rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width:580rpx;
+}
+
+.tab_button .item {
+ width:20%;	
+ text-align: center;
+}
+
+.tab_button .item image {
+	width: 90rpx;
+	height: 90rpx;
+}
+
+.tab_button .item view {
+	font-size: 28rpx;
+	line-height: 40rpx;
+	text-align: center;
+	color: #333;
+}
+/* 标题 */
+.content_box {
+	width: 690rpx;
+	margin: 0 auto;
+	margin-bottom: 40rpx;
+}
+
+.content_title {
+	font-size: 32rpx;
+	font-weight: 700;
+	margin-bottom:30rpx;
+ }
+
+.base_info {
+	display: flex;
+	width: 690rpx;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+.base_info .item {
+	width: 270rpx;
+	padding: 22rpx 18rpx 22rpx 24rpx;
+	background: #fff;
+	border-radius: 20rpx;
+	flex-grow: 1;
+	margin-bottom: 20rpx;
+	box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+}
+
+.base_info .item view {
+	display: flex;
+	flex-wrap: wrap;
+}
+.base_info .item:nth-child(even) {
+	margin-left: 30rpx;
+}
+
+.base_info .item view {
+	justify-content: space-between;
+	display: flex;
+}
+
+.base_info .item .item_title {
+	font-size: 32rpx;
+	color: #333;
+}
+
+.base_info .item .item_name {
+	font-size: 32rpx;
+	color: #64B55B;
+}
+
+.base_info .item .item_why {
+	font-size: 32rpx;
+	color: #64B55B;
+}
+
+.base_info .item .item_date {
+	font-size: 24rpx;
+	color: #999999;
+}
+
+.base_info .item .item_progress {
+	width: 132rpx;
+	border-radius: 10rpx;
+}
+/* 院外管理 */
+.hospManage{
+ width: 690rpx;
+ background: #fff;
+ border-radius: 20rpx;
+ flex-grow: 1;
+ margin-bottom:20rpx;
+ padding-top:42rpx;
+ box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.03);
+ overflow:hidden;
+ padding-bottom:60rpx;
+ }
+.contentHospManage {
+  font-size: 32rpx;
+	font-weight: 700;
+	margin-bottom: 30rpx;
+ }
+.hospManage .item{
+	background:#fff;
+	width:642rpx;
+	margin:0 auto;
+	margin-bottom:20rpx;
+	}
+.hospManage .item view{
+	width: 100%;
+	position: relative;
+}
+.hospManage .item .circle{
+	position:absolute;
+	top:-8rpx;
+	left:-6rpx;
+	width: 16rpx;
+	height:16rpx;
+	border-radius:50%;
+	background:#B5DBA8;
+}
+.hospManage .item .Time{
+	position:absolute;
+	font-size:28rpx;
+	color:#59B34E;
+	top:-20rpx;
+	left:16rpx;
+	height:40rpx;
+	line-height: 40rpx;
+	font-weight: 600;
+}
+.buttonIcon{
+	width: 100%;
+	position:absolute;
+	top:0;
+	border-left:4rpx dashed #B5DBA8;
+	padding-top:20rpx;
+}
+.buttonItem{
+	font-size:24rpx;
+	padding:10rpx;
+	display:block;
+	border-radius: 8rpx;
+	padding:20rpx;
+	
+}
+.buttonItem text{
+	font-size:24rpx;
+	padding:10rpx;
+	border:1rpx solid #9B9B9B;
+	border-radius: 8rpx;
+}
+.hospitalManagement{
+	position: relative;
+}
+/* 健康预警 */
+.base_info {
+	display: flex;
+	width: 690rpx;
+	margin: 0 auto;
+	flex-flow: row wrap;
+	align-items: center;
+}
+.varning .item {
+	display: flex;
+	background: #fff;
+	border-radius: 20rpx;
+	height: 136rpx;
+	flex-grow: 1;
+	padding-top: 0rpx !important;
+	padding-bottom: 0rpx !important;
+}
+.varning_img {
+	margin-top:14rpx;
+	display:block;
+	width:104rpx;
+	height:108rpx;
+}
+.varning_text {
+	width: 520rpx;
+	height: 136rpx;
+	font-size: 28rpx;
+	color: #4A4A4AFF;
+	line-height: 136rpx;
+	font-weight: bolder;
+	padding-left: 30rpx;
+	text-align: center;
+}
+
+/* 今日任务 */
+.task .task_info{
+	border-radius:20rpx;
+	background:#fff;
+	box-shadow: 0px 0px 8px 4px rgba(0, 0, 0,0.03)
+}
+.task .task_info .item{
+	 width:690rpx;
+	 height:96rpx;
+   background: #fff;
+	 line-height: 96rpx;
+	 border-radius:20rpx;
+}
+
+.task .task_info .circle{
+  margin-top:40rpx;
+	width: 16rpx;
+	height:16rpx;
+	border-radius:50%;
+	background:#59B34E;
+	margin-left:32rpx;
+	margin-right:18rpx;
+}
+.task_info .task_name{
+	font-size:28rpx;
+	font-weight:600;
+	color:#4A4A4A;
+}
+.task_info .task_finish{
+	background:#F4FAF3;
+	width:140rpx;
+	height:44rpx;
+	line-height: 44rpx;
+	color:#4A9E41;
+	font-size:24rpx;
+	text-align: center;
+	border-radius:40rpx;
+	margin-top:26rpx;
+	margin-right:30rpx;
+}
+ /* 健康预警 */
+ .arrow {
+	margin-top:45rpx;
+}
+/* 展开 */
+.openClose{
+	width: 690rpx;
+	background:#fff;
+	/* background: linear-gradient(0,#ffffff); */
+	/* background:linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1)); */
+	position:absolute;
+	bottom:0;
+	text-align: center;
+	line-height:98rpx;
+	border-radius:40rpx;
+	z-index: 1000;
+}
+.isOpenClose{
+	width: 690rpx;
+	height:116rpx;
+	background:#fff;
+	/* background: linear-gradient(0,#ffffff); */
+	background:linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 1));
+	position:absolute;
+	bottom:0;
+	text-align: center;
+	line-height:116rpx;
+	border-radius:40rpx;
+	z-index: 1000;
+}
+.openClose_img{
+	display:inline-block;
+	width:28rpx;
+	height:28rpx;
+}
+.openClose_img1{
+	display:inline-block;
+	width:15rpx;
+	height:28rpx;
+}
+.openClose_text{
+	display:inline-block;
+	color:#9B9B9B;
+	font-size:28rpx;
+}
+

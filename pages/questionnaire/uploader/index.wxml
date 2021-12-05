@@ -1,0 +1,40 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);' class="container">
+  <scroll-view scroll-y>
+    <view class="viewBg">
+      <view class="item">
+        <view class="title">临床类报告</view>
+        <view class="titleTip">血常规、凝血检验、尿液检验、体液检验、粪便检验、白带检验</view>
+        <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" deletable="" preview-size="205rpx"
+          preview-full-image="" multiple="false" />
+      </view>
+      <view class="item">
+        <view class="title">生化类报告</view>
+        <view class="titleTip">血生化组合、肝功能组合、肾功能组合、血脂组合</view>
+        <van-uploader file-list="{{ fileList3 }}" bind:after-read="afterRead3" deletable="" preview-size="205rpx"
+          preview-full-image="" multiple="false" />
+      </view>
+      <view class="item">
+        <view class="title">上传血常规报告</view>
+        <view class="titleTip">肿瘤常规、激素类</view>
+        <van-uploader file-list="{{ fileList4 }}" bind:after-read="afterRead4" deletable="" preview-size="205rpx"
+          preview-full-image="" multiple="false" />
+      </view>
+      <view class="item">
+        <view class="title">其他</view>
+        <van-uploader file-list="{{ fileList5 }}" bind:after-read="afterRead5" deletable="" preview-size="205rpx"
+          preview-full-image="" multiple="false" />
+      </view>
+      
+    <view class="bottomBg">
+      <view class="sureTheme">
+        <text style="text-align:center" bindtap="sureFun">完成</text>
+      </view>
+    </view>
+    <view class="bottomPhoneLay">
+      如有任何疑问，请致电(010) 5272 9739
+    </view>
+    </view>
+  </scroll-view>
+</view>

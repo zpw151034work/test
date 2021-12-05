@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="dietAdd">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/pages/record/dietAdd.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

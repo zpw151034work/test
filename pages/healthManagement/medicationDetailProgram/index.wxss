@@ -1,0 +1,20 @@
+/* pages/healthManagement/medicationDetailProgram/index.wxss */
+.container{
+	width:100%;
+	background:#ffffff;
+	box-sizing: border-box;
+	overflow: auto;
+	margin: 0 auto;
+}
+
+.scrollviewTheme{
+	background: #ffffff;
+}
+
+.content{
+	width: 640rpx;
+	margin: 0 auto;
+	color: #666;
+	font-size: 28rpx;
+	text-indent: 2em;
+}

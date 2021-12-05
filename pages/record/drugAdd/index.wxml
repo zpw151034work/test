@@ -1,0 +1,99 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+	<scroll-view style="width:750rpx;margin:0 auto;padding-bottom:60rpx;">
+	  <!-- 搜索 -->
+			<view class="search">
+				<van-search value="{{ value }}" shape="round" placeholder="请输入搜索关键词" bind:change="onChangeSearch"/>
+			</view>
+			<view class="content_box" wx:if="{{drugData!=''}}">  
+				<view class="base_info">    
+				  <view class="item" wx:for="{{drugData}}" wx:for-item='item' wx:for-index="index">
+						<van-cell value="" class="van-cell" center >
+							<view slot="title" class="cell-slot">
+								<view class="van-cell-text" style="margin-left:10rpx;">
+									<view class="cell-title">{{item.name}}</view>
+								</view>
+							</view>
+							<van-icon slot="right-icon" name="add-o" class="custom-icon" 	data-item="{{item}}"   data-index="{{index}}" bindtap="drugAddClick" size="20px" />
+						</van-cell>
+					</view>
+				</view>
+		 </view>
+		 <view class="noData" wx:else>
+         <view class="img">
+				   <image src="{{imgUrl}}/noData/noData.png"></image>
+				 </view>
+		 </view>
+	</scroll-view>	
+	<view>
+      <!--弹出窗 -->
+			 <view class="dialog">
+						<van-dialog use-slot show="{{ show }}" confirm-button-open-type="getUserInfo" bind:close="onClose"
+							bind:getuserinfo="getUserInfo">
+							<view class="dialogContent">
+								<view class="title">
+										阿司匹林肠溶片
+								</view>
+								<view class="close" bindtap="onClose">
+									<van-icon name="cross" />
+								</view>
+								<view  class="productSpecifications clearfix" >
+									<view class="fl name">产品规格</view>
+									<view class="fr" style="width:300rpx;z-index:10000;height:100rpx; line-height:100rpx;padding:25rpx 0 0 0;border:1rpx solid red;">
+										<van-cell-group>
+											<van-field
+												value="{{ value }}"
+												placeholder="请输入用户名"
+												border="{{ false }}"
+												bind:change="onChange"/>
+										</van-cell-group>	
+									</view>
+								</view>
+								
+								<view class="dialogInfo">
+									<view class="item"> 
+											<text>服用频次</text>
+											<text>1日1次</text>
+									</view>
+									<view class="item">
+											<text>服用量</text>
+											<van-cell-group>
+											<van-field
+												value="{{ value }}"
+												placeholder="请输入用户名"
+												border="{{ false }}"
+												bind:change="onChange"/>
+										</van-cell-group>
+									</view>
+							</view>
+							</view>
+						</van-dialog>
+			 </view>
+      <!-- 最下面页面button		 -->
+			  <view class="clearfix {{isIphoneX ?'tipX':'tip'}}" >
+						<view  wx:if="{{infoShow}}"  class="infoDialog" >
+								<view style="position: absolute;bottom:0;"class="infoBox">
+									<view class="item" wx:for="{{drugAddData}}" wx:for-item='item' wx:for-index="index" 
+										>
+										<van-cell  class="van-cell"  center="true">
+											<view slot="title" class="cell-slot">
+												<view class="van-cell-text" style="margin-left:10rpx;">
+													<view class="cell-title">{{item.name}}</view>
+												</view>
+											</view>
+											<van-icon slot="right-icon" name="delete" size="20px" class="custom-icon" data-item="{{item}}"   data-index="{{index}}" bindtap="drugDeleteClick"/>
+										</van-cell>
+								</view>
+							</view>  
+						</view>
+					<view class="ButtonBox">
+						<view class="tipButton" bindtap="infoShow">
+							<image src="{{imgUrl}}/drugAdd/药品.png"></image>
+							<view class="info">{{drugAddData.length}}</view>
+						</view>
+						<view class="button" bindtap="save">完成</view>
+					</view>
+				</view>
+    </view>
+	</view>

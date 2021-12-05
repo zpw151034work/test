@@ -1,0 +1,72 @@
+.container {
+	width: 100%;
+	background: #fff;
+	box-sizing: border-box;
+	padding-top:30rpx;
+}
+
+.content_box {
+	width: 650rpx;
+	margin: 0 auto;
+	padding:10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top:30rpx;
+	background: #fff;
+	border-radius: 20rpx;
+	margin-bottom: 40rpx;
+	border: 1px solid rgb(233, 231, 231);
+	box-shadow: 5px 5px 5px #eeeeee;
+}
+/* .content_box .base_info{
+	width:590rpx;
+	margin:20rpx auto;
+	padding:32rpx 32rpx; 
+	font-size:28rpx;
+	color:28rpx;
+	border-radius:20rpx;
+	margin-top:20rpx;
+} */
+/* 预警 */
+.stasisBloodWarning .item{
+	display: block;
+	margin: 0,0,0,0;
+	padding: 0,0,0,0;
+	height: 80rpx;
+	width: 620rpx;
+	}
+.stasisBloodWarning .item .icon{
+	display: block;
+	width:16rpx;
+	height:16rpx;
+	border-radius: 50%;
+	background:#59B34E;
+	float:left;
+	margin-top:30rpx;
+	margin-left:32rpx;
+}
+.stasisBloodWarning .item .title{
+	height: 80rpx;
+	line-height:80rpx !important;
+}
+.content_box .base_info .stasisBloodWarning .item .varning_img {
+	display: block;
+	margin:0,0,0,0;
+	padding: 0,0,0,0;
+	width: 50rpx;
+	height: 50rpx;
+	float: left;
+	z-index: 100;
+}
+.stasisBloodWarning .item .title{
+	  display: block;
+		font-size:28rpx;
+		color:#4A4A4A;
+		font-weight:500;
+		height:80rpx;
+		text-align: center;
+		float:left;
+		line-height: 35px;
+		margin-left: 10px;
+}
+

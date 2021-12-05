@@ -1,0 +1,88 @@
+/* pages/healthassessment/index.wxss */
+.container{
+	position: absolute;
+	width:750rpx;
+ margin:0 auto;
+	box-sizing: border-box;
+	overflow: auto;
+	background:#fff;
+} 
+.content_box{
+	width: 702rpx;
+	margin: 0 auto;
+	background:#fff;
+	border-radius:20rpx;
+	margin-bottom:40rpx;
+	border:1px solid #fff;
+}
+.base_info{
+ width: 702rpx;
+ margin:0 auto;
+}
+.base_info .item{
+	width: 682rpx;
+	height:140rpx;
+	border:1rpx solid #eee;
+	border-radius: 20rpx;
+	padding:0 10rpx;
+	margin-top:32rpx;
+}
+
+.van-image{
+width:84rpx;
+height:84rpx;
+border-radius: 10rpx;}
+.cell-slot{
+	display:flex;	
+	border-radius:10rpx;
+	width: 400rpx;
+}
+.cell-title{
+	font-size:32rpx;
+	font-weight:500;
+		color:#333;
+}
+.cell-reason{
+	font-size:20rpx;
+	color:#909399;
+}
+/* 最后按钮 */
+.button{
+	width:702rpx;
+	height:80rpx;
+	margin:0 auto;
+	color:#fff;
+	border-radius: 40rpx;
+	text-align: center;
+	font-size:32rpx;
+	line-height: 80rpx;
+	background:#419D37;
+	}
+.tip {
+	width:750rpx;
+	height: 80rpx;
+	margin: 0 auto;
+	position: fixed;
+	bottom:0rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background:#fff;
+	padding-bottom:10rpx;
+}
+.tipX {
+	width: 750rpx;
+	height: 80rpx;
+	margin: 0 auto;
+	position: fixed;
+	bottom:58rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background:#fff;
+	padding-bottom:10rpx;
+}
+/* 时间插件 */
+.custom-icon{
+	margin-top: 4rpx !important;
+}
+
+

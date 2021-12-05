@@ -1,0 +1,40 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - 34px);'>
+	<view style="width:750rpx;margin:0 auto;padding-bottom:120rpx;height:2000rpx;">
+		<!-- echarts -->
+		<view class="reportChart">
+			<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{healthScore}}"></ec-canvas>
+		</view>
+		<view wx:if="{{emotionAdjust!=''}}">
+			<!-- 睡眠时长 -->
+			<view class="energyIntake">
+				<view>主要情绪</view>
+				<view>{{emotion}}</view>
+			</view>
+			<view class="content_box">
+				<view class="motionType">
+					<view>情绪影响因素</view>
+					<view >{{emotionAdjust}}</view>
+				</view>
+			</view>
+			<view class="content_box">
+				<view class="motionType">
+					<view>情绪调节方法</view>
+					<view>{{emotionEffect}}</view>
+				</view>
+			</view>
+			<!-- 运动记录良好，继续保持！ -->
+			<!-- <view class="content_box assessment" >
+								<view class="content_title"><image  class="good" src="{{imgUrl}}/sleepReport/故障.png"></image>情绪波动严重</view>
+								<view class="contentTitle">
+									但是尚未波及到健康哦。
+								</view>
+			</view> -->
+		</view>
+		<view class="blankPage" wx:if="{{emotionAdjust==''}}">
+			<view class="tip">完成记录才能获得分析报告哦</view>
+			<view class="button" bindtap="jumpPage">去记录</view>
+		</view>
+	</view>
+</view>

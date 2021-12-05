@@ -1,0 +1,243 @@
+@import '../../../assets/base64.wxss';
+@import '../../../assets/base.wxss';
+
+/* 页面样式 */
+.exercise .tab_title {
+	width: 642rpx;
+	/* height: 404rpx; */
+	background: #ffff;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 254rpx;
+	border-radius: 20rpx;
+	z-index: 10000;
+	border: 1rpx solid #eee;
+	padding: 30rpx;
+	margin-bottom: 40rpx;
+	overflow: auto;
+}
+.exercise .tab_text {
+	font-size: 32rpx;
+	color: #333;
+	font-weight: 600;
+	top: 20rpx;
+	left: 32rpx;
+}
+
+.exercise .tab_button {
+	display: flex;
+	top: 82rpx;
+	font-size: 28rpx;
+	color: #666;
+	width: 640rpx;
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+}
+.exercise .tab_button .item {
+	margin-left: 6rpx;
+}
+
+.exercise .tab_button .item image {
+	width: 90rpx;
+	height: 90rpx;
+}
+
+.exercise .tab_button .item view {
+	font-size: 28rpx;
+	line-height: 40rpx;
+	text-align: center;
+	color: #333;
+}
+
+/* 运动推荐 */
+.exercise .sportsRecommendation {
+	width: 614rpx;
+	background: #F4FAF3;
+	margin: 0 auto;
+	padding: 10rpx 20rpx;
+	border-radius: 20rpx;
+	position: relative;
+}
+
+.exercise .sportsRecommendation .icon {
+	color: #48a53d;
+	font-size: 36rpx;
+	display: block;
+	height: 30rpx;
+	width: 30rpx;
+	margin-top: 11rpx;
+	overflow: hidden;
+	float: left;
+}
+
+.exercise .suggestionsWaysBox .icon {
+	color: #48a53d;
+	font-size: 36rpx;
+	display: block;
+	height: 30rpx;
+	width: 30rpx;
+	margin-top: 12rpx;
+	overflow: hidden;
+	float: left;
+}
+
+.exercise .sportsRecommendation text {
+	font-size: 28rpx;
+	padding: 0 10rpx;
+	font-weight: 600;
+	/* vertical-align: center; */
+}
+
+.exercise .sportsRecommendation .duration {
+	position: absolute;
+	top: 104rpx;
+	left: 149rpx;
+	font-size: 40rpx;
+	font-weight: 600;
+	color: #333;
+}
+
+.exercise .sportsRecommendation .timeSlot {
+	position: absolute;
+	top: 104rpx;
+	left: 337rpx;
+	font-size: 40rpx;
+	color: #4A4A4A;
+}
+
+/* 方式建议 */
+
+.exercise .sportsCustom {
+	background: #F4FAF3;
+}
+
+.exercise .sportsNav {
+	background: #F4FAF3;
+}
+
+.exercise .sportTab {
+	background: #E2EAE1;
+	font-size: 28rpx;
+	color: #333;
+}
+
+.exercise .content_box {
+	padding-bottom: 0rpx !important;
+	margin-bottom: 40rpx !important;
+}
+
+.exercise .content_box .suggestionsWaysBox {
+	width: 614rpx;
+	background: #F4FAF3;
+	margin: 0 auto;
+	padding: 10rpx 20rpx;
+	border-radius: 20rpx;
+	position: relative;
+}
+
+.exercise .content_box .suggestionsWaysBox .methodIcon {
+	color: #48a53d;
+	font-size: 36rpx;
+	/* vertical-align: center; */
+	display: block;
+	height: 40rpx;
+	width: 40rpx;
+	/* border:1rpx solid #4a4a4a; */
+	margin-top: 10rpx;
+	overflow: hidden;
+	float: left;
+}
+
+.exercise .suggestionsWaysBox text {
+	font-size: 28rpx;
+	padding: 0 10rpx;
+	font-weight: 600;
+	vertical-align: center;
+}
+
+.exercise .suggestionsWays .item image {
+	width: 588rpx;
+	height: 90rpx;
+	margin-top: 20rpx;
+	border-radius: 20rpx;
+}
+
+.exercise .suggestionBg {
+	display: flex;
+	width: 100%;
+}
+
+.exercise .suggestionBg .suggestionBtn {
+	float: left;
+	width: 144rpx;
+	height: 50rpx;
+	padding-top: 6rpx;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	margin-top: 10rpx;
+	font-size: 28rpx;
+	text-align: center;
+	background: #E2EAE1;
+	color: #333333;
+	border-radius: 10rpx;
+}
+
+.exercise .suggestionBg .suggestionBtnBg {
+	float: left;
+	width: 144rpx;
+	height: 50rpx;
+	padding-top: 6rpx;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	margin-top: 10rpx;
+	font-size: 28rpx;
+	text-align: center;
+	background: #59B34E;
+	color: #FFFFFF;
+	border-radius: 10rpx;
+}
+
+.exercise .sugSty {
+	margin-left: 10rpx;
+	margin-top: 40rpx;
+	margin-bottom: 20rpx;
+}
+
+.exercise .sugStyItem {
+	height: 90rpx;
+	width: 600rpx;
+}
+
+.exercise .sportsInstructions {
+	color: #4A4A4A;
+	font-size: 28rpx;
+	padding: 30rpx
+}
+
+.suggestionImage {
+	width: 24rpx;
+	height: 22rpx;
+	margin: 15rpx 32rpx;
+}
+
+.suggestionImage image {
+	width: 24rpx;
+	height: 22rpx;
+}
+
+.box {
+	width: 702rpx;
+	background: #fff;
+	margin: 0 auto;
+	border-radius: 20rpx;
+	margin-bottom: 20rpx;
+  position:absolute;
+	top: 120rpx;
+	padding-bottom: 150rpx;
+	
+}

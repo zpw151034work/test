@@ -1,0 +1,6 @@
+<view class="error">
+   <view class="img">
+      <image src="../../assets/images/noData/noData.png"></image>
+   </view>
+   <view class="button" bindtap="backHome">返回首页</view>
+</view>

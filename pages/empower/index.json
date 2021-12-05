@@ -1,0 +1,10 @@
+
+  {
+    "usingComponents": {
+      "wxc-dialog": "../../commpents/dialog/dialog"
+     
+    },
+    "disableScroll":true
+  }
+  
+  

@@ -1,0 +1,92 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+	<scroll-view style="width:750rpx;margin:0 auto;padding-bottom:60rpx;">
+		<!-- 搜索 -->
+		<view class="search">
+			<van-search value="{{ value }}" shape="round" placeholder="请输入搜索关键词" bind:change="onChangeSearch"
+				color="#429E38" />
+		</view>
+		<view class="content_box" wx:if="{{motionData!=''}}">
+			<view class="base_info">
+				<view class="item" wx:for="{{motionData}}" wx:for-item='item' wx:for-index="index">
+					<van-cell value="" class="van-cell" value="" center>
+						<view slot="title" class="cell-slot">
+							<image class="van-image" src="{{host}}{{item.img}}"></image>
+							<view class="van-cell-text" style="margin-left:30rpx;">
+								<view class="cell-title">{{item.name}}</view>
+								<view class="cell-reason">{{item.heat}}千卡/{{item.minCount}}{{item.unit}}</view>
+							</view>
+						</view>
+						<van-icon slot="right-icon" name="add-o"  class="custom-icon" data-item="{{item}}"  data-index="{{index}}"
+							bindtap="motionAddClick" size='40rpx' />
+					</van-cell>
+				</view>
+			</view>
+		<view wx:if="{{showOrHide}}" class="loadMore" bindtap="loadMore">
+		加载更多
+		</view>
+		</view>
+		<view class="noData" wx:else>
+         <view class="img">
+				   <image src="{{imgUrl}}/noData/noData.png"></image>
+				 </view>
+		</view>
+	</scroll-view>
+	<view>
+
+		<!--手动弹出窗 -->
+		<view class="dialog">
+			<van-dialog use-slot show="{{ show }}" data-item="{{dialogData}}" 
+				bind:close="onClose" bind:confirm="dialogSave" width='700rpx'>
+				<view class="dialogContent">
+					<view class="card">
+						<image src="{{host}}{{dialogData.img}}"></image>
+						<view class="cardText">
+							<text>{{dialogData.name}}</text>
+							<text>{{dialogData.heat}}千卡/{{dialogData.minCount}}{{dialogData.unit}}</text>
+						</view>
+					</view>
+					<view class="close" bindtap="onClose">
+						<van-icon name="cross" size="60rpx"/>
+					</view>
+					<view class="dialogInfo">
+					  <view class="item middle">
+							<van-field value="{{val}}" border="{{ false }}" bind:change="onMinutesChange"  style="font-size:56rpx;color:#419D37;" placeholder="" 
+							placeholder-style="color:#64B55B;font-size: 30rpx; text-align:left;" custom-style="text-align:center;" input-align="center"/>
+							<text>分钟</text>
+						</view>
+					</view>
+				</view>
+			</van-dialog>
+		</view>
+		
+		<!-- 最下面页面button		 -->
+		<view class="clearfix tip">
+			<view wx:if="{{infoShow}}" class="infoDialog" >
+				<view style="position: absolute;bottom:0;" class="infoBox">
+					<view class="item" wx:for="{{motionAddData}}" wx:for-item='item' wx:for-index="index">
+						<van-cell value="" class="van-cell" center="true">
+							<view slot="title" class="cell-slot">
+								<van-image width="42" height="42" src="{{host}}{{item.img}}" class="van-image" />
+								<view class="van-cell-text" style="margin-left:30rpx;">
+									<view class="cell-title">{{item.name}}</view>
+									<view class="cell-reason">{{item.heat}}千卡/{{item.minCount}}{{item.unit}}</view>
+								</view>
+							</view>
+							<van-icon slot="right-icon" name="delete" class="custom-icon" data-item="{{item}}" data-index="{{index}}"
+								bindtap="motionDeleteClick" size="40rpx"/>
+						</van-cell>
+					</view>
+				</view>
+			</view>
+			<view class="ButtonBox">
+				<view class="tipButton" bindtap="infoShow">
+					<image src="{{imgUrl}}/motionRecord/鞋.png"></image>
+					<view class="info">{{motionAddData.length}}</view>
+				</view>
+				<view class="button" bindtap="save">完成</view>
+			</view>
+		</view>
+	</view>
+</view>

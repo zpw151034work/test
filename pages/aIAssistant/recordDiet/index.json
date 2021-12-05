@@ -1,0 +1,12 @@
+{
+	"usingComponents": {
+		"nav-bar": "/commpents/navbar/index",
+		"van-card": "@vant/weapp/card/index",
+    "van-field": "@vant/weapp/field/index",
+     "load-ing":"/commpents/loading/index",
+     "van-overlay": "@vant/weapp/overlay/index"
+	},
+"backgroundColor":"#eee",
+"backgroundTextStyle":"dark",
+"disableScroll":true
+}

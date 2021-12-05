@@ -1,0 +1,78 @@
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+  <scroll-view style="width:750rpx;margin:0 auto;padding-bottom:60rpx;">
+    <view class="date">
+      <!-- <van-cell title="选择单个日期"  value="{{ date }}" bind:click="onDisplay" >
+    <van-icon slot="right-icon" name="clock-o" class="custom-icon" />
+  </van-cell> -->
+      <view class="clearfix timeButton" bindtap="onDisplay">
+        <view class="fr timeButtonRight">
+          <van-icon name="clock-o" />
+        </view>
+        <view class="fr timeButtonCenter"></view>
+        <view class="fr timeButtonLeft">{{date}}</view>
+      </view>
+      <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" min-date="{{ minDate }}"
+        max-date="{{maxDate}}" color="#429E38" default-date="{{date}}" />
+    </view>
+    <view>
+      <!-- 睡眠时间 -->
+      <view class="content_box">
+        <view class="content_title">睡眠时间</view>
+        <view class="unit">
+          <text class="shi">时</text>
+          <text class="fen">分</text>
+        </view>
+        <view class=" base_info sleepData">
+          <view class="item">
+            <text>入睡时间</text>
+            <text>昨天</text>
+            <view style="display:inline-block" class="timeSlot">
+              <van-datetime-picker type="time" value="{{ currentDate1 }}" min-hour="{{ minHour1 }}"
+                max-hour="{{ maxHour1 }}" bind:change="onInput1" visible-item-count="3" />
+            </view>
+          </view>
+          <view class="item">
+            <text>起床时间</text>
+            <text>今天</text>
+            <!-- <view class="unit">
+           <text class="shi">时</text>
+           <text class="fen">分</text>
+          </view> -->
+            <view style="display:inline-block" class="timeSlot">
+              <van-datetime-picker type="time" value="{{ currentDate2 }}" min-hour="{{ minHour2 }}"
+                max-hour="{{ maxHour2 }}" bind:change="onInput2" visible-item-count="3" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 睡眠状态 -->
+      <view class="content_box">
+        <view class="content_title">睡眠状态</view>
+        <view class="sleepState">
+          <view class="item" wx:for="{{sleepStateData}}" wx:for-item='item' data-item="{{item}}" data-index="{{index}}"
+            bindtap="sleepStateClick">
+            <image src="{{item.isActive?item.image:item.imageActiive}}"></image>
+            <text style="color:{{item.isActive ? '#4A4A4A':'#999'}}">{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 是否使用了助眠保健品 -->
+      <!-- <view class="content_box clearfix" >
+      <view class="content_title fl" >是否使用了助眠保健品</view>
+       <view class="swich fr">
+         <van-switch checked="{{ checked }}" bind:change="onChangeSwicth" size="30rpx" style="display:inline-block" inactive-color="#fff" active-color="#64B55B"/>
+      </view>
+      <view class=" base_info healthProducts" wx:if="{{checked}}">
+        <view class="item" wx:for="{{healthProductsData}}"  wx:for-item='item' wx:for-index="index" 
+         data-item="{{item}}"   data-index="{{index}}" bindtap="healthProductsClick" style="color:{{item.isActive ? '#4A9E41':'#999'}}">
+         {{item.name}}
+        </view> 
+      </view>
+   </view> -->
+    </view>
+  </scroll-view>
+  <view class="tip">
+    <view class="button" bindtap="save">完成</view>
+  </view>
+</view>

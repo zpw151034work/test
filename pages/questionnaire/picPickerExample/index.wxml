@@ -1,0 +1,42 @@
+<!--pages/questionnaire/edittextPage/edittextThem.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight}}px);'>
+  <view class="viewBg">
+    <text class="title">本膳食调查属于频次法，可能不能完全覆盖您的膳食习惯，您可以选择与您情况最相近的选择。</text>
+    <view class="topPic">
+      <view class="picLayTheme">
+        <image class="imageTheme" src='{{topImageUrl}}'></image>
+      </view>
+      <view class="nameLayTheme">
+        <text class="nameTheme">老张</text>
+        <text class="nameTipTheme">平时的饮食习惯中，最多的组合是这样的：</text>
+        <text class="nameTipTheme">早餐吃2个包子，午餐吃一碗面条，晚餐吃一份饺子。</text>
+      </view>
+    </view>
+    <view class="examplePicLayTheme">
+      <image class="examplePic" src='{{exampleImageUrl}}' mode="aspectFit"></image>
+    </view>
+    <view class="summaryTipLayTheme">
+      <text class='summaryTip'>所以，老张一天实际上是吃了4份主食。</text>
+    </view>
+    <view class='exampleResultLay'>
+      <view class="exampleResult">
+        <text class="exampleResultNum">4.0</text>
+        <image class="exampleResultPic" src='../../../assets/questionnaireExampleResultPic.png'></image>
+      </view>
+      <text class='exampleResultUnit'>份</text>
+    </view>
+
+    <view class="bottomBg">
+      <view class="backTheme">
+        <text style="text-align:center" bindtap="backFun">没解决我的问题</text>
+      </view>
+      <view class="sureTheme">
+        <text style="text-align:center" bindtap="sureFun">明白了，返回</text>
+      </view>
+    </view>
+    <view class="bottomPhoneLay">
+      如有任何疑问，请致电(010) 5272 9739
+    </view>
+  </view>
+</view>

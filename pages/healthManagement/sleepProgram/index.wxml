@@ -1,0 +1,72 @@
+<view class="container sleepProgram" style="height:calc(100vh - {{statusBarHeight+44}}px);">
+	<scroll-view style="background:#F9FAFC;">
+		<view class="global_background">
+			<!-- 睡眠重点关注 -->
+			<view class="top_content_box">
+				<view class="sectionTitleTop">
+					睡眠重点关注
+				</view>
+				<view class="sleep_status" style="margin-bottom:30rpx">
+					{{sleep_risk_name}}
+				</view>
+				<view class="sleep_content">
+					<view class="item">
+						<text class="icon"></text> <text class="title">建议入睡时间：{{sleep_time}}</text>
+					</view>
+					<view class="horizontalline"></view>
+					<view class="item">
+						<text class="icon"></text> <text class="title">建议卧室温度：{{temprature}}°C</text>
+					</view>
+					<!-- <view class="horizontalline"></view> -->
+					<view>
+						<view class="sleep_content">
+							<view class="item" style="margin-top:20rpx">
+								<text class="icon"></text> <text class="title">睡前2小时不得进行如下活动事项：</text>
+							</view>
+							<view class="gridview">
+								<view wx:for="{{sleepBeforeEvent}}" wx:for-item="itemd" class="gridview-item">
+									<text>· {{itemd.name}}</text>
+								</view>
+							</view>
+							<view class="horizontalline"></view>
+							<view class="item">
+								<text class="icon"></text> <text class="title">睡具建议:</text>
+							</view>
+							<view class="gridview">
+								<view wx:for="{{sleepTool}}" wx:for-item="itemd" class="gridview-item">
+									<text>·{{itemd.name}}</text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="background_position">
+
+			<!-- 入睡困难常见诱因 -->
+			<view style="margin-top:30rpx">
+				<view class="sectionTitle">入睡困难常见诱因</view>
+				<view class="sleep_content ">
+					<view wx:for="{{sleepHardCause}}" wx:for-item="itemdata" class="item">
+						<text class="icon"></text> <text class="title">{{itemdata.title}}</text>
+						<view style="margin-top:10rpx" class="content">{{itemdata.content}}</view>
+					</view>
+				</view>
+			</view>
+			<!-- 专属睡眠建议 -->
+			<view class="border_radius">
+				<view style="margin-top:30rpx;">
+					<view class="sectionTitle">专属睡眠建议</view>
+					<view class="sleep_content ">
+						<view wx:for="{{sleepSugistion}}" wx:for-item="itemd" class="item">
+							<!-- <text class="icon"></text> -->
+							<text class="content">{{itemd}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view style="height:840rpx;background:#F9FAFC;margin-top:40rpx;"></view>
+		</view>
+	</scroll-view>
+</view>

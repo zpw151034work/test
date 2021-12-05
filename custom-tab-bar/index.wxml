@@ -1,0 +1,66 @@
+  <view  class="tabbar_wrapper">
+    <van-tabbar active="{{ active }}" bind:change="onChange" class=tabbar"   active-color="#64B55B" inactive-color="#000" >
+       <van-tabbar-item   data-path="/pages/healthManagement/main/index" >
+        <image  slot="icon" src="{{imgUrl}}/tabbar/健康管理.png" mode="aspectFit" style="width: 30px; height: 18px;"/>
+        <image slot="icon-active" src="{{imgUrl}}/tabbar/健康管理-选中.png" mode="aspectFit" style="width: 30px; height: 18px;"/>
+        健康管理
+       </van-tabbar-item>
+       <van-tabbar-item  data-path="/pages/aIAssistant/main/index">
+         <image   slot="icon" src="{{imgUrl}}/tabbar/随访.png" mode="aspectFit"  style="width: 30px; height: 18px;"/>
+         <image   slot="icon-active" src="{{imgUrl}}/tabbar/随访-选中.png" mode="aspectFit" style="width: 30px; height: 18px;"/>
+         AI助手
+      </van-tabbar-item>
+      <view   class="center" >
+        <view class="image"  bindtap="clickTab"></view>
+      </view>
+      <van-tabbar-item data-path="/pages/report/reportMain/index">
+        <image slot="icon" src="{{imgUrl}}/tabbar/健康档案.png" mode="aspectFit" style="width: 30px; height: 18px;"/>
+        <image slot="icon-active" src="{{imgUrl}}/tabbar/健康档案-选中.png" mode="aspectFit" style="width: 30px; height: 18px;"/>
+         健康档案
+      </van-tabbar-item>
+     
+      <van-tabbar-item   data-path="/pages/my/home/index">
+        <image  slot="icon" src="{{imgUrl}}/tabbar/我的.png"  mode="aspectFit" style="width: 30px; height: 18px;"/>
+        <image slot="icon-active" src="{{imgUrl}}/tabbar/我的-选中.png" mode="aspectFit" style="width: 30px; height: 18px;"/>
+        我的
+    </van-tabbar-item>
+    </van-tabbar>
+   <!-- <view class="centerBar" >
+      <view class="image"  bindtap="clickTab"></view>
+   </view> -->
+  </view>
+   <view class="dialogBox"  wx:if="{{show}}">
+     <view class="contentBox">
+      <view class="item" bindtap="recordPage1">
+        <image src="{{imgUrl}}/tabbar/记饮食.png"></image>
+        <text>记饮食</text>
+      </view>
+      <view class="item" bindtap="recordPage2">
+        <image src="{{imgUrl}}/tabbar/记运动.png"></image>
+        <text>记运动</text>
+      </view>
+      <view class="item" bindtap="recordPage3">
+        <image src="{{imgUrl}}/tabbar/记感受.png"></image>
+        <text>记感受</text>
+      </view>
+      <view class="item" bindtap="recordPage4">
+        <image src="{{imgUrl}}/tabbar/记睡眠.png"></image>
+        <text>记睡眠</text>
+      </view>
+      <view class="item" bindtap="recordPage5">
+        <image src="{{imgUrl}}/tabbar/记用药.png"></image>
+        <text>记用药</text>
+      </view>
+      <!-- <view class="item" bindtap="recordPage6">
+        <image src="{{imgUrl}}/tabbar/记体征.png"></image>
+        <text>记体征</text>
+      </view> -->
+     </view>
+     <view class="close">
+       <image src="{{imgUrl}}/tabbar/关闭.png" bindtap="clickClose" ></image>
+     </view>
+   </view>
+  
+  
+
+

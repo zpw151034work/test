@@ -1,0 +1,8 @@
+/* pages/healthassessment/index.wxss */
+.container{
+	width:100%;
+	background:#eee;
+	box-sizing: border-box;
+}
+
+ 

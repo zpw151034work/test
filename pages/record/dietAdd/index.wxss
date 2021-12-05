@@ -1,0 +1,392 @@
+/* pages/healthassessment/index.wxss */
+.container {
+	position: absolute;
+	width: 750rpx;
+	margin: 0 auto;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.content_box {
+	width: 702rpx;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 20rpx;
+	margin-bottom: 40rpx;
+}
+
+.base_info {
+	width: 702rpx;
+	margin: 0 auto;
+}
+
+.van-image {
+	width: 84rpx;
+	height: 84rpx;
+	border-radius: 10rpx;
+}
+
+.cell-slot {
+	display: flex;
+	border-radius: 10rpx;
+	width: 400rpx;
+}
+
+.cell-title {
+	font-size: 28rpx;
+	color: #333;
+	font-weight: 600 !important;
+}
+
+.cell-reason {
+	font-size: 24rpx;
+	color: #909399;
+}
+
+/* 弹出层样式 */
+.dialog .van-button--default {
+	width: 544rpx !important;
+	height: 80rpx !important;
+	line-height: 80rpx;
+	margin: 0 auto !important;
+	border-radius: 40rpx;
+	background: #419D37 !important;
+	color: #fff !important;
+	margin-bottom: 30rpx !important;
+	display: block;
+}
+
+.dialogContent {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border: 1rpx solid #fff;
+}
+
+.card {
+	top: 80rpx;
+	width: 400rpx;
+	height: 140rpx;
+}
+
+.cardText {
+	display: inline-block;
+	margin-left: 20rpx;
+}
+
+.card image {
+	width: 82rpx;
+	height: 82rpx;
+	margin: 40rpx 0 0 30rpx;
+	display: inline-block;
+}
+
+.card .cardText text:nth-child(2n+1) {
+	font-size: 20rpx;
+	color: #333;
+	display: block;
+	width: 100%;
+}
+
+.card .cardText text:nth-child(2n) {
+	font-size: 24rpx;
+	color: #909399;
+	display: block;
+}
+
+.close {
+	position: absolute;
+	top: 30rpx;
+	right: 40rpx;
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.dialogInfo {
+	widows: 640rpx;
+	height: 230rpx;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0 32rpx;
+}
+
+.dialogInfo .item {
+	width: 160rpx;
+	height: 100rpx;
+	padding: 100rpx 0;
+	text-align: center;
+}
+
+.dialogInfo .item text {
+	display: block;
+	color: #909399;
+	font-size: 24rpx;
+}
+
+.dialogInfo .middle {
+	width: 224rpx;
+	text-align: center;
+	padding: 50rpx 0;
+	z-index: 0;
+}
+
+.dialogInfo .middle text:nth-child(2n+1) {
+	color: #64B55B;
+	font-size: 56rpx;
+	border-bottom: 6rpx solid #64B55B;
+}
+
+.dialogInfo .middle .van-field__input {
+	color: #64B55B !important;
+	font-size: 56rpx;
+	text-align: center;
+}
+
+.dialogInfo .middle .van-field__input::-webkit-input-placeholder {
+	/* WebKit browsers */
+	font-size: 14px;
+	color: #64B55B;
+}
+
+.dialogInfo .middle .van-field__input:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	font-size: 14px;
+	color: #64B55B;
+}
+
+.dialogInfo .middle .van-field__input::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	font-size: 14px;
+	color: #64B55B;
+}
+
+.dialogInfo .middle .van-field__input:-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	font-size: 14px;
+	color: #64B55B;
+}
+
+.dialogInfo .middle text {
+	color: #64B55B;
+	font-size: 56rpx;
+	border-top: 6rpx solid #64B55B;
+}
+
+
+.photo {
+	width: 702rpx;
+	margin: 0 auto;
+	padding: 20rpx 0;
+}
+
+/* 拍照弹出层 */
+.searchPhoto {
+	width: 544rpx;
+	margin: 0 auto;
+	height: 80rpx;
+	margin-top: 80rpx;
+}
+
+.searchPhoto input {
+	display: block;
+	width: 544rpx;
+	height: 80rpx;
+	background: #F6F6F6;
+	border-radius: 40rpx;
+}
+
+.input-placeholder {
+	color: #999999;
+	font-size: 28rpx;
+	/* text-indent: 2em; */
+}
+
+.dialogStepper {
+	padding: 20rpx 0;
+	width: 544rpx;
+	height: 120rpx;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.dialogStepper text {
+	font-size: 24rpx;
+	color: #999;
+}
+
+/* 页面照片 */
+.van-uploader__preview-image {
+	width: 200rpx !important;
+	height: 200rpx !important;
+}
+
+.van-uploader__upload {
+	width: 200rpx !important;
+	height: 200rpx !important;
+}
+
+.van-uploader__preview {
+	margin: 0rpx 45rpx 40rpx 0rpx !important;
+}
+
+/* 最后按钮 */
+.tip {
+	width: 750rpx;
+	height: 120rpx;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 0rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background: #fff;
+	display: flex;
+	align-items: center;
+	padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tipX {
+	width: 750rpx;
+	/* height: 80rpx; */
+	margin: 0 auto;
+	position: fixed;
+	bottom: 58rpx;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.button {
+	float: left;
+	width: 602rpx;
+	height: 80rpx;
+	color: #fff;
+	border-radius: 40rpx;
+	text-align: center;
+	font-size: 32rpx;
+	line-height: 80rpx;
+	background: #419D37;
+}
+
+.tipButton {
+	position: relative;
+}
+
+.info {
+	position: absolute;
+	width: 30rpx;
+	height: 30rpx;
+	background: red;
+	color: #fff;
+	font-size: 20rpx;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30rpx;
+	left: 50rpx;
+}
+
+.tipButton image {
+	float: left;
+	display: inline-block;
+	width: 60rpx;
+	height: 60rpx;
+	margin-top: 8rpx;
+	margin-right: 30rpx;
+}
+
+.ButtonBox {
+	width: 750rpx;
+	height: 80rpx;
+	padding: 0 24rpx;
+	/* padding-bottom: 10rpx; */
+}
+
+.infoDialog {
+	background: rgba(000, 000, 000, 0.7);
+	height: 100vh;
+	position: relative;
+	width: 750rpx;
+	z-index: 10000 !important;
+}
+
+.infoBox {
+	padding-top: 20rpx;
+	width: 750rpx;
+	margin: 0 auto;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+	background: #fff;
+}
+
+.zIndex {
+	z-index: -1 !important;
+}
+
+.loading {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background: rgba(000, 000, 000, 0.9), ;
+	z-index: 1000001;
+}
+
+.loadMore {
+	text-align: center;
+	font-size: 28rpx;
+	margin-top: 30rpx;
+	margin-bottom: 60rpx;
+}
+
+.noData {
+	width: 100%;
+	height: 800rpx;
+	position: relative;
+}
+
+.noData .img {
+	width: 360rpx;
+	height: 336rpx;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.noData .img image {
+	width: 360rpx;
+	height: 336rpx;
+}
+
+.swiper-item {
+	width: 40rpx !important;
+	height: 30rpx;
+}
+
+.activeClass {
+	color: #64B55B !important;
+	font-size: 32rpx !important;
+	font-weight: 600 !important;
+}
+
+.van-tabs__line {
+	display: none;
+}
+
+.dialog .middle .van-field__control {
+	font-size: 56rpx;
+	color: #419D37 !important;
+
+}
+
+/* .dialog .van-cell__value{
+	text-align: center !important;
+	
+<<<<<<< HEAD
+} */
+
+.search .van-field__control{
+	color:#000 !important;
+  caret-color:#000 !important;
+}
+

@@ -1,0 +1,179 @@
+
+@import '../../../assets/base64.wxss';
+@import '../../../assets/base.wxss';
+
+/* 页面样式 */
+.global_background{
+	width:750rpx;
+	height:244rpx;
+	position:relative;
+	top:0rpx;
+	z-index:1;
+	background-color:#64B55B;
+ border-radius: 0rpx 0rpx 100rpx 100rpx;
+}
+/* 页面样式 */
+.positionBox {
+	position: relative;
+	top: -164rpx;
+	z-index: 100;
+}
+.medication {
+	width: 702rpx;
+	margin: auto;
+}
+.medication .tabItem {
+	background: #ffff;
+	border-radius: 20rpx;
+	width: 662rpx;
+	padding: 20rpx 20rpx;
+	margin-bottom: 40rpx;
+}
+.medication .tab_text {
+	position: relative !important;
+	font-size: 32rpx;
+	color: #333;
+	font-weight: 600;
+	top: 0 !important;
+	left: 0 !important;
+}
+.tab_button {
+	display: flex;
+	position: absolute;
+	top: 112rpx;
+	font-size: 24rpx;
+	color: #666;
+	width: 640rpx;
+	height: 132rpx;
+	margin-left: 32rpx;
+}
+
+.tab_button .item {
+	margin-left: 6rpx;
+}
+
+.tab_button .item image {
+	width: 90rpx;
+	height: 90rpx;
+}
+
+.tab_button .item view {
+	font-size: 28rpx;
+	line-height: 40rpx;
+	text-align: center;
+	color: #333;
+}
+
+.echartsBox {
+	width: 640rpx;
+	margin: 0 auto;
+	color: #666;
+	font-size: 28rpx;
+	text-indent: 2em;
+}
+
+.tip {
+	width: 640rpx;
+	margin: 0 auto;
+	font-size: 28rpx;
+	color: #64B55B;
+	font-weight: 500;
+}
+
+.tip .item {
+	width: 213rpx;
+	float: left;
+	height: 68rpx;
+	line-height: 68rpx;
+}
+
+.tip .item:nth-child(3n+2) {
+	text-align: center;
+}
+
+.tip .item:nth-child(3n) {
+	text-align: right;
+}
+
+.tip .item text:nth-child(odd) {
+	display: inline-block;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background: #B5DBA8;
+}
+
+.tip .item text:nth-child(even) {
+	margin-left: 10rpx;
+}
+
+.button {
+	width: 702rpx;
+	height: 80rpx;
+	margin: 0 auto;
+	color: #fff;
+	border-radius: 40rpx;
+	text-align: center;
+	font-size: 32rpx;
+	line-height: 80rpx;
+	background: #419D37;
+}
+
+.buttonTip {
+	font-size: 24rpx;
+	color: #999;
+}
+
+
+
+.bottomView {
+	text-align: center;
+	margin:auto;
+	width:300rpx;
+	margin: 20rpx auto;
+}
+
+.bottomBtn {
+	display: block;
+	font-size: 24rpx;
+	color: #999;
+	height: 40rpx;
+	float: left;
+}
+
+.bottomEye {
+	float: left;
+	display:block;
+	width: 40rpx;
+	height:40rpx;
+	line-height:40rpx;
+}
+.swich{
+	padding-top:7rpx;
+}
+
+.bottomButton{
+	width: 750rpx;
+	height: 180rpx;
+	position: fixed;
+	bottom:0rpx;
+	left:50%;
+	transform: translate(-50%,0);
+	margin: 0 auto;
+	z-index: 1000;
+	background:#fff;
+}
+.positionBox2{
+	position: relative;
+	top: -164rpx;
+	width: 702rpx;
+	margin: 0 auto;
+	z-index: 100;
+	background:#fff;
+	box-shadow: 20rpx;
+	text-align: center;
+	line-height: 180rpx;
+	font-size: 32rpx;
+	font-weight: 600;
+	border-radius: 20rpx;
+}

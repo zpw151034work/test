@@ -1,0 +1,42 @@
+/**index.wxss**/
+.container {
+  width: 750rpx;
+  background: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.scanningCode {
+  width: 702rpx;
+  margin: 0 auto;
+  height: 360rpx;
+  margin-top: 364rpx;
+  margin-bottom: 60rpx;
+}
+
+.scanningCode image {
+  width: 702rpx;
+  height: 360rpx;
+}
+
+.evaluation {
+  width: 702rpx;
+  margin: 0 auto;
+  height: 280rpx;
+}
+
+.evaluation image {
+  width: 702rpx;
+  height: 280rpx;
+}
+
+.close {
+  width: 50rpx;
+  margin: 0 auto;
+  height: 50rpx;
+  margin-top: 100rpx;
+
+}

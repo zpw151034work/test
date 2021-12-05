@@ -1,0 +1,10 @@
+<van-overlay show="{{false}}" bind:click="onClickHide" class="overlay"  >
+  <view>{{loadingData.loading }}</view>
+  <view class="wrapper">
+     <view class="block" catch:tap="noop" />
+     <van-loading type="spinner" color="#1989fa" />
+  </view>
+</van-overlay>
+<view class="overlay" >
+
+</view>

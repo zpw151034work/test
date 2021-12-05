@@ -1,0 +1,67 @@
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+.tab{
+  position: fixed;
+  width: 750rpx;
+  height:88rpx;
+  z-index: 10000;
+
+}
+.tab_title{
+	width: 702rpx;
+	height:276rpx;
+	background:#ffff;
+	position: absolute;
+	left:50%;
+	transform: translate(-50%,0);
+	top:294rpx;
+	border-radius:20rpx;
+	z-index:10000;
+} 
+.tab_text{
+	font-size:32rpx;
+ color:#333;
+ font-weight:600;
+	position: absolute;
+	top:20rpx;
+	left:32rpx;
+}
+.tabBackground{
+	background:#64B55B !important;
+	opacity: 1;
+} 
+.navBackground2{
+	background:#64B55B !important;
+}
+.tabBackground{
+	background:#64B55B !important;
+	flex-basis:16.6% !important;
+ padding:0;
+}
+.tabBackground .van-ellipsis{
+	width:108rpx !important;
+	text-align: center;
+}
+.tab_button{
+	display:flex;
+	position: absolute;
+	top:112rpx;
+	font-size:24rpx;
+	color:#666;	
+	width:640rpx;
+	height:132rpx;
+	margin-left:32rpx;
+}
+.tab_button .item{
+  margin-left:6rpx;
+}
+.tab_button .item image{
+		width:90rpx;
+		height:90rpx;
+}
+.tab_button .item view{
+	font-size:28rpx;
+	line-height:40rpx;
+	text-align: center;
+	color:#333;
+}
+  

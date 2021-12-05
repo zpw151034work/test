@@ -1,0 +1,92 @@
+/* pages/questionnaire/edittextPage/edittextThem.wxss */
+
+.viewBg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.topTitleBg {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+.topTitle {
+  color: #59B34E;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.viewTheme {
+  width: 90%;
+  height: 20%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+}
+
+.tipTextTheme {
+  color: #4A4A4A;
+  font-size: 25rpx;
+  font-weight: bold;
+}
+
+.bottomTipTextTheme {
+  color: #4A4A4A;
+  font-size: 25rpx;
+}
+
+.buttonTheme {
+  width: 100%;
+  color: #ffffff;
+  border-radius: 50rpx;
+  background: #59B34E;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 50rpx;
+}
+
+.fBLy {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.imageTheme {
+  width: 10rpx;
+  height: 10rpx;
+  margin-top: 5rpx;
+}
+
+.bottomTipLay {
+  width: 90%;
+  height: 10%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50rpx;
+}
+
+.bottomLay {
+  width: 90%;
+  height: 25%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bottomButtonTheme {
+  width: 100%;
+  color: #4A4A4A;
+  border-radius: 50rpx;
+  background: #ECEDEE;
+  font-size: 30rpx;
+  margin-bottom: 50rpx;
+}

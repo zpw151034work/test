@@ -1,0 +1,11 @@
+<!--pages/healthManagement/medicationDetailProgram/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeight+34}}px);'>
+  <scroll-view scroll-y="true" style="width:750rpx;">
+    <view class="scrollviewTheme">
+      <view wx:for="{{contentArr}}" wx:for-item="itemd"  class="content">
+        <text>{{itemd}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

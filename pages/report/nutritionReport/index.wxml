@@ -1,0 +1,107 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - 30px);'>
+	<scroll-view style="width:750rpx;margin:0 auto;padding-bottom:120rpx;">
+		<!-- echarts -->
+		<view class="reportChart">
+			<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{healthScore}}" >
+			</ec-canvas>
+		</view>
+		<view wx:if="{{standardDtos!=''}}">
+		    <!-- 能量摄入 -->
+				<view class="energyIntake">
+					<view>能量摄入</view>
+					<view>{{heatTotal}}千卡</view> 
+				</view>
+				<view class="content_box">
+					<view class="content_title">三大营养素分析</view>
+					<view class="base_info">
+						<view>供能比及摄入</view>
+						<view class="nutritionAnalysis">
+							<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{nutritionReport}}"></ec-canvas>
+						</view>
+						<view class="analysisTable">
+							<view class="name">
+								<view style="font-weight:600;">名称</view>
+								<view style="font-weight:600;">摄入(克)</view>
+								<view style="font-weight:600;">推荐(克)</view>
+							</view>
+							<view class="name">
+								<view>脂肪</view>
+								<view>
+									<image wx:if="{{fatFlag == 1}}" class="mainImg" src="{{imgUrl}}/nutritionReport/下降.png"></image>
+									<image wx:if="{{fatFlag == 3}}" class="mainImg" src="{{imgUrl}}/nutritionReport/上升.png"></image>
+
+								<text class="mainText">{{fatTotal}}</text>
+								</view>
+								<view>{{fatDown}}~{{fatUp}}</view>
+							</view>
+							<view class="name">
+								<view>蛋白质</view>
+								<view>
+								<image wx:if="{{proteinFlag == 1}}" class="mainImg" src="{{imgUrl}}/nutritionReport/下降.png"></image>
+									<image wx:if="{{proteinFlag == 3}}" class="mainImg" src="{{imgUrl}}/nutritionReport/上升.png"></image>
+								<text class="mainText">{{proteinTotal}}</text>
+								</view>
+								<view>{{proteinDown}}~{{proteinUp}}</view>
+							</view>
+							<view class="name">
+								<view>碳水化合物</view>
+								<view>
+									<image wx:if="{{carboFlag == 1}}" class="mainImg" src="{{imgUrl}}/nutritionReport/下降.png"></image>
+									<image wx:if="{{carboFlag == 3}}" class="mainImg" src="{{imgUrl}}/nutritionReport/上升.png"></image>
+
+								<text class="mainText">{{carboTotal}}</text>
+								</view>
+								<view>{{carboDown}}~{{carboUp}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 其他营养素分析 -->
+				<view class="content_box assessment">
+					<view class="content_title">其他营养素分析</view>
+					<view class="base_assessment">
+						<view class="analysisTable">
+							<view class="name">
+								<view style="font-weight:600;">名称</view>
+								<view style="font-weight:600;">摄入</view>
+								<view style="font-weight:600;">推荐</view>
+							</view>
+							<view class="name" wx:for="{{standardDtos}}" wx:for-item="item">
+								<view>{{item.elementName}}</view>
+								<view>
+									<image wx:if="{{item.level == 1}}" class="mainImg" src="{{imgUrl}}/nutritionReport/下降.png"></image>
+									<image wx:if="{{item.level == 3}}" class="mainImg" src="{{imgUrl}}/nutritionReport/上升.png"></image>
+									<text class="mainText">{{item.userValue}}</text>
+								</view>
+								<view>{{item.standardValue}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!--今日食物记录  -->
+				<view class="content_box assessment">
+					<view class="content_title">今日食物记录</view>
+					<view class="base_assessment">
+						<view class="analysisTable">
+							<view class="name">
+								<view style="font-weight:600;">名称</view>
+								<view style="font-weight:600;">摄入量</view>
+								<view style="font-weight:600;">能量</view>
+							</view>
+							<view class="name" wx:for="{{foodRecordsData}}" wx:for-item="item">
+								<view>{{item.food}}</view>
+								<view>{{item.val}}{{item.unitType}}</view>
+								<view>{{item.heat}}千卡</view>
+							</view>
+						</view>
+					</view>
+				</view>
+		</view>
+		<view class="blankPage" wx:if="{{standardDtos==''}}">
+          <view class="tip">完成记录才能获得分析报告哦</view>
+          <view class="button" bindtap="jumpPage">去记录</view>
+		</view>
+	</scroll-view>
+</view>

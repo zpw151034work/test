@@ -1,0 +1,162 @@
+<!--pages/healthassessment/index.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+ <view class="transparentPanel" bindtap="panelNoAuthor" wx:if="{{author==1}}"></view>
+<view class="transparentPanel" bindtap="panelNoScan" wx:if="{{author==2}}"></view> 
+<view class="container" style='margin-top:{{statusBarHeight}}px;height:calc(100vh - {{statusBarHeightX}}px);'>
+	<scroll-view  class="scrollView" style="background:#F9FAFC;min-height:1400rpx;">
+	  	<view class="global_background">
+			<view class="noAuthor" wx:if="{{author==1}}">您还未授权，请点击进行授权</view>
+			<view class="noAuthor" wx:if="{{author==2}}">请点击扫描院机二维码，\n获取健康评估报告</view>
+			<view class="unitNum" bindtap="healthScore" wx:if="{{author!=1&&author!=2}}">{{healthAssementScore}}</view>
+			<view class="unit" wx:if="{{author!=1&&author!=2}}"><van-icon name="arrow" size="32rpx"/></view>
+			<view class="title" wx:if="{{author!=1&&author!=2}}">健康得分</view>
+			<view class="hospital">{{hospital}}</view>
+			<view class="department">{{department}}</view>
+			<view class="scanCode" bindtap="scanCode">
+				<van-icon name="scan" />
+			</view>
+			<image src="{{imgUrl}}/main/showBar.png" class="showBar"></image>
+		  	<image src="{{imgUrl}}/main/bar.png" class="barImage"></image> 
+			<view class="tab_title">
+				<!-- <view>科技狗的专属健康方案/<view> -->
+				<view class="tab_text">
+					{{nickName}}的专属健康方案
+				</view>
+				<view class="tab_button">
+					<view wx:for="{{list}}" wx:key="index" wx:for-item="item" data-item="{{item}}" class="item"
+						bindtap="itemClick">
+						<image src='{{item.image}}'></image>
+						<view>{{item.name}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	<!-- 院外管理 -->
+	  <view class="content_box hospitalManagement">
+			<view class="contentHospManage" >院外管理</view>
+			<view >
+			  <view class="hospManage clearfix" style="height:{{hospManageHeight}}rpx;" >
+					<view class="item"  wx:for="{{hospManageData}}" wx:key='index' wx:for-item="item">
+					  <view>
+							<view class="circle"></view>
+						  <view class="Time">{{item.time}}</view>
+								<view class="buttonIcon"  >
+									<view class="buttonItem" wx:for="{{item.data}}" wx:key='*this' wx:for-item="ite">
+										<text>{{ite.name}}</text>
+									</view>
+								</view>
+						 </view>
+					</view>
+			  </view>
+		  </view>
+			<view  class="openClose" >
+				 <view  style="display:inline-block;" bindtap="buttonOpen">
+					<view class="openClose_text" wx:if="{{hospManageHeight<=8000}}" >展开</view>
+				 <view class="openClose_img1"></view>
+			   <image class="openClose_img"  wx:if="{{hospManageHeight<=8000}}" src="{{imgUrl}}/newImages/zhankai.png"></image>
+				 </view>
+				 <view class="openClose_img"></view>
+				  <view style="display:inline-block;" bindtap="buttonRetract">
+						<view class="openClose_text" wx:if="{{hospManageHeight>=500}}" >收起</view>
+						<view class="openClose_img1"></view>
+						<image class="openClose_img" wx:if="{{hospManageHeight>=500}}" src="{{imgUrl}}/newImages/top.png"></image>
+					</view  >
+				
+			 <!-- <view class="openClose_img"></view> -->
+			 <!-- <image class="openClose_img"  wx:if="{{hospManageHeight!=''}}" src="{{imgUrl}}/newImages/zhankai.png"></image>
+			 <image class="openClose_img" wx:if="{{hospManageHeight==''}}" src="{{imgUrl}}/newImages/top.png"></image> -->
+		  </view>
+		</view>
+		<!-- 健康动态 -->
+		<view class="content_box">
+			<view class="content_title">健康动态</view>
+			<view class="base_info">
+				<view class="item">
+					<view>
+						<view class="item_title">营养指数</view>
+						<view class="item_name" wx:if="{{author!=1&&author!=2}}" style="color:{{nutritionScoreColor}}">{{nutritionScore}}</view>
+					</view>
+					<view>
+						<view class="item_date" wx:if="{{author!=1&&author!=2}}">{{time}}</view>
+						<progress class="item_progress" percent="{{nutritionScore}}" stroke-width='10'
+							wx:if="{{author!=1&&author!=2}}" color="{{nutritionScoreColor}}" border-radius="5"></progress>
+					</view>
+				</view>
+				<view class="item">
+					<view>
+						<view class="item_title">运动指数</view>
+						<view class="item_name" wx:if="{{author!=1&&author!=2}}" style="color:{{sportScoreColor}}">{{sportScore}}</view>
+					</view>
+					<view>
+						<view class="item_date" wx:if="{{author!=1&&author!=2}}">{{time}}</view>
+						<progress class="item_progress" percent="{{sportScore}}" stroke-width='10'
+							wx:if="{{author!=1&&author!=2}}" color="{{sportScoreColor}}" border-radius="5"></progress>
+					</view>
+				</view>
+				<view class="item">
+					<view>
+						<view class="item_title">心理指数</view>
+						<view class="item_name" wx:if="{{author!=1&&author!=2}}" style="color:{{psychologyScoreColor}}">{{psychologyScore}}</view>
+					</view>
+					<view>
+						<view class="item_date" wx:if="{{author!=1&&author!=2}}">{{time}}</view>
+						<progress class="item_progress" percent="{{psychologyScore}}" stroke-width='10'
+							wx:if="{{author!=1&&author!=2}}" color="{{psychologyScoreColor}}" border-radius="5"></progress> 
+					</view>
+				</view>
+				<view class="item">
+					<view>
+						<view class="item_title">睡眠指数</view>
+						<view class="item_name" wx:if="{{author!=1&&author!=2}}" style="color:{{sleepScoreColor}}">{{sleepScore}}</view>
+					</view>
+					<view>
+						<view class="item_date" wx:if="{{author!=1&&author!=2}}">{{time}}</view>
+						<progress class="item_progress" percent="{{sleepScore}}" stroke-width='10'
+							wx:if="{{author!=1&&author!=2}}" color="{{sleepScoreColor}}"  border-radius="5"></progress>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 健康预警 -->
+		<view class="content_box">
+			<view class="content_title">健康预警</view>
+			<view class="base_info varning">
+
+				<!-- <view class="item">
+					<image class="varning_img" src="{{imgUrl}}/main/varning.png"></image>
+					<view class="varning_text">
+						最大的预警就是还没开始健康行动
+					</view> -->
+
+				<view class="item" bindtap="healthVarning">
+					<image class="varning_img" src="{{imgUrl}}/main/warning.png"></image>
+					<view class="varning_text">{{earlyWarning}}</view>
+					<view class="buttonLInk">
+						<van-icon name="arrow" size="20px" class="arrow"/>
+					</view>
+				</view>
+			</view>
+		</view>
+    <!-- 今日任务 -->
+		<!-- <view class="content_box task">
+			<view class="content_title">今日任务</view>
+			<view class="task_info">
+				<view class="item clearfix">
+				   <view class="fl circle"></view>
+					 <view class="fl task_name">摄入足量的蛋白质</view>
+					 <view class="fr task_finish"  bindtap="toUploader">去完成</view>
+				</view>
+				<view class="item clearfix">
+				   <view class="fl circle"></view>
+					 <view class="fl task_name">摄入足量的蛋白质</view>
+					 <view class="fr task_finish">去完成</view>
+				</view>
+				<view class="item clearfix">
+				   <view class="fl circle"></view>
+					 <view class="fl task_name">摄入足量的蛋白质</view>
+					 <view class="fr task_finish">去完成</view>
+				</view>
+			</view>
+		</view>  -->
+	</scroll-view>
+</view>

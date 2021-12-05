@@ -1,0 +1,122 @@
+<view class="container nutrition" style="height:calc(100vh - {{statusBarHeight+44}}px);">
+	<scroll-view style="background:#F9FAFC;">
+		<view class="global_background">
+			<view class="tab_title clearfix nutritionTabTitle" id="nutritionTabTitle">
+				<view class="tab_text">
+					当前阶段营养原则
+				</view>
+				<view class="tab_button">
+					您当前处于<text>"{{disease}}"</text>
+					<!-- <text wx:if="{{disease2}}"></text> -->
+					<text	wx:if="{{disease2}}">"{{disease2}}"</text>治疗阶段,营养方案依据以下原则制定，同时配餐兼顾了您的"{{birth_province}}"地域饮食口味。
+				</view>
+			</view>
+		</view>
+		<!--推荐避免-->
+		<view style="position: relative;top:-{{positionHeight}}rpx;">
+			<view class="content_box">
+				<view class="item">
+					<view class="title">推荐</view>
+					<view class="clearfix ibutton">
+						<view wx:for="{{recommendedData}}" wx:for-item="item">{{item.name}}</view>
+					</view>
+				</view>
+				<view class="item">
+					<view class="title">避免</view>
+					<view class="clearfix ibutton">
+						<view wx:for="{{noRecommendedData}}" wx:for-item="item">{{item.name}}</view>
+					</view>
+				</view>
+			</view>
+			<!-- 养需求 -->
+			<view class="content_box">
+				<view class="content_title">营养需求</view>
+				<view class="base_info nutritionalNeeds clearfix">
+					<view class="fl" id='container'>
+						<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{nutritionNeeds}}"></ec-canvas>
+					</view>
+					<view class="fl" style="border-left:1rpx solid #F5F5F5;">
+						<image class="glass" src="{{imgUrl}}/nutritionProgram/glass.png"></image>
+						<text class="dose">{{water}}升水/日</text>
+					</view>
+				</view>
+			</view>
+			<!-- 饮食推荐 -->
+			<view class="content_box clearfix  pointsDiet">
+				<view class="content_title">饮食推荐</view>
+				<view class="dietRecommendation clearfix">
+					<view class="breakfast">
+						<text>早餐</text><text>建议摄入{{breakfastEnergy}}千卡</text>
+						<view class="breakfast-box">
+							<view class="item" wx:for="{{breakfastData}}" wx:for-item="item">
+								<image src="{{item.foodImg}}"></image>
+								<text>{{item.food}}</text>
+								<text>{{item.val}}</text>
+							</view>
+						</view>
+					</view>
+					<view class="lunch">
+						<text>午餐</text><text>建议摄入{{lunchEnergy}}千卡</text>
+						<view class="lunch-box">
+							<view class="item" wx:for="{{lunchData}}" wx:for-item="item">
+								<image src="{{item.foodImg}}"></image>
+								<text>{{item.food}}</text>
+								<text>{{item.val}}</text>
+							</view>
+						</view>
+					</view>
+					<view class="dinner">
+						<text>晚餐</text><text>建议摄入{{dinnerEnergy}}千卡</text>
+						<view class="dinner-box">
+							<view class="item" wx:for="{{dinnerData}}" wx:for-item="item">
+								<image src="{{item.foodImg}}"></image>
+								<text>{{item.food}}</text>
+								<text>{{item.val}}</text>
+							</view>
+						</view>
+					</view>
+					<view wx:if="{{addMeal.length > 0}}" class="addMeal dinner">
+						<text>加餐</text><text></text>
+						<view class="dinner-box">
+							<view class="item" wx:for="{{addMeal}}" wx:for-item="item">
+								<image src="{{item.foodImg}}"></image>
+								<text>{{item.food}}</text>
+								<text>{{item.val}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- //下面button -->
+				<!-- <view class="dietRecommendationButton" >
+				<image src="{{imgUrl}}/nutritionProgram/推荐.png" bindtap="recommend"></image>
+				<image src="{{imgUrl}}/nutritionProgram/不推荐.png" bindtap="noRecommend"></image>
+			</view> -->
+			</view>
+			<!-- 饮食要点 -->
+			<!-- <view class="content_box">
+			<view class="content_title">饮食要点</view>
+			<view class="dietPoints ">
+				<view class="item">
+					<text class="icon"></text> <text class="title">每日30g膳食纤维</text>
+					<view class="content">
+						蔬菜是最易获取的膳食纤维来源，每天建议安排300-500g，促进肠道健康；每日保证至少一餐全谷物，丰富的膳食纤维有利于稳定血糖水平，减少脂肪囤积。
+					</view>
+				</view>
+				<view class="item">
+					<text class="icon"></text> <text class="title">每日30g膳食纤维</text>
+					<view class="content">
+						蔬菜是最易获取的膳食纤维来源，每天建议安排300-500g，促进肠道健康；每日保证至少一餐全谷物，丰富的膳食纤维有利于稳定血糖水平，减少脂肪囤积。
+					</view>
+				</view>
+				<view class="item">
+					<text class="icon"></text> <text class="title">每日30g膳食纤维</text>
+					<view class="content">
+						蔬菜是最易获取的膳食纤维来源，每天建议安排300-500g，促进肠道健康；每日保证至少一餐全谷物，丰富的膳食纤维有利于稳定血糖水平，减少脂肪囤积。
+					</view>
+				</view>
+       </view>
+			<view style="width:100rpx;height:32rpx;"></view>
+		</view>  -->
+		</view>
+	</scroll-view>
+</view>

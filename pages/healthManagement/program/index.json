@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "nav-bar": "/commpents/navbar-bg/index",
+    "nav-tab":"/commpents/navTab/index",
+    "nutrition-program": "/pages/healthManagement/nutritionProgram",
+    "exercise-program": "/pages/healthManagement/exerciseProgram",
+    "medication-program": "/pages/healthManagement/medicationProgram",
+    "sleep-program": "/pages/healthManagement/sleepProgram",
+    "psychology-program": "/pages/healthManagement/psychologyProgram"
+  },
+  "disableScroll":true,
+  "backgroundColor":"#F9FAFC"
+}
